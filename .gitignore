@@ -1,21 +1,6 @@
-
 *.lock
 *.vsidx
-src/2. server/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
 *.cache
-src/2. server/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll
-src/2. server/obj/*.*
-src/2. server/obj/Debug/WindowsFormsApp4.ucPanel.ucScreen4.resources
-src/2. server/obj/Debug/WindowsFormsApp4.ucPanel.ucScreen3.resources
-src/2. server/obj/Debug/WindowsFormsApp4.ucPanel.ucScreen2.resources
-src/2. server/obj/Debug/WindowsFormsApp4.ucPanel.ucScreen1.resources
-src/2. server/obj/Debug/WindowsFormsApp4.Properties.Resources.resources
-src/2. server/obj/Debug/WindowsFormsApp4.pdb
-src/2. server/obj/Debug/WindowsFormsApp4.main.resources
-src/2. server/obj/Debug/WindowsFormsApp4.Login_Form.resources
-src/2. server/obj/Debug/WindowsFormsApp4.exe
-src/2. server/obj/Debug/flawless.csproj.FileListAbsolute.txt
-src/2. server/bin/Debug/WindowsFormsApp4.pdb
-src/2. server/bin/Debug/WindowsFormsApp4.exe.config
-src/2. server/bin/Debug/WindowsFormsApp4.exe
-src/2. server/.vs/flawless/v17/.suo
+*.suo
+src/2. server/obj/
+src/2. server/bin/
