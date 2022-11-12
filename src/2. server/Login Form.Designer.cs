@@ -39,6 +39,7 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.label3 = new System.Windows.Forms.Label();
 			this.Exit_panel.SuspendLayout();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,9 +50,9 @@
 			this.Login_btn.BackColor = System.Drawing.Color.LightSteelBlue;
 			this.Login_btn.FlatAppearance.BorderSize = 0;
 			this.Login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Login_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Login_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Login_btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.Login_btn.Location = new System.Drawing.Point(91, 404);
+			this.Login_btn.Location = new System.Drawing.Point(90, 378);
 			this.Login_btn.Name = "Login_btn";
 			this.Login_btn.Size = new System.Drawing.Size(118, 34);
 			this.Login_btn.TabIndex = 0;
@@ -64,7 +65,7 @@
 			this.button2.FlatAppearance.BorderSize = 0;
 			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.ForeColor = System.Drawing.Color.White;
+			this.button2.ForeColor = System.Drawing.Color.Black;
 			this.button2.Location = new System.Drawing.Point(270, 0);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(25, 25);
@@ -106,6 +107,7 @@
 			this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
 			this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.textBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
 			this.textBox1.Location = new System.Drawing.Point(42, 213);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(215, 19);
@@ -116,6 +118,7 @@
 			this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
 			this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.textBox2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
 			this.textBox2.Location = new System.Drawing.Point(42, 309);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(215, 19);
@@ -146,6 +149,7 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+			this.panel1.Controls.Add(this.label3);
 			this.panel1.Controls.Add(this.pictureBox1);
 			this.panel1.Controls.Add(this.Exit_panel);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -156,14 +160,23 @@
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pictureBox1.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_tv_monitor_4018796;
-			this.pictureBox1.Location = new System.Drawing.Point(0, 25);
+			this.pictureBox1.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_ecg_monitor_5199552;
+			this.pictureBox1.Location = new System.Drawing.Point(12, 31);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(300, 132);
+			this.pictureBox1.Size = new System.Drawing.Size(147, 98);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 7;
 			this.pictureBox1.TabStop = false;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(179, 55);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(95, 50);
+			this.label3.TabIndex = 8;
+			this.label3.Text = "Monitor\r\nprocess";
 			// 
 			// Login_Form
 			// 
@@ -187,6 +200,7 @@
 			this.Text = "Login_Form";
 			this.Exit_panel.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
+			this.panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -206,5 +220,6 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Label label3;
 	}
 }

@@ -134,5 +134,8 @@
   <ItemGroup>
     <None Include="Resources\free-icon-tv-monitor-4018796.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-ecg-monitor-5199552.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

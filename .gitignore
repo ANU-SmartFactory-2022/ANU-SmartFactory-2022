@@ -4,3 +4,4 @@
 src/2. server/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
 *.cache
 src/2. server/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll
+src/2. server/obj/*.*
