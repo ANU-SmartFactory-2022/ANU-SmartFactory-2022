@@ -1,0 +1,5 @@
+
+*.lock
+*.vsidx
+src/2. server/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+*.cache
