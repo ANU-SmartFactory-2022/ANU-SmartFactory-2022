@@ -31,6 +31,7 @@
 			this.panel_title = new System.Windows.Forms.Panel();
 			this.button6 = new System.Windows.Forms.Button();
 			this.panel_menu = new System.Windows.Forms.Panel();
+			this.PnlNav = new System.Windows.Forms.Panel();
 			this.button5 = new System.Windows.Forms.Button();
 			this.btn_detail = new System.Windows.Forms.Button();
 			this.btn_summary = new System.Windows.Forms.Button();
@@ -39,12 +40,13 @@
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.PnlNav = new System.Windows.Forms.Panel();
 			this.panel_main = new System.Windows.Forms.Panel();
+			this.button1 = new System.Windows.Forms.Button();
 			this.panel_title.SuspendLayout();
 			this.panel_menu.SuspendLayout();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.panel_main.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel_title
@@ -87,6 +89,14 @@
 			this.panel_menu.Name = "panel_menu";
 			this.panel_menu.Size = new System.Drawing.Size(186, 551);
 			this.panel_menu.TabIndex = 0;
+			// 
+			// PnlNav
+			// 
+			this.PnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+			this.PnlNav.Location = new System.Drawing.Point(3, 194);
+			this.PnlNav.Name = "PnlNav";
+			this.PnlNav.Size = new System.Drawing.Size(3, 100);
+			this.PnlNav.TabIndex = 1;
 			// 
 			// button5
 			// 
@@ -197,21 +207,23 @@
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
 			// 
-			// PnlNav
-			// 
-			this.PnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.PnlNav.Location = new System.Drawing.Point(3, 194);
-			this.PnlNav.Name = "PnlNav";
-			this.PnlNav.Size = new System.Drawing.Size(3, 100);
-			this.PnlNav.TabIndex = 1;
-			// 
 			// panel_main
 			// 
+			this.panel_main.Controls.Add(this.button1);
 			this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel_main.Location = new System.Drawing.Point(186, 26);
 			this.panel_main.Name = "panel_main";
 			this.panel_main.Size = new System.Drawing.Size(765, 551);
 			this.panel_main.TabIndex = 2;
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(246, 117);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(339, 176);
+			this.button1.TabIndex = 0;
+			this.button1.Text = "button1";
+			this.button1.UseVisualStyleBackColor = true;
 			// 
 			// main
 			// 
@@ -232,6 +244,7 @@
 			this.panel2.ResumeLayout(false);
 			this.panel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			this.panel_main.ResumeLayout(false);
 			this.ResumeLayout(false);
 
         }
@@ -251,6 +264,7 @@
         private System.Windows.Forms.Panel panel_main;
         private System.Windows.Forms.Panel panel_title;
         private System.Windows.Forms.Button button6;
-    }
+		private System.Windows.Forms.Button button1;
+	}
 }
 
