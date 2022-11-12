@@ -39,8 +39,8 @@
 			this.btn_monitoring = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panel_main = new System.Windows.Forms.Panel();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panel_title.SuspendLayout();
 			this.panel_menu.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -63,8 +63,9 @@
 			// 
 			this.button6.FlatAppearance.BorderSize = 0;
 			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
 			this.button6.ForeColor = System.Drawing.Color.White;
-			this.button6.Location = new System.Drawing.Point(923, 3);
+			this.button6.Location = new System.Drawing.Point(923, -2);
 			this.button6.Name = "button6";
 			this.button6.Size = new System.Drawing.Size(25, 25);
 			this.button6.TabIndex = 6;
@@ -195,16 +196,6 @@
 			this.label1.TabIndex = 1;
 			this.label1.Text = "모니터 공정";
 			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_font_computer_3917446;
-			this.pictureBox1.Location = new System.Drawing.Point(60, 32);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(63, 63);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
-			// 
 			// panel_main
 			// 
 			this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -212,6 +203,16 @@
 			this.panel_main.Name = "panel_main";
 			this.panel_main.Size = new System.Drawing.Size(765, 551);
 			this.panel_main.TabIndex = 2;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_ecg_monitor_5199552;
+			this.pictureBox1.Location = new System.Drawing.Point(60, 32);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(63, 63);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
 			// 
 			// main
 			// 

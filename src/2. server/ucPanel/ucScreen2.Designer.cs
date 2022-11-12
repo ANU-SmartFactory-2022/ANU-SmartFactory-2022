@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // ucScreen2
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Name = "ucScreen2";
-            this.Size = new System.Drawing.Size(771, 577);
-            this.ResumeLayout(false);
+			this.SuspendLayout();
+			// 
+			// ucScreen2
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+			this.Name = "ucScreen2";
+			this.Size = new System.Drawing.Size(771, 577);
+			this.ResumeLayout(false);
 
         }
 
