@@ -38,8 +38,8 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label3 = new System.Windows.Forms.Label();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.Exit_panel.SuspendLayout();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -121,6 +121,7 @@
 			this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
 			this.textBox2.Location = new System.Drawing.Point(42, 309);
 			this.textBox2.Name = "textBox2";
+			this.textBox2.PasswordChar = '*';
 			this.textBox2.Size = new System.Drawing.Size(215, 19);
 			this.textBox2.TabIndex = 10;
 			// 
@@ -158,16 +159,6 @@
 			this.panel1.Size = new System.Drawing.Size(300, 157);
 			this.panel1.TabIndex = 13;
 			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_ecg_monitor_5199552;
-			this.pictureBox1.Location = new System.Drawing.Point(12, 31);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(147, 98);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox1.TabIndex = 7;
-			this.pictureBox1.TabStop = false;
-			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
@@ -177,6 +168,16 @@
 			this.label3.Size = new System.Drawing.Size(95, 50);
 			this.label3.TabIndex = 8;
 			this.label3.Text = "Monitor\r\nprocess";
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_ecg_monitor_5199552;
+			this.pictureBox1.Location = new System.Drawing.Point(12, 31);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(147, 98);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox1.TabIndex = 7;
+			this.pictureBox1.TabStop = false;
 			// 
 			// Login_Form
 			// 
