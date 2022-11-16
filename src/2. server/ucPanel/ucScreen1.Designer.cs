@@ -42,6 +42,10 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.panel7 = new System.Windows.Forms.Panel();
 			this.label7 = new System.Windows.Forms.Label();
+			this.btn_24_1 = new System.Windows.Forms.Button();
+			this.btn_24_2 = new System.Windows.Forms.Button();
+			this.btn_24_3 = new System.Windows.Forms.Button();
+			this.btn_24_4 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -54,6 +58,10 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+			this.panel1.Controls.Add(this.btn_24_4);
+			this.panel1.Controls.Add(this.btn_24_3);
+			this.panel1.Controls.Add(this.btn_24_2);
+			this.panel1.Controls.Add(this.btn_24_1);
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.Location = new System.Drawing.Point(28, 33);
 			this.panel1.Name = "panel1";
@@ -191,6 +199,42 @@
 			this.label7.TabIndex = 0;
 			this.label7.Text = "양품\r\n불량1\r\n불량2";
 			// 
+			// btn_24_1
+			// 
+			this.btn_24_1.Location = new System.Drawing.Point(20, 69);
+			this.btn_24_1.Name = "btn_24_1";
+			this.btn_24_1.Size = new System.Drawing.Size(66, 27);
+			this.btn_24_1.TabIndex = 1;
+			this.btn_24_1.Text = "1공정";
+			this.btn_24_1.UseVisualStyleBackColor = true;
+			// 
+			// btn_24_2
+			// 
+			this.btn_24_2.Location = new System.Drawing.Point(107, 69);
+			this.btn_24_2.Name = "btn_24_2";
+			this.btn_24_2.Size = new System.Drawing.Size(66, 27);
+			this.btn_24_2.TabIndex = 2;
+			this.btn_24_2.Text = "2공정";
+			this.btn_24_2.UseVisualStyleBackColor = true;
+			// 
+			// btn_24_3
+			// 
+			this.btn_24_3.Location = new System.Drawing.Point(20, 111);
+			this.btn_24_3.Name = "btn_24_3";
+			this.btn_24_3.Size = new System.Drawing.Size(66, 27);
+			this.btn_24_3.TabIndex = 3;
+			this.btn_24_3.Text = "3공정";
+			this.btn_24_3.UseVisualStyleBackColor = true;
+			// 
+			// btn_24_4
+			// 
+			this.btn_24_4.Location = new System.Drawing.Point(107, 111);
+			this.btn_24_4.Name = "btn_24_4";
+			this.btn_24_4.Size = new System.Drawing.Size(66, 27);
+			this.btn_24_4.TabIndex = 4;
+			this.btn_24_4.Text = "4공정";
+			this.btn_24_4.UseVisualStyleBackColor = true;
+			// 
 			// ucScreen1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -239,5 +283,9 @@
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Panel panel7;
 		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Button btn_24_4;
+		private System.Windows.Forms.Button btn_24_3;
+		private System.Windows.Forms.Button btn_24_2;
+		private System.Windows.Forms.Button btn_24_1;
 	}
 }
