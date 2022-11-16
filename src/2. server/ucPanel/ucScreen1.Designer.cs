@@ -207,6 +207,7 @@
 			this.btn_24_1.TabIndex = 1;
 			this.btn_24_1.Text = "1공정";
 			this.btn_24_1.UseVisualStyleBackColor = true;
+			this.btn_24_1.Click += new System.EventHandler(this.btn_24_1_Click);
 			// 
 			// btn_24_2
 			// 
@@ -216,6 +217,7 @@
 			this.btn_24_2.TabIndex = 2;
 			this.btn_24_2.Text = "2공정";
 			this.btn_24_2.UseVisualStyleBackColor = true;
+			this.btn_24_2.Click += new System.EventHandler(this.btn_24_2_Click);
 			// 
 			// btn_24_3
 			// 
@@ -225,6 +227,7 @@
 			this.btn_24_3.TabIndex = 3;
 			this.btn_24_3.Text = "3공정";
 			this.btn_24_3.UseVisualStyleBackColor = true;
+			this.btn_24_3.Click += new System.EventHandler(this.btn_24_3_Click);
 			// 
 			// btn_24_4
 			// 
@@ -234,6 +237,7 @@
 			this.btn_24_4.TabIndex = 4;
 			this.btn_24_4.Text = "4공정";
 			this.btn_24_4.UseVisualStyleBackColor = true;
+			this.btn_24_4.Click += new System.EventHandler(this.btn_24_4_Click);
 			// 
 			// ucScreen1
 			// 
