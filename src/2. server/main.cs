@@ -41,6 +41,7 @@ namespace WindowsFormsApp4
             btn_list.Add(btn_running);
             btn_list.Add(btn_summary);
             btn_list.Add(btn_detail);
+            btn_list.Add(btn_home);
         }
 
         private void Form1_Load(object sender, EventArgs e)
