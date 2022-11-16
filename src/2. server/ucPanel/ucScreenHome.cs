@@ -33,5 +33,10 @@ namespace WindowsFormsApp4.ucPanel
 		{
 			label3.Text = DateTime.Now.ToString("yyyy-MM-dd");
 		}
+
+		private void label2_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
