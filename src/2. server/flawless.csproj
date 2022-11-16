@@ -85,6 +85,12 @@
     <Compile Include="ucPanel\ucScreen4.Designer.cs">
       <DependentUpon>ucScreen4.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucPanel\ucScreenHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPanel\ucScreenHome.Designer.cs">
+      <DependentUpon>ucScreenHome.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucPanel\ucScreen4.resx">
       <DependentUpon>ucScreen4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPanel\ucScreenHome.resx">
+      <DependentUpon>ucScreenHome.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -143,6 +152,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\free-icon-down-arrow-7860593.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\홈버튼 이미지.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
