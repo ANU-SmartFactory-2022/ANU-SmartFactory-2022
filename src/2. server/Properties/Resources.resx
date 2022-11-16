@@ -127,7 +127,13 @@
   <data name="free-icon-font-computer-3917446" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\free-icon-font-computer-3917446.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="캡처" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\캡처.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="free-icon-ecg-monitor-5199552" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\free-icon-ecg-monitor-5199552.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-down-arrow-7860593" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-down-arrow-7860593.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

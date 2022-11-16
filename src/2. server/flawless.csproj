@@ -137,5 +137,11 @@
   <ItemGroup>
     <None Include="Resources\free-icon-ecg-monitor-5199552.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\캡처.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-down-arrow-7860593.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

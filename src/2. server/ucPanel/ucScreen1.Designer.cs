@@ -40,12 +40,15 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.label6 = new System.Windows.Forms.Label();
+			this.panel7 = new System.Windows.Forms.Panel();
+			this.label7 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel6.SuspendLayout();
+			this.panel7.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -168,11 +171,32 @@
 			this.label6.TabIndex = 0;
 			this.label6.Text = "불량 case2";
 			// 
+			// panel7
+			// 
+			this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+			this.panel7.Controls.Add(this.label7);
+			this.panel7.Location = new System.Drawing.Point(321, 193);
+			this.panel7.Name = "panel7";
+			this.panel7.Size = new System.Drawing.Size(126, 199);
+			this.panel7.TabIndex = 3;
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label7.ForeColor = System.Drawing.SystemColors.Control;
+			this.label7.Location = new System.Drawing.Point(15, 30);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(92, 120);
+			this.label7.TabIndex = 0;
+			this.label7.Text = "양품\r\n불량1\r\n불량2";
+			// 
 			// ucScreen1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+			this.Controls.Add(this.panel7);
 			this.Controls.Add(this.panel6);
 			this.Controls.Add(this.panel5);
 			this.Controls.Add(this.panel4);
@@ -180,7 +204,7 @@
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
 			this.Name = "ucScreen1";
-			this.Size = new System.Drawing.Size(771, 577);
+			this.Size = new System.Drawing.Size(771, 591);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.panel2.ResumeLayout(false);
@@ -193,6 +217,8 @@
 			this.panel5.PerformLayout();
 			this.panel6.ResumeLayout(false);
 			this.panel6.PerformLayout();
+			this.panel7.ResumeLayout(false);
+			this.panel7.PerformLayout();
 			this.ResumeLayout(false);
 
         }
@@ -211,5 +237,7 @@
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Panel panel6;
 		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Panel panel7;
+		private System.Windows.Forms.Label label7;
 	}
 }
