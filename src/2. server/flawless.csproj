@@ -156,5 +156,8 @@
   <ItemGroup>
     <None Include="Resources\홈버튼 이미지.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\회사 로고.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -80,7 +80,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.SystemColors.Control;
+			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
 			this.label1.Location = new System.Drawing.Point(13, 12);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(116, 40);
@@ -104,7 +104,7 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold);
-			this.label2.ForeColor = System.Drawing.SystemColors.Control;
+			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
 			this.label2.Location = new System.Drawing.Point(13, 12);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(116, 40);
@@ -128,7 +128,7 @@
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold);
-			this.label3.ForeColor = System.Drawing.SystemColors.Control;
+			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
 			this.label3.Location = new System.Drawing.Point(13, 12);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(116, 40);
@@ -149,7 +149,7 @@
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold);
 			this.label4.ForeColor = System.Drawing.SystemColors.Control;
-			this.label4.Location = new System.Drawing.Point(13, 12);
+			this.label4.Location = new System.Drawing.Point(62, 54);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(75, 40);
 			this.label4.TabIndex = 0;
@@ -169,7 +169,7 @@
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold);
 			this.label5.ForeColor = System.Drawing.SystemColors.Control;
-			this.label5.Location = new System.Drawing.Point(13, 12);
+			this.label5.Location = new System.Drawing.Point(13, 51);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(167, 40);
 			this.label5.TabIndex = 0;
@@ -189,7 +189,7 @@
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold);
 			this.label6.ForeColor = System.Drawing.SystemColors.Control;
-			this.label6.Location = new System.Drawing.Point(13, 12);
+			this.label6.Location = new System.Drawing.Point(21, 51);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(159, 40);
 			this.label6.TabIndex = 0;
@@ -217,6 +217,8 @@
 			// 
 			// btn_24_1
 			// 
+			this.btn_24_1.FlatAppearance.BorderSize = 0;
+			this.btn_24_1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
 			this.btn_24_1.Location = new System.Drawing.Point(20, 69);
 			this.btn_24_1.Name = "btn_24_1";
 			this.btn_24_1.Size = new System.Drawing.Size(66, 27);
@@ -227,6 +229,7 @@
 			// 
 			// btn_24_2
 			// 
+			this.btn_24_2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
 			this.btn_24_2.Location = new System.Drawing.Point(107, 69);
 			this.btn_24_2.Name = "btn_24_2";
 			this.btn_24_2.Size = new System.Drawing.Size(66, 27);
@@ -237,6 +240,7 @@
 			// 
 			// btn_24_3
 			// 
+			this.btn_24_3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
 			this.btn_24_3.Location = new System.Drawing.Point(20, 111);
 			this.btn_24_3.Name = "btn_24_3";
 			this.btn_24_3.Size = new System.Drawing.Size(66, 27);
@@ -247,6 +251,7 @@
 			// 
 			// btn_24_4
 			// 
+			this.btn_24_4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
 			this.btn_24_4.Location = new System.Drawing.Point(107, 111);
 			this.btn_24_4.Name = "btn_24_4";
 			this.btn_24_4.Size = new System.Drawing.Size(66, 27);
@@ -257,6 +262,7 @@
 			// 
 			// button1
 			// 
+			this.button1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
 			this.button1.Location = new System.Drawing.Point(20, 64);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(66, 27);
@@ -267,6 +273,7 @@
 			// 
 			// button2
 			// 
+			this.button2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
 			this.button2.Location = new System.Drawing.Point(107, 64);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(66, 27);
@@ -277,6 +284,7 @@
 			// 
 			// button3
 			// 
+			this.button3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
 			this.button3.Location = new System.Drawing.Point(20, 105);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(66, 27);
@@ -287,6 +295,7 @@
 			// 
 			// button4
 			// 
+			this.button4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
 			this.button4.Location = new System.Drawing.Point(107, 105);
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(66, 27);
@@ -297,6 +306,7 @@
 			// 
 			// button5
 			// 
+			this.button5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
 			this.button5.Location = new System.Drawing.Point(20, 66);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(66, 27);
@@ -307,6 +317,7 @@
 			// 
 			// button6
 			// 
+			this.button6.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
 			this.button6.Location = new System.Drawing.Point(107, 66);
 			this.button6.Name = "button6";
 			this.button6.Size = new System.Drawing.Size(66, 27);
@@ -317,6 +328,7 @@
 			// 
 			// button7
 			// 
+			this.button7.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
 			this.button7.Location = new System.Drawing.Point(20, 110);
 			this.button7.Name = "button7";
 			this.button7.Size = new System.Drawing.Size(66, 27);
@@ -327,6 +339,7 @@
 			// 
 			// button8
 			// 
+			this.button8.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
 			this.button8.Location = new System.Drawing.Point(107, 110);
 			this.button8.Name = "button8";
 			this.button8.Size = new System.Drawing.Size(66, 27);
