@@ -68,7 +68,12 @@ namespace WindowsFormsApp4
             panel_main.Controls.Clear();
             switch (btn.Text)
             {
-                case "모니터링": panel_main.Controls.Add(ucSc1); break;
+                case "모니터링":
+                    {
+                        panel_main.Controls.Add(ucSc1);
+                        //ucSc1.buttonColor( 32, 2, Color.Red );
+                    }
+                    break;
                 case "공정 가동": panel_main.Controls.Add(ucSc2); break;
                 case "통계": panel_main.Controls.Add(ucSc3); break;
                 case "불량품 상세정보": panel_main.Controls.Add(ucSc4); break;

@@ -29,10 +29,22 @@
         private void InitializeComponent()
         {
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.btn_24_4 = new System.Windows.Forms.Button();
+			this.btn_24_3 = new System.Windows.Forms.Button();
+			this.btn_24_2 = new System.Windows.Forms.Button();
+			this.btn_24_1 = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.btn_27_4 = new System.Windows.Forms.Button();
+			this.btn_27_3 = new System.Windows.Forms.Button();
+			this.btn_27_2 = new System.Windows.Forms.Button();
+			this.btn_27_1 = new System.Windows.Forms.Button();
 			this.label2 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.btn_32_4 = new System.Windows.Forms.Button();
+			this.btn_32_3 = new System.Windows.Forms.Button();
+			this.btn_32_2 = new System.Windows.Forms.Button();
+			this.btn_32_1 = new System.Windows.Forms.Button();
 			this.label3 = new System.Windows.Forms.Label();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.label4 = new System.Windows.Forms.Label();
@@ -42,18 +54,6 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.panel7 = new System.Windows.Forms.Panel();
 			this.label7 = new System.Windows.Forms.Label();
-			this.btn_24_1 = new System.Windows.Forms.Button();
-			this.btn_24_2 = new System.Windows.Forms.Button();
-			this.btn_24_3 = new System.Windows.Forms.Button();
-			this.btn_24_4 = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
-			this.button6 = new System.Windows.Forms.Button();
-			this.button7 = new System.Windows.Forms.Button();
-			this.button8 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -76,6 +76,51 @@
 			this.panel1.Size = new System.Drawing.Size(200, 150);
 			this.panel1.TabIndex = 0;
 			// 
+			// btn_24_4
+			// 
+			this.btn_24_4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+			this.btn_24_4.Location = new System.Drawing.Point(107, 111);
+			this.btn_24_4.Name = "btn_24_4";
+			this.btn_24_4.Size = new System.Drawing.Size(66, 27);
+			this.btn_24_4.TabIndex = 4;
+			this.btn_24_4.Text = "4공정";
+			this.btn_24_4.UseVisualStyleBackColor = true;
+			this.btn_24_4.Click += new System.EventHandler(this.btn_Click);
+			// 
+			// btn_24_3
+			// 
+			this.btn_24_3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.btn_24_3.Location = new System.Drawing.Point(20, 111);
+			this.btn_24_3.Name = "btn_24_3";
+			this.btn_24_3.Size = new System.Drawing.Size(66, 27);
+			this.btn_24_3.TabIndex = 3;
+			this.btn_24_3.Text = "3공정";
+			this.btn_24_3.UseVisualStyleBackColor = true;
+			this.btn_24_3.Click += new System.EventHandler(this.btn_Click);
+			// 
+			// btn_24_2
+			// 
+			this.btn_24_2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+			this.btn_24_2.Location = new System.Drawing.Point(107, 69);
+			this.btn_24_2.Name = "btn_24_2";
+			this.btn_24_2.Size = new System.Drawing.Size(66, 27);
+			this.btn_24_2.TabIndex = 2;
+			this.btn_24_2.Text = "2공정";
+			this.btn_24_2.UseVisualStyleBackColor = true;
+			this.btn_24_2.Click += new System.EventHandler(this.btn_Click);
+			// 
+			// btn_24_1
+			// 
+			this.btn_24_1.FlatAppearance.BorderSize = 0;
+			this.btn_24_1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.btn_24_1.Location = new System.Drawing.Point(20, 69);
+			this.btn_24_1.Name = "btn_24_1";
+			this.btn_24_1.Size = new System.Drawing.Size(66, 27);
+			this.btn_24_1.TabIndex = 1;
+			this.btn_24_1.Text = "1공정";
+			this.btn_24_1.UseVisualStyleBackColor = true;
+			this.btn_24_1.Click += new System.EventHandler(this.btn_Click);
+			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
@@ -90,15 +135,59 @@
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-			this.panel2.Controls.Add(this.button4);
-			this.panel2.Controls.Add(this.button3);
-			this.panel2.Controls.Add(this.button2);
-			this.panel2.Controls.Add(this.button1);
+			this.panel2.Controls.Add(this.btn_27_4);
+			this.panel2.Controls.Add(this.btn_27_3);
+			this.panel2.Controls.Add(this.btn_27_2);
+			this.panel2.Controls.Add(this.btn_27_1);
 			this.panel2.Controls.Add(this.label2);
 			this.panel2.Location = new System.Drawing.Point(28, 211);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(200, 150);
 			this.panel2.TabIndex = 1;
+			// 
+			// btn_27_4
+			// 
+			this.btn_27_4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+			this.btn_27_4.Location = new System.Drawing.Point(107, 105);
+			this.btn_27_4.Name = "btn_27_4";
+			this.btn_27_4.Size = new System.Drawing.Size(66, 27);
+			this.btn_27_4.TabIndex = 5;
+			this.btn_27_4.Text = "4공정";
+			this.btn_27_4.UseVisualStyleBackColor = true;
+			this.btn_27_4.Click += new System.EventHandler(this.btn_Click);
+			// 
+			// btn_27_3
+			// 
+			this.btn_27_3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+			this.btn_27_3.Location = new System.Drawing.Point(20, 105);
+			this.btn_27_3.Name = "btn_27_3";
+			this.btn_27_3.Size = new System.Drawing.Size(66, 27);
+			this.btn_27_3.TabIndex = 5;
+			this.btn_27_3.Text = "3공정";
+			this.btn_27_3.UseVisualStyleBackColor = true;
+			this.btn_27_3.Click += new System.EventHandler(this.btn_Click);
+			// 
+			// btn_27_2
+			// 
+			this.btn_27_2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+			this.btn_27_2.Location = new System.Drawing.Point(107, 64);
+			this.btn_27_2.Name = "btn_27_2";
+			this.btn_27_2.Size = new System.Drawing.Size(66, 27);
+			this.btn_27_2.TabIndex = 5;
+			this.btn_27_2.Text = "2공정";
+			this.btn_27_2.UseVisualStyleBackColor = true;
+			this.btn_27_2.Click += new System.EventHandler(this.btn_Click);
+			// 
+			// btn_27_1
+			// 
+			this.btn_27_1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+			this.btn_27_1.Location = new System.Drawing.Point(20, 64);
+			this.btn_27_1.Name = "btn_27_1";
+			this.btn_27_1.Size = new System.Drawing.Size(66, 27);
+			this.btn_27_1.TabIndex = 4;
+			this.btn_27_1.Text = "1공정";
+			this.btn_27_1.UseVisualStyleBackColor = true;
+			this.btn_27_1.Click += new System.EventHandler(this.btn_Click);
 			// 
 			// label2
 			// 
@@ -114,15 +203,59 @@
 			// panel3
 			// 
 			this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-			this.panel3.Controls.Add(this.button8);
-			this.panel3.Controls.Add(this.button7);
-			this.panel3.Controls.Add(this.button6);
-			this.panel3.Controls.Add(this.button5);
+			this.panel3.Controls.Add(this.btn_32_4);
+			this.panel3.Controls.Add(this.btn_32_3);
+			this.panel3.Controls.Add(this.btn_32_2);
+			this.panel3.Controls.Add(this.btn_32_1);
 			this.panel3.Controls.Add(this.label3);
 			this.panel3.Location = new System.Drawing.Point(28, 390);
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(200, 150);
 			this.panel3.TabIndex = 2;
+			// 
+			// btn_32_4
+			// 
+			this.btn_32_4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+			this.btn_32_4.Location = new System.Drawing.Point(107, 110);
+			this.btn_32_4.Name = "btn_32_4";
+			this.btn_32_4.Size = new System.Drawing.Size(66, 27);
+			this.btn_32_4.TabIndex = 6;
+			this.btn_32_4.Text = "4공정";
+			this.btn_32_4.UseVisualStyleBackColor = true;
+			this.btn_32_4.Click += new System.EventHandler(this.btn_Click);
+			// 
+			// btn_32_3
+			// 
+			this.btn_32_3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+			this.btn_32_3.Location = new System.Drawing.Point(20, 110);
+			this.btn_32_3.Name = "btn_32_3";
+			this.btn_32_3.Size = new System.Drawing.Size(66, 27);
+			this.btn_32_3.TabIndex = 6;
+			this.btn_32_3.Text = "3공정";
+			this.btn_32_3.UseVisualStyleBackColor = true;
+			this.btn_32_3.Click += new System.EventHandler(this.btn_Click);
+			// 
+			// btn_32_2
+			// 
+			this.btn_32_2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+			this.btn_32_2.Location = new System.Drawing.Point(107, 66);
+			this.btn_32_2.Name = "btn_32_2";
+			this.btn_32_2.Size = new System.Drawing.Size(66, 27);
+			this.btn_32_2.TabIndex = 6;
+			this.btn_32_2.Text = "2공정";
+			this.btn_32_2.UseVisualStyleBackColor = true;
+			this.btn_32_2.Click += new System.EventHandler(this.btn_Click);
+			// 
+			// btn_32_1
+			// 
+			this.btn_32_1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+			this.btn_32_1.Location = new System.Drawing.Point(20, 66);
+			this.btn_32_1.Name = "btn_32_1";
+			this.btn_32_1.Size = new System.Drawing.Size(66, 27);
+			this.btn_32_1.TabIndex = 6;
+			this.btn_32_1.Text = "1공정";
+			this.btn_32_1.UseVisualStyleBackColor = true;
+			this.btn_32_1.Click += new System.EventHandler(this.btn_Click);
 			// 
 			// label3
 			// 
@@ -215,139 +348,6 @@
 			this.label7.TabIndex = 0;
 			this.label7.Text = "양품\r\n불량1\r\n불량2";
 			// 
-			// btn_24_1
-			// 
-			this.btn_24_1.FlatAppearance.BorderSize = 0;
-			this.btn_24_1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.btn_24_1.Location = new System.Drawing.Point(20, 69);
-			this.btn_24_1.Name = "btn_24_1";
-			this.btn_24_1.Size = new System.Drawing.Size(66, 27);
-			this.btn_24_1.TabIndex = 1;
-			this.btn_24_1.Text = "1공정";
-			this.btn_24_1.UseVisualStyleBackColor = true;
-			this.btn_24_1.Click += new System.EventHandler(this.btn_Click);
-			// 
-			// btn_24_2
-			// 
-			this.btn_24_2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
-			this.btn_24_2.Location = new System.Drawing.Point(107, 69);
-			this.btn_24_2.Name = "btn_24_2";
-			this.btn_24_2.Size = new System.Drawing.Size(66, 27);
-			this.btn_24_2.TabIndex = 2;
-			this.btn_24_2.Text = "2공정";
-			this.btn_24_2.UseVisualStyleBackColor = true;
-			this.btn_24_2.Click += new System.EventHandler(this.btn_Click);
-			// 
-			// btn_24_3
-			// 
-			this.btn_24_3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.btn_24_3.Location = new System.Drawing.Point(20, 111);
-			this.btn_24_3.Name = "btn_24_3";
-			this.btn_24_3.Size = new System.Drawing.Size(66, 27);
-			this.btn_24_3.TabIndex = 3;
-			this.btn_24_3.Text = "3공정";
-			this.btn_24_3.UseVisualStyleBackColor = true;
-			this.btn_24_3.Click += new System.EventHandler(this.btn_Click);
-			// 
-			// btn_24_4
-			// 
-			this.btn_24_4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
-			this.btn_24_4.Location = new System.Drawing.Point(107, 111);
-			this.btn_24_4.Name = "btn_24_4";
-			this.btn_24_4.Size = new System.Drawing.Size(66, 27);
-			this.btn_24_4.TabIndex = 4;
-			this.btn_24_4.Text = "4공정";
-			this.btn_24_4.UseVisualStyleBackColor = true;
-			this.btn_24_4.Click += new System.EventHandler(this.btn_Click);
-			// 
-			// button1
-			// 
-			this.button1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
-			this.button1.Location = new System.Drawing.Point(20, 64);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(66, 27);
-			this.button1.TabIndex = 4;
-			this.button1.Text = "1공정";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.btn_Click);
-			// 
-			// button2
-			// 
-			this.button2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
-			this.button2.Location = new System.Drawing.Point(107, 64);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(66, 27);
-			this.button2.TabIndex = 5;
-			this.button2.Text = "2공정";
-			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.btn_Click);
-			// 
-			// button3
-			// 
-			this.button3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
-			this.button3.Location = new System.Drawing.Point(20, 105);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(66, 27);
-			this.button3.TabIndex = 5;
-			this.button3.Text = "3공정";
-			this.button3.UseVisualStyleBackColor = true;
-			this.button3.Click += new System.EventHandler(this.btn_Click);
-			// 
-			// button4
-			// 
-			this.button4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
-			this.button4.Location = new System.Drawing.Point(107, 105);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(66, 27);
-			this.button4.TabIndex = 5;
-			this.button4.Text = "4공정";
-			this.button4.UseVisualStyleBackColor = true;
-			this.button4.Click += new System.EventHandler(this.btn_Click);
-			// 
-			// button5
-			// 
-			this.button5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
-			this.button5.Location = new System.Drawing.Point(20, 66);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(66, 27);
-			this.button5.TabIndex = 6;
-			this.button5.Text = "1공정";
-			this.button5.UseVisualStyleBackColor = true;
-			this.button5.Click += new System.EventHandler(this.btn_Click);
-			// 
-			// button6
-			// 
-			this.button6.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
-			this.button6.Location = new System.Drawing.Point(107, 66);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(66, 27);
-			this.button6.TabIndex = 6;
-			this.button6.Text = "2공정";
-			this.button6.UseVisualStyleBackColor = true;
-			this.button6.Click += new System.EventHandler(this.btn_Click);
-			// 
-			// button7
-			// 
-			this.button7.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
-			this.button7.Location = new System.Drawing.Point(20, 110);
-			this.button7.Name = "button7";
-			this.button7.Size = new System.Drawing.Size(66, 27);
-			this.button7.TabIndex = 6;
-			this.button7.Text = "3공정";
-			this.button7.UseVisualStyleBackColor = true;
-			this.button7.Click += new System.EventHandler(this.btn_Click);
-			// 
-			// button8
-			// 
-			this.button8.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
-			this.button8.Location = new System.Drawing.Point(107, 110);
-			this.button8.Name = "button8";
-			this.button8.Size = new System.Drawing.Size(66, 27);
-			this.button8.TabIndex = 6;
-			this.button8.Text = "4공정";
-			this.button8.UseVisualStyleBackColor = true;
-			this.button8.Click += new System.EventHandler(this.btn_Click);
-			// 
 			// ucScreen1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -400,13 +400,13 @@
 		private System.Windows.Forms.Button btn_24_3;
 		private System.Windows.Forms.Button btn_24_2;
 		private System.Windows.Forms.Button btn_24_1;
-		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button8;
-		private System.Windows.Forms.Button button7;
-		private System.Windows.Forms.Button button6;
-		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.Button btn_27_4;
+		private System.Windows.Forms.Button btn_27_3;
+		private System.Windows.Forms.Button btn_27_2;
+		private System.Windows.Forms.Button btn_27_1;
+		private System.Windows.Forms.Button btn_32_4;
+		private System.Windows.Forms.Button btn_32_3;
+		private System.Windows.Forms.Button btn_32_2;
+		private System.Windows.Forms.Button btn_32_1;
 	}
 }
