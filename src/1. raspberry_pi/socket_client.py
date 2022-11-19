@@ -6,11 +6,11 @@ import threading
 import errno
 import select
 
-def recv():
+def recv_d():
     try:
         recv_data = client_socket.recv(256).decode('utf-8')
-    except BlockingIOError:
-        return ""
+    except BlockingIOError as e1:
+        return print( type(e1) )
     return recv_data
 
 
@@ -24,7 +24,7 @@ def send(send_data):
         select.select([], [client_socket], [])
 
 
-def connect( ip, port ):
+def connect_d( ip, port ):
     try:
         client_socket.connect((ip, port))
         client_socket.setblocking(False)
@@ -39,8 +39,8 @@ client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # 서버
 #ip = '127.0.0.1'
-# ip = '192.168.0.4'
-# port = 9999
+# ip = '192.168.0.35'
+# port = 8000
 
-# recv_thread = threading.Thread(target=recv, args=(client_socket,))
-# send_thread = threading.Thread(target=send, args=(client_socket,))
+recv_thread = threading.Thread(target=recv_d, args=(client_socket,))
+send_thread = threading.Thread(target=send, args=(client_socket,))
