@@ -31,20 +31,18 @@
 			this.panel_title = new System.Windows.Forms.Panel();
 			this.button6 = new System.Windows.Forms.Button();
 			this.panel_menu = new System.Windows.Forms.Panel();
+			this.PnlNav = new System.Windows.Forms.Panel();
 			this.button5 = new System.Windows.Forms.Button();
 			this.btn_detail = new System.Windows.Forms.Button();
 			this.btn_summary = new System.Windows.Forms.Button();
 			this.btn_running = new System.Windows.Forms.Button();
 			this.btn_monitoring = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.PnlNav = new System.Windows.Forms.Panel();
 			this.panel_main = new System.Windows.Forms.Panel();
+			this.btn_home = new System.Windows.Forms.Button();
 			this.panel_title.SuspendLayout();
 			this.panel_menu.SuspendLayout();
 			this.panel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel_title
@@ -63,8 +61,9 @@
 			// 
 			this.button6.FlatAppearance.BorderSize = 0;
 			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
 			this.button6.ForeColor = System.Drawing.Color.White;
-			this.button6.Location = new System.Drawing.Point(923, 3);
+			this.button6.Location = new System.Drawing.Point(923, -2);
 			this.button6.Name = "button6";
 			this.button6.Size = new System.Drawing.Size(25, 25);
 			this.button6.TabIndex = 6;
@@ -87,6 +86,14 @@
 			this.panel_menu.Name = "panel_menu";
 			this.panel_menu.Size = new System.Drawing.Size(186, 551);
 			this.panel_menu.TabIndex = 0;
+			// 
+			// PnlNav
+			// 
+			this.PnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+			this.PnlNav.Location = new System.Drawing.Point(3, 194);
+			this.PnlNav.Name = "PnlNav";
+			this.PnlNav.Size = new System.Drawing.Size(3, 100);
+			this.PnlNav.TabIndex = 1;
 			// 
 			// button5
 			// 
@@ -168,42 +175,12 @@
 			// 
 			// panel2
 			// 
-			this.panel2.Controls.Add(this.label1);
-			this.panel2.Controls.Add(this.pictureBox1);
+			this.panel2.Controls.Add(this.btn_home);
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel2.Location = new System.Drawing.Point(0, 0);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(186, 144);
 			this.panel2.TabIndex = 0;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.label1.Location = new System.Drawing.Point(30, 102);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(128, 21);
-			this.label1.TabIndex = 1;
-			this.label1.Text = "모니터 공정";
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_font_computer_3917446;
-			this.pictureBox1.Location = new System.Drawing.Point(60, 32);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(63, 63);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
-			// 
-			// PnlNav
-			// 
-			this.PnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.PnlNav.Location = new System.Drawing.Point(3, 194);
-			this.PnlNav.Name = "PnlNav";
-			this.PnlNav.Size = new System.Drawing.Size(3, 100);
-			this.PnlNav.TabIndex = 1;
 			// 
 			// panel_main
 			// 
@@ -212,6 +189,24 @@
 			this.panel_main.Name = "panel_main";
 			this.panel_main.Size = new System.Drawing.Size(765, 551);
 			this.panel_main.TabIndex = 2;
+			// 
+			// btn_home
+			// 
+			this.btn_home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+			this.btn_home.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btn_home.FlatAppearance.BorderSize = 0;
+			this.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_home.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.btn_home.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+			this.btn_home.Image = global::WindowsFormsApp4.Properties.Resources.홈버튼_이미지;
+			this.btn_home.Location = new System.Drawing.Point(0, 0);
+			this.btn_home.Name = "btn_home";
+			this.btn_home.Size = new System.Drawing.Size(186, 144);
+			this.btn_home.TabIndex = 0;
+			this.btn_home.Text = "모니터 공정";
+			this.btn_home.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.btn_home.UseVisualStyleBackColor = false;
+			this.btn_home.Click += new System.EventHandler(this.button_click);
 			// 
 			// main
 			// 
@@ -230,8 +225,6 @@
 			this.panel_title.ResumeLayout(false);
 			this.panel_menu.ResumeLayout(false);
 			this.panel2.ResumeLayout(false);
-			this.panel2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -240,7 +233,6 @@
 
         private System.Windows.Forms.Panel panel_menu;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btn_detail;
         private System.Windows.Forms.Button btn_summary;
@@ -251,6 +243,7 @@
         private System.Windows.Forms.Panel panel_main;
         private System.Windows.Forms.Panel panel_title;
         private System.Windows.Forms.Button button6;
-    }
+		private System.Windows.Forms.Button btn_home;
+	}
 }
 

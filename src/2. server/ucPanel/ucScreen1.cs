@@ -16,5 +16,10 @@ namespace WindowsFormsApp4.ucPanel
         {
             InitializeComponent();
         }
-    }
+
+		private void btn_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("해당 공정에 문제가 발생하였습니다. 조치 하시겠습니다?", "공정 오류", MessageBoxButtons.YesNo);
+		}
+	}
 }

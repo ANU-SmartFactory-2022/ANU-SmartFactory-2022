@@ -1,0 +1,6 @@
+*.lock
+*.vsidx
+*.cache
+*.suo
+src/2. server/obj/
+src/2. server/bin/

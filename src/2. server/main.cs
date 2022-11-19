@@ -17,6 +17,7 @@ namespace WindowsFormsApp4
         ucPanel.ucScreen2 ucSc2 = new ucPanel.ucScreen2 ();
         ucPanel.ucScreen3 ucSc3 = new ucPanel.ucScreen3 ();
         ucPanel.ucScreen4 ucSc4 = new ucPanel.ucScreen4 ();
+        ucPanel.ucScreenHome ucScHome = new ucPanel.ucScreenHome();
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -40,11 +41,12 @@ namespace WindowsFormsApp4
             btn_list.Add(btn_running);
             btn_list.Add(btn_summary);
             btn_list.Add(btn_detail);
+            btn_list.Add(btn_home);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //test---
         }
 
 
@@ -69,6 +71,7 @@ namespace WindowsFormsApp4
                 case "공정 가동": panel_main.Controls.Add(ucSc2); break;
                 case "통계": panel_main.Controls.Add(ucSc3); break;
                 case "불량품 상세정보": panel_main.Controls.Add(ucSc4); break;
+                case "모니터 공정": panel_main.Controls.Add(ucScHome); break;
             }
         }
 
