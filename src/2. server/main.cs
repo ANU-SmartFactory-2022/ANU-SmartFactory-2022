@@ -13,6 +13,7 @@ using TCPIP_Sample_CSharp;
 
 namespace WindowsFormsApp4
 {
+    //패널 객체 생성, 메인창 선택 버튼 옆 작은 선택 패널 옮기기
     public partial class main : Form
     {
         ucPanel.ucScreen1 ucSc1 = new ucPanel.ucScreen1();
@@ -38,11 +39,12 @@ namespace WindowsFormsApp4
         OracleCommand cmd = new OracleCommand();
         OracleDataReader rdr;
         OracleConnection conn = new OracleConnection(strConn);
-        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=system ;Password=20161268;";
+        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=hr ;Password=hr;";
         OracleDataAdapter adapt = new OracleDataAdapter();
 
         //서버 클라이언트 설정을 위한 객체 설정
         socket_server m_server = null;
+
         public main()
         {
             InitializeComponent();
@@ -146,6 +148,7 @@ namespace WindowsFormsApp4
             PnlNav.Top = btn.Top;
             PnlNav.Left = btn.Left;
 
+            
             foreach( var item in btn_list )
 			{
                 item.BackColor = Color.FromArgb(24, 30, 54);
@@ -159,7 +162,7 @@ namespace WindowsFormsApp4
                 case "모니터링":
                     {
                         panel_main.Controls.Add(ucSc1);
-                        //ucSc1.buttonColor( 32, 2, Color.Red );
+                        ucSc1.buttonColor( 32, 2, Color.Red ); //ucScreen1 문제생긴 공정에 빨간색 들어오게 하기
                     }
                     break;
                 case "공정 가동": panel_main.Controls.Add(ucSc2); break;
@@ -182,7 +185,6 @@ namespace WindowsFormsApp4
         }
         
         // Form을 마우스로 이동하는 소스
-
         bool TagMove;
         int MValX, MValY;
 
