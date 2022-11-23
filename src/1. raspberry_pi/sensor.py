@@ -1,59 +1,62 @@
-# import cv2
-# import RPi.GPIO as GPIO
-# import time
-# from picamera import PiCamera
-# from time import sleep
+import RPi.GPIO as GPIO
+import time
 
-# camera = PiCamera()
+TrigPin_1 = 36
+EchoPin_1 = 38
+# TrigPin_2 = 16
+# EchoPin_2 = 20
+m = 15
+n = 16
 
-# TrigPin = 16
-# EchoPin = 20
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
 
-# GPIO.setwarnings(False)
-# GPIO.setmode(GPIO.BCM)
+GPIO.setup(TrigPin_1, GPIO.OUT)
+GPIO.setup(EchoPin_1, GPIO.IN)
+# GPIO.setup(TrigPin_2, GPIO.OUT)
+# GPIO.setup(EchoPin_2, GPIO.IN)
 
-# GPIO.setup(TrigPin, GPIO.OUT)
-# GPIO.setup(EchoPin, GPIO.IN)
+GPIO.setup(m, GPIO.IN)
+GPIO.setup(n, GPIO.IN)
 
-# def distance():   
-#     GPIO.output(TrigPin, True)
-#     time.sleep(0.00001)
-#     GPIO.output(TrigPin, False)
+def distance_1():   
+    GPIO.output(TrigPin_1, True)
+    time.sleep(0.00001)
+    GPIO.output(TrigPin_1, False)
     
-#     while GPIO.input(EchoPin) == 0:
-#         start_time = time.time()
+    while GPIO.input(EchoPin_1) == 0:
+        start_time = time.time()
         
-#     while GPIO.input(EchoPin) == 1 :
-#         end_time = time.time()
+    while GPIO.input(EchoPin_1) == 1 :
+        end_time = time.time()
         
-#     duration = end_time - start_time
+    duration = end_time - start_time
     
-#     distanceCm = duration* 17000
-#     distanceCm = round(distanceCm, 2)
-#     return distanceCm
+    distanceCm = duration* 17000
+    distanceCm = round(distanceCm, 2)
+    return distanceCm
 
-# def detected():
-#     try :
-#         while True:
-#             distanceCm = distance()
-#             if(distanceCm >=0) and (distanceCm<10):
-#                 camera.start_preview()
-#                 sleep(2)
-#                 camera.capture('./img/capture.png')
-#                 camera.stop_preview()
-                
-#                 img = cv2.imread('./img/capture.png') 
-#                 det = cv2.QRCodeDetector()  
-#                 info, box_coordinates, _ = det.detectAndDecode(img)
-#                 if box_coordinates is None: 
-#                     print('No Code')
-#                 else:
-#                     print(info) 
-#             print("cm : ", distanceCm)
-#             time.sleep(0.5)
-            
-#     except KeyboardInterrupt :
-#         pass
+def distance_2():   
+    GPIO.output(TrigPin_2, True)
+    time.sleep(0.00001)
+    GPIO.output(TrigPin_2, False)
+    
+    while GPIO.input(EchoPin_2) == 0:
+        start_time = time.time()
+        
+    while GPIO.input(EchoPin_2) == 1 :
+        end_time = time.time()
+        
+    duration = end_time - start_time
+    
+    distanceCm = duration* 17000
+    distanceCm = round(distanceCm, 2)
+    return distanceCm
 
-#     GPIO.cleanup()
-#     return False
+def distance_3():
+    return GPIO.input(m)
+
+def distance_4():
+    return GPIO.input(n)
+    
+GPIO.cleanup()

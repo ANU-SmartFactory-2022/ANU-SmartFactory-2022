@@ -1,15 +1,35 @@
 import cv2
 import numpy as np
+import time
+from picamera import PiCamera
+import RPi.GPIO as GPIO
 
-def capture(a):
-    b = str(a+".png")
-    image = cv2.imread(b)
-    image_gray = cv2.imread(b, cv2.IMREAD_GRAYSCALE) 
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
 
-<<<<<<< HEAD
-    blur = cv2.GaussianBlur(image_gray, ksize=(5,5), sigmaX=0)
-    ret, thresh1 = cv2.threshold(blur, 127, 255, cv2.THRESH_BINARY)
+on = 19
+GPIO.setup(on,GPIO.OUT,initial=GPIO.LOW)
 
+def capture():
+    GPIO.output(on,1)
+    PiCamera.capture('a.png')
+    img = cv2.imread('a.png')
+    GPIO.output(on,0)
+    return img
+    
+def qr(img):
+    decoded = pyzbar.decode(img)
+
+    for d in decoded: 
+        x, y, w, h = d.rect
+
+        barcode_data = d.data.decode("utf-8")
+        return barcode_data
+
+def classify(img):
+    # image_gray = cv2.imread(img, cv2.IMREAD_GRAYSCALE) 
+
+    blur = cv2.GaussianBlur(img, ksize=(5,5), sigmaX=0)
     edged = cv2.Canny(blur, 50, 250)
 
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (7,7))
@@ -40,7 +60,7 @@ def capture(a):
         x_min=30
         y_min=30
 
-    img_trim = image[y_min+30:y_min+610, x_min+30:x_min+1210]
+    img_trim = img[y_min+30:y_min+610, x_min+30:x_min+1210]
     bgr = img_trim[:,:,:3]
 
     CLASSIFY_RESULT = 4
@@ -85,33 +105,3 @@ def capture(a):
         CLASSIFY_RESULT=2
         
     return CLASSIFY_RESULT
-=======
-def capture():
-    
-    import cv2
-    import time
-    from picamera import PiCamera
-    from time import sleep
-
-    camera = PiCamera()
-
-    #카메라 해상도
-    camera.resolution = (2592, 1944)
-    camera.framerate = 15
-
-    #사진 촬영
-    camera.start_preview()
-    sleep(1)
-    camera.capture('1.jpg')
-    camera.stop_preview()
-            
-    # 사진 QR읽기
-    img = cv2.imread('1.jpg') # 사진 읽기
-    det = cv2.QRCodeDetector()      # QR 스캔 클래스
-    info, box_coordinates, _ = det.detectAndDecode(img)
-
-    if box_coordinates is None:     # 스캔결과 유무
-        print('No Code')
-    else:
-        print(info)                 # 스캔결과 출력
->>>>>>> 2de44b3c1a47520af3d3d3156df1a71b9f994cff
