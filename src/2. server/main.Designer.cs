@@ -40,9 +40,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_home = new System.Windows.Forms.Button();
             this.panel_main = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel_title.SuspendLayout();
             this.panel_menu.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel_main.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_title
@@ -50,8 +53,9 @@
             this.panel_title.Controls.Add(this.button6);
             this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_title.Location = new System.Drawing.Point(0, 0);
+            this.panel_title.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_title.Name = "panel_title";
-            this.panel_title.Size = new System.Drawing.Size(951, 26);
+            this.panel_title.Size = new System.Drawing.Size(1087, 32);
             this.panel_title.TabIndex = 0;
             this.panel_title.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_title_Paint);
             this.panel_title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_MouseDown);
@@ -64,9 +68,10 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(923, -2);
+            this.button6.Location = new System.Drawing.Point(1055, -2);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(25, 25);
+            this.button6.Size = new System.Drawing.Size(29, 31);
             this.button6.TabIndex = 6;
             this.button6.Text = "X";
             this.button6.UseVisualStyleBackColor = true;
@@ -83,17 +88,19 @@
             this.panel_menu.Controls.Add(this.btn_monitoring);
             this.panel_menu.Controls.Add(this.panel2);
             this.panel_menu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_menu.Location = new System.Drawing.Point(0, 26);
+            this.panel_menu.Location = new System.Drawing.Point(0, 32);
+            this.panel_menu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_menu.Name = "panel_menu";
-            this.panel_menu.Size = new System.Drawing.Size(186, 551);
+            this.panel_menu.Size = new System.Drawing.Size(213, 689);
             this.panel_menu.TabIndex = 0;
             // 
             // PnlNav
             // 
             this.PnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.PnlNav.Location = new System.Drawing.Point(3, 194);
+            this.PnlNav.Location = new System.Drawing.Point(3, 242);
+            this.PnlNav.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PnlNav.Name = "PnlNav";
-            this.PnlNav.Size = new System.Drawing.Size(3, 100);
+            this.PnlNav.Size = new System.Drawing.Size(3, 125);
             this.PnlNav.TabIndex = 1;
             // 
             // button5
@@ -103,9 +110,10 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button5.Location = new System.Drawing.Point(0, 501);
+            this.button5.Location = new System.Drawing.Point(0, 627);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(186, 50);
+            this.button5.Size = new System.Drawing.Size(213, 62);
             this.button5.TabIndex = 5;
             this.button5.Text = "라인 긴급 중지";
             this.button5.UseVisualStyleBackColor = true;
@@ -119,9 +127,10 @@
             this.btn_detail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_detail.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_detail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btn_detail.Location = new System.Drawing.Point(0, 294);
+            this.btn_detail.Location = new System.Drawing.Point(0, 366);
+            this.btn_detail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_detail.Name = "btn_detail";
-            this.btn_detail.Size = new System.Drawing.Size(186, 50);
+            this.btn_detail.Size = new System.Drawing.Size(213, 62);
             this.btn_detail.TabIndex = 4;
             this.btn_detail.Text = "불량품 상세정보";
             this.btn_detail.UseVisualStyleBackColor = true;
@@ -134,9 +143,10 @@
             this.btn_summary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_summary.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_summary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btn_summary.Location = new System.Drawing.Point(0, 244);
+            this.btn_summary.Location = new System.Drawing.Point(0, 304);
+            this.btn_summary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_summary.Name = "btn_summary";
-            this.btn_summary.Size = new System.Drawing.Size(186, 50);
+            this.btn_summary.Size = new System.Drawing.Size(213, 62);
             this.btn_summary.TabIndex = 3;
             this.btn_summary.Text = "통계";
             this.btn_summary.UseVisualStyleBackColor = true;
@@ -149,9 +159,10 @@
             this.btn_running.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_running.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_running.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btn_running.Location = new System.Drawing.Point(0, 194);
+            this.btn_running.Location = new System.Drawing.Point(0, 242);
+            this.btn_running.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_running.Name = "btn_running";
-            this.btn_running.Size = new System.Drawing.Size(186, 50);
+            this.btn_running.Size = new System.Drawing.Size(213, 62);
             this.btn_running.TabIndex = 2;
             this.btn_running.Text = "공정 가동";
             this.btn_running.UseVisualStyleBackColor = true;
@@ -166,9 +177,10 @@
             this.btn_monitoring.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_monitoring.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btn_monitoring.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_monitoring.Location = new System.Drawing.Point(0, 144);
+            this.btn_monitoring.Location = new System.Drawing.Point(0, 180);
+            this.btn_monitoring.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_monitoring.Name = "btn_monitoring";
-            this.btn_monitoring.Size = new System.Drawing.Size(186, 50);
+            this.btn_monitoring.Size = new System.Drawing.Size(213, 62);
             this.btn_monitoring.TabIndex = 1;
             this.btn_monitoring.Text = "모니터링";
             this.btn_monitoring.UseVisualStyleBackColor = true;
@@ -179,8 +191,9 @@
             this.panel2.Controls.Add(this.btn_home);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(186, 144);
+            this.panel2.Size = new System.Drawing.Size(213, 180);
             this.panel2.TabIndex = 0;
             // 
             // btn_home
@@ -193,8 +206,9 @@
             this.btn_home.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btn_home.Image = global::WindowsFormsApp4.Properties.Resources.홈버튼_이미지;
             this.btn_home.Location = new System.Drawing.Point(0, 0);
+            this.btn_home.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(186, 144);
+            this.btn_home.Size = new System.Drawing.Size(213, 180);
             this.btn_home.TabIndex = 0;
             this.btn_home.Text = "모니터 공정";
             this.btn_home.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -203,23 +217,45 @@
             // 
             // panel_main
             // 
+            this.panel_main.Controls.Add(this.label2);
+            this.panel_main.Controls.Add(this.label3);
             this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_main.Location = new System.Drawing.Point(186, 26);
+            this.panel_main.Location = new System.Drawing.Point(213, 32);
+            this.panel_main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(765, 551);
+            this.panel_main.Size = new System.Drawing.Size(874, 689);
             this.panel_main.TabIndex = 2;
             this.panel_main.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_main_Paint);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(423, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 15);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(305, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "label3";
+            // 
             // main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(951, 577);
+            this.ClientSize = new System.Drawing.Size(1087, 721);
             this.Controls.Add(this.panel_main);
             this.Controls.Add(this.panel_menu);
             this.Controls.Add(this.panel_title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -227,6 +263,8 @@
             this.panel_title.ResumeLayout(false);
             this.panel_menu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel_main.ResumeLayout(false);
+            this.panel_main.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -246,6 +284,8 @@
         private System.Windows.Forms.Panel panel_title;
         private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Button btn_home;
-	}
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+    }
 }
 
