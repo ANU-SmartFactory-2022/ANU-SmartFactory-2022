@@ -13,30 +13,64 @@ namespace WindowsFormsApp4
 {
     public partial class Login_Form : Form
     {
-        OracleCommand cmd = new OracleCommand();
+        OracleConnection conn;
+        OracleCommand cmd;
         OracleDataReader rdr;
-        OracleConnection conn = new OracleConnection(strConn);
-        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=hr ;Password=hr;";
-        OracleDataAdapter adapt = new OracleDataAdapter();
+        string strConn = "Data Source=(DESCRIPTION=" +
+               "(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)" +
+               "(HOST=localhost)(PORT=1521)))" +
+               "(CONNECT_DATA=(SERVER=DEDICATED)" +
+               "(SERVICE_NAME=xe)));" +
+               "User Id=pd68;Password=pd68;";
+
+        string login_Name;
+        string login_Number;
         public Login_Form()
         {
             InitializeComponent();
+            conn = new OracleConnection(strConn);
+            conn.Open();
+            cmd = new OracleCommand();
+            cmd.Connection = conn;
 
         }
-        string login_Name;
-        string login_Number;
+        
         bool TagMove;
         int MValX, MValY;
+        main main1;
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            conn.Open();
-            cmd.Connection = conn;
+            cmd.CommandText = $"select Mpw from Manager WHERE MId = '{textBox1.Text}'";
+            rdr = cmd.ExecuteReader();
+            string pw = "";
+            while (rdr.Read())
 
-            main mainform = new main();
-            mainform.Show();
+            {
+                pw = rdr["Mpw"].ToString();
+            }
+            if (textBox2.Text == pw)
 
+            {
+                cmd.CommandText = $"select * from Manager WHERE MId = '{textBox1.Text}'";
+                rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+
+                {
+                    login_Number = rdr["MNumber"].ToString();
+                    login_Name = rdr["MName"].ToString();
+                }
+
+                this.Hide();
+
+
+                main1 = new main();
+                main1.login_Name = login_Name;
+                main1.login_Number = login_Number;
+                main1.Show();
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -58,6 +92,11 @@ namespace WindowsFormsApp4
         }
 
         private void Login_Form_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Exit_panel_Paint(object sender, PaintEventArgs e)
         {
 
         }

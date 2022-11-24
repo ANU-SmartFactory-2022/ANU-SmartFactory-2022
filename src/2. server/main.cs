@@ -44,6 +44,7 @@ namespace WindowsFormsApp4
 
         //서버 클라이언트 설정을 위한 객체 설정
         socket_server m_server = null;
+        
 
         public main()
         {
@@ -57,6 +58,9 @@ namespace WindowsFormsApp4
             btn_list.Add(btn_home);
         }
 
+        public string login_Number;
+        public string login_Name;
+
         private void Form1_Load(object sender, EventArgs e)
         {
             //test---
@@ -64,6 +68,8 @@ namespace WindowsFormsApp4
             cmd.Connection = conn;
             m_server = new socket_server(recv_callback);
             m_server.start();
+            label2.Text = login_Number;
+            label3.Text = login_Name;
         }
        
         private void recv_callback(string _msg)
