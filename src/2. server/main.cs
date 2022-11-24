@@ -81,16 +81,10 @@ namespace WindowsFormsApp4
                 case "QR_READING":
                     // DB 조회 및 인치값 발사하기
                     P_NUM = TCPmsg[1];
-                    cmd.CommandText = $"select PINCH from PRD WHERE PPdNumber = '{P_NUM}' ";
-                    rdr = cmd.ExecuteReader();
-                    string inch = "";
-                    while (rdr.Read())
-                    {
-                        inch = rdr["PINCH"].ToString();
-                    }
-                    m_server?.send("REQUEST_RESULT," + inch);
+                    string k = selectCommand("PINCH", "PRD", P_NUM);
+                    m_server?.send("REQUEST_RESULT," + k);
                     break;
-                case "FRACTIONATION_RESULT":
+                case "RESULT":
                     //오라클 정리 DB축적
                     string ru = "";
                     if(TCPmsg[1] == "1")
@@ -109,18 +103,16 @@ namespace WindowsFormsApp4
                     {
                         ru = "스턱";
                     }
-                    string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                    cmd.CommandText = $"INSERT INTO TABLE PRM VALUES('{date}','담장자','사원번호','{ru}')";
-                    cmd.ExecuteNonQuery();
+                    
                     m_server?.send("ROLLING");
                     break;
                 case "ROLLING_END":
-                    cmd.CommandText = "SELECT CUME_DIST() OVER(ORDER BY PRResult) AS ResultSUM FROM PRM WHERE != '정상' ";
+                    cmd.CommandText = "SELECT COUNT(*) cnt , RATIO_TO_REPORT(COUNT(*)) OVER() rat FROM PRKMM GROUP BY PRResult; ";
                     rdr = cmd.ExecuteReader();
                     double num = 0.0;
                     while (rdr.Read())
                     {
-                        num = Convert.ToDouble(rdr["ResultSUM"]);
+                        num = Convert.ToDouble(rdr["rat"]);
                         if(num >= 0.05 && rdr["PRResult"].ToString() != "정상")
                         {
                             string Result1 = rdr["PRResult"].ToString();
@@ -140,6 +132,24 @@ namespace WindowsFormsApp4
                     }
                     break;
             }
+        }
+        public string selectCommand(string num , string table , string result)
+        {
+            cmd.CommandText = $"select {result} from {table} WHERE PPdNumber = '{num}' ";
+            rdr = cmd.ExecuteReader();
+            string inch = "";
+            while (rdr.Read())
+            {
+                inch = rdr["PINCH"].ToString();
+            }
+            return inch;
+        }
+        public void INSERTCommand(string num, string table, string result)
+        {
+            string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            cmd.CommandText = $"INSERT INTO PRM VALUES('{date}','담장자','사원번호','{ru}')";
+            rdr = cmd.ExecuteReader();
+            cmd.ExecuteNonQuery();
         }
         private void button_click( object sender, EventArgs e )
         {
