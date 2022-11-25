@@ -39,5 +39,10 @@ namespace WindowsFormsApp4.ucPanel
 
              dataGridView1.DataSource = table;
         }
-	}
+
+        private void ucScreen2_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

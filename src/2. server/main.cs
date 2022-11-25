@@ -155,7 +155,7 @@ namespace WindowsFormsApp4
         // 결과값을 확인 후 에러창을 띄위기 위한 함수 
         public void FINDERROR(string inch)
         {
-            cmd.CommandText = $"SELECT  PRResult, PINCH,COUNT(*) cnt , RATIO_TO_REPORT(COUNT(*)) OVER() rat FROM PRD2 INNER JOIN PRM2 ON PRD2.PPdNumber = PRM2.PRPdNumber Where PINCH = {inch} and PRResult != 4 GROUP BY PRResult,PINCH";
+            cmd.CommandText = $"SELECT  PRResult, PINCH,COUNT(*) cnt , RATIO_TO_REPORT(COUNT(*)) OVER() rat FROM PRD INNER JOIN PRM ON PRD.PPdNumber = PRM.PRPdNumber Where PINCH = '{inch}' and PRResult != 4 GROUP BY PRResult,PINCH";
             rdr = cmd.ExecuteReader();
             double num = 0.0;
             while (rdr.Read())
@@ -222,7 +222,7 @@ namespace WindowsFormsApp4
             Application.Exit();
         }
         
-        // Form을 마우스로 이동하는 소스
+        // Form을 마우스로 이동하는 소
         bool TagMove;
         int MValX, MValY;
 
