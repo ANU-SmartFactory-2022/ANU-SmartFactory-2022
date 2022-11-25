@@ -46,6 +46,41 @@ namespace WindowsFormsApp4.ucPanel
 				}
 			}
 		}
+		//--------------------------------------------------------------------
+		public void picBoxColor(int _inch)
+		{
+			var picBox_list = Controls
+				.OfType<PictureBox>();
+
+			foreach (var picbox in picBox_list)
+			{
+				try
+				{
+					var a = picbox.Controls
+										.OfType<PictureBox>()
+										.Where(pib => pib.Name == "pib_" + _inch.ToString())
+										.First();
+					if(a == pib_24)
+					{
+						a.Load(@"C: \Users\Admin\Desktop\화살표 모음\이동중\이동중3.png");
+					}
+					else if(a == pib_27)
+					{
+						a.Load(@"C: \Users\Admin\Desktop\화살표 모음\이동중\이동중.png");
+					}
+					else
+					{
+						a.Load(@"C: \Users\Admin\Desktop\화살표 모음\이동중\이동중2.png");
+					}
+					
+				}
+				catch (Exception ex)
+				{
+
+				}
+			}
+		}
+		//--------------------------------------------------------------------
 		public void Colorred()
         {
 			panel7.BackColor = Color.Red;

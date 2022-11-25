@@ -200,6 +200,21 @@
   <ItemGroup>
     <None Include="Resources\회사 로고.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\화살표1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\화살표.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\화살표2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\화살표3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\화살표31.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
