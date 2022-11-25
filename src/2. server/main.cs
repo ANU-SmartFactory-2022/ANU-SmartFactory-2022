@@ -82,6 +82,7 @@ namespace WindowsFormsApp4
         {
             string[] TCPmsg = _msg.Split(',');
             string P_NUM = "";
+            string P_inch = "";
             switch (TCPmsg[0])
             {
                 case "QR_READING":
@@ -92,53 +93,44 @@ namespace WindowsFormsApp4
                     break;
                 case "RESULT":
                     //오라클 정리 DB축적
-                    string ru = "";
-                    if(TCPmsg[1] == "1")
-                    {
-                        ru = "데드";
-                    }
-                    else if(TCPmsg[1] == "2")
-                    {
-                        ru = "정상";
-                    }
-                    else if(TCPmsg[1] == "3")
-                    {
-                        ru = "핫";
-                    }
-                    else if(TCPmsg[1] == "4")
-                    {
-                        ru = "스턱";
-                    }
-                    
-                    m_server?.send("ROLLING");
+                    string RESULT = RESULTCH(TCPmsg[2]);
+                    INSERTCommand(TCPmsg[1], RESULT);
+                    P_NUM = TCPmsg[1];
+                    P_inch = selectCommand("PINCH", "PRD", P_NUM);
+                    m_server?.send("DB_END");
+                    break;
+                case "STUCK":
+                    ucSc1.Colorred();
                     break;
                 case "ROLLING_END":
-                    cmd.CommandText = "SELECT COUNT(*) cnt , RATIO_TO_REPORT(COUNT(*)) OVER() rat FROM PRKMM GROUP BY PRResult; ";
-                    rdr = cmd.ExecuteReader();
-                    double num = 0.0;
-                    while (rdr.Read())
-                    {
-                        num = Convert.ToDouble(rdr["rat"]);
-                        if(num >= 0.05 && rdr["PRResult"].ToString() != "정상")
-                        {
-                            string Result1 = rdr["PRResult"].ToString();
-                            if (Result1 == "핫")
-                            {
-                                //닫는 함수
-                            }
-                            else if (Result1 == "스턱")
-                            {
-                                //닫는 함수
-                            }
-                            else if (Result1 == "데드")
-                            {
-                                //닫는 함수
-                            }
-                        }
-                    }
+                    FINDERROR(P_inch);
                     break;
             }
         }
+
+        //값 변환 함수 들어온 숫자에 따라 결과로 변환
+        public string RESULTCH(string RESULT)
+        {
+            string ru = "";
+            if (RESULT == "1")
+            {
+                ru = "데드";
+            }
+            else if (RESULT == "2")
+            {
+                ru = "정상";
+            }
+            else if (RESULT == "3")
+            {
+                ru = "핫";
+            }
+            else if (RESULT == "4")
+            {
+                ru = "스턱";
+            }
+            return ru;
+        }
+        // inch 값을 도출하기 위한 함수
         public string selectCommand(string num , string table , string result)
         {
             cmd.CommandText = $"select {result} from {table} WHERE PPdNumber = '{num}' ";
@@ -150,12 +142,42 @@ namespace WindowsFormsApp4
             }
             return inch;
         }
-        public void INSERTCommand(string num, string table, string result)
+
+        // 오라클 데이터 삽입을 위한 함수
+        public void INSERTCommand(string Pnum, string result)
         {
             string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            cmd.CommandText = $"INSERT INTO PRM VALUES('{date}','담장자','사원번호','{ru}')";
+            cmd.CommandText = $"INSERT INTO PRM VALUES('{date}','{Pnum}','{login_Number}','{result}')";
             rdr = cmd.ExecuteReader();
             cmd.ExecuteNonQuery();
+        }
+
+        // 결과값을 확인 후 에러창을 띄위기 위한 함수 
+        public void FINDERROR(string inch)
+        {
+            cmd.CommandText = $"SELECT  PRResult, PINCH,COUNT(*) cnt , RATIO_TO_REPORT(COUNT(*)) OVER() rat FROM PRD2 INNER JOIN PRM2 ON PRD2.PPdNumber = PRM2.PRPdNumber Where PINCH = {inch} and PRResult != 4 GROUP BY PRResult,PINCH";
+            rdr = cmd.ExecuteReader();
+            double num = 0.0;
+            while (rdr.Read())
+            {
+                num = Convert.ToDouble(rdr["RAT"]);
+                if (num >= 0.10)
+                {
+                    string Result1 = rdr["PRResult"].ToString();
+                    if (Result1 == "핫")
+                    {
+                        ucSc1.buttonColor(Int32.Parse(inch), 1, Color.Red);
+                    }
+                    else if (Result1 == "스턱")
+                    {
+                        ucSc1.buttonColor(Int32.Parse(inch), 2, Color.Red);
+                    }
+                    else if (Result1 == "데드")
+                    {
+                        ucSc1.buttonColor(Int32.Parse(inch), 3, Color.Red);
+                    }
+                }
+            }
         }
         private void button_click( object sender, EventArgs e )
         {
@@ -219,7 +241,7 @@ namespace WindowsFormsApp4
 
         private void panel_main_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void panel_title_Paint(object sender, PaintEventArgs e)
