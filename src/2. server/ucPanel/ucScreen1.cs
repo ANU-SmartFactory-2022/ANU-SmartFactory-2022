@@ -45,6 +45,24 @@ namespace WindowsFormsApp4.ucPanel
 
 				}
 			}
-		}  
-	}
+		}
+		public void Colorred()
+        {
+			panel7.BackColor = Color.Red;
+        }
+        private void ucScreen1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
 }
