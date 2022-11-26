@@ -47,7 +47,7 @@ namespace WindowsFormsApp4.ucPanel
 				}
 			}
 		}
-		//--------------------------------------------------------------------
+		// 모니터 이동 중 화살표 색상 변경
 		public void picBoxColor(int _inch)
 		{
 			try
@@ -75,7 +75,35 @@ namespace WindowsFormsApp4.ucPanel
 
 			}
 		}
-		//--------------------------------------------------------------------
+		
+		public void picBoxColor2(int _num)
+		{
+			try
+			{
+				var picBox1 = Controls
+					.OfType<PictureBox>()
+					.Where(pib => pib.Name == "pib_" + _num.ToString())
+					.First();
+
+				if (picBox1.Name == "pib_1")
+				{
+					picBox1.Image = WindowsFormsApp4.Properties.Resources.양품;
+				}
+				else if (picBox1.Name == "pib_2")
+				{
+					picBox1.Image = WindowsFormsApp4.Properties.Resources.불량1;
+				}
+				else if (picBox1.Name == "pib_3")
+				{
+					picBox1.Image = WindowsFormsApp4.Properties.Resources.불량2;
+				}
+			}
+			catch (Exception ex)
+			{
+
+			}
+		}
+		//----------------------------------------------------------------------------
 		public void Colorred()
         {
 			panel7.BackColor = Color.Red;

@@ -202,6 +202,9 @@
     <None Include="Resources\화살표2.png" />
     <None Include="Resources\화살표.PNG" />
     <None Include="Resources\화살표.bmp" />
+    <None Include="Resources\불량1.png" />
+    <None Include="Resources\불량2.png" />
+    <None Include="Resources\양품.png" />
     <Content Include="Resources\화살표3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
