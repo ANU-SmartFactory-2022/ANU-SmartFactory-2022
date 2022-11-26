@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucScreen1));
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.btn_24_4 = new System.Windows.Forms.Button();
 			this.btn_24_3 = new System.Windows.Forms.Button();
@@ -357,8 +356,8 @@
 			// 
 			// pib_24
 			// 
-			this.pib_24.Image = global::WindowsFormsApp4.Properties.Resources.화살표2;
-			this.pib_24.Location = new System.Drawing.Point(248, 134);
+			this.pib_24.Image = global::WindowsFormsApp4.Properties.Resources.화살표3;
+			this.pib_24.Location = new System.Drawing.Point(248, 144);
 			this.pib_24.Name = "pib_24";
 			this.pib_24.Size = new System.Drawing.Size(67, 64);
 			this.pib_24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -367,7 +366,7 @@
 			// 
 			// pib_27
 			// 
-			this.pib_27.Image = ((System.Drawing.Image)(resources.GetObject("pib_27.Image")));
+			this.pib_27.Image = global::WindowsFormsApp4.Properties.Resources.화살표;
 			this.pib_27.Location = new System.Drawing.Point(248, 262);
 			this.pib_27.Name = "pib_27";
 			this.pib_27.Size = new System.Drawing.Size(67, 64);
@@ -377,8 +376,8 @@
 			// 
 			// pib_32
 			// 
-			this.pib_32.Image = global::WindowsFormsApp4.Properties.Resources.화살표;
-			this.pib_32.Location = new System.Drawing.Point(248, 390);
+			this.pib_32.Image = global::WindowsFormsApp4.Properties.Resources.화살표2;
+			this.pib_32.Location = new System.Drawing.Point(248, 378);
 			this.pib_32.Name = "pib_32";
 			this.pib_32.Size = new System.Drawing.Size(67, 64);
 			this.pib_32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
