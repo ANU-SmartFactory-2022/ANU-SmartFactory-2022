@@ -19,9 +19,14 @@ namespace WindowsFormsApp4.ucPanel
 
 		private void btn_Click(object sender, EventArgs e)
 		{
+			Button btn = (Button)sender;
+			DialogResult result= MessageBox.Show("해당 공정에 문제가 발생하였습니다. 조치 하시겠습니다?", "공정 오류", MessageBoxButtons.YesNo);
 
-			MessageBox.Show("해당 공정에 문제가 발생하였습니다. 조치 하시겠습니다?", "공정 오류", MessageBoxButtons.YesNo);
-			
+			if(result == DialogResult.Yes)
+			{
+				btn.BackColor= SystemColors.Window;
+			}
+
 		}	
 		
 		//문제가 생긴 공정 버튼을 빨간색으로 표시하는 코드
@@ -48,7 +53,7 @@ namespace WindowsFormsApp4.ucPanel
 			}
 		}
 		// 모니터 이동 중 화살표 색상 변경
-		public void picBoxColor(int _inch)
+		public void picBoxColor(int _inch , string state)
 		{
 			try
 			{
@@ -56,18 +61,40 @@ namespace WindowsFormsApp4.ucPanel
 					.OfType<PictureBox>()
 					.Where(pib => pib.Name == "pib_" + _inch.ToString())
 					.First();
-
-				if (picBox.Name == "pib_24")
-				{
-					picBox.Image = WindowsFormsApp4.Properties.Resources.이동중3;
+				if(state == "ON")
+                {
+					picBox.Visible = true;
+					if (picBox.Name == "pib_24")
+					{
+						picBox.Image = WindowsFormsApp4.Properties.Resources.작동1;
+					}
+					else if (picBox.Name == "pib_27")
+					{
+						picBox.Image = WindowsFormsApp4.Properties.Resources.작동2;
+					}
+					else if (picBox.Name == "pib_32")
+					{
+						picBox.Image = WindowsFormsApp4.Properties.Resources.작동3;
+					}
 				}
-				else if (picBox.Name == "pib_27")
-				{
-					picBox.Image = WindowsFormsApp4.Properties.Resources.이동중;
-				}
-				else if (picBox.Name == "pib_32")
-				{
-					picBox.Image = WindowsFormsApp4.Properties.Resources.이동중2;
+				else if (state == "OFF")
+                {
+					picBox.Visible = false;
+                }
+				else if (state == "WARING")
+                {
+					if (picBox.Name == "pib_24")
+					{
+						picBox.Image = WindowsFormsApp4.Properties.Resources.멈춤1;
+					}
+					else if (picBox.Name == "pib_27")
+					{
+						picBox.Image = WindowsFormsApp4.Properties.Resources.멈춤2;
+					}
+					else if (picBox.Name == "pib_32")
+					{
+						picBox.Image = WindowsFormsApp4.Properties.Resources.멈춤3;
+					}
 				}
 			}
 			catch (Exception ex)
@@ -76,7 +103,7 @@ namespace WindowsFormsApp4.ucPanel
 			}
 		}
 		
-		public void picBoxColor2(int _num)
+		public void picBoxColor2(int _num, string state)
 		{
 			try
 			{
@@ -84,18 +111,40 @@ namespace WindowsFormsApp4.ucPanel
 					.OfType<PictureBox>()
 					.Where(pib => pib.Name == "pib_" + _num.ToString())
 					.First();
-
-				if (picBox1.Name == "pib_1")
+				if (state == "ON")
 				{
-					picBox1.Image = WindowsFormsApp4.Properties.Resources.양품;
+					picBox1.Visible = true;
+					if (picBox1.Name == "pib_1")
+					{
+						picBox1.Image = WindowsFormsApp4.Properties.Resources.작동1;
+					}
+					else if (picBox1.Name == "pib_2")
+					{
+						picBox1.Image = WindowsFormsApp4.Properties.Resources.작동2;
+					}
+					else if (picBox1.Name == "pib_3")
+					{
+						picBox1.Image = WindowsFormsApp4.Properties.Resources.작동3;
+					}
 				}
-				else if (picBox1.Name == "pib_2")
+				else if (state == "OFF")
 				{
-					picBox1.Image = WindowsFormsApp4.Properties.Resources.불량1;
+					picBox1.Visible = false;
 				}
-				else if (picBox1.Name == "pib_3")
+				else if (state == "WARING")
 				{
-					picBox1.Image = WindowsFormsApp4.Properties.Resources.불량2;
+					if (picBox1.Name == "pib_1")
+					{
+						picBox1.Image = WindowsFormsApp4.Properties.Resources.멈춤1;
+					}
+					else if (picBox1.Name == "pib_2")
+					{
+						picBox1.Image = WindowsFormsApp4.Properties.Resources.멈춤2;
+					}
+					else if (picBox1.Name == "pib_3")
+					{
+						picBox1.Image = WindowsFormsApp4.Properties.Resources.멈춤3;
+					}
 				}
 			}
 			catch (Exception ex)

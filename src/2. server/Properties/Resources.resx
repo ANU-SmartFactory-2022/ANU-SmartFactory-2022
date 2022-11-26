@@ -154,4 +154,22 @@
   <data name="양품" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\양품.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="멈춤1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\멈춤1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="멈춤2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\멈춤2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="멈춤3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\멈춤3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="작동1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\작동1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="작동2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\작동2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="작동3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\작동3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

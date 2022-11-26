@@ -39,7 +39,7 @@ namespace WindowsFormsApp4
         OracleCommand cmd = new OracleCommand();
         OracleDataReader rdr;
         OracleConnection conn = new OracleConnection(strConn);
-        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=System ;Password=20161268;";
+        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=hr ;Password=hr;";
         OracleDataAdapter adapt = new OracleDataAdapter();
 
         //서버 클라이언트 설정을 위한 객체 설정
@@ -70,10 +70,7 @@ namespace WindowsFormsApp4
             m_server.start();
             label2.Text = login_Number;
             label3.Text = login_Name;
-            ucSc1.picBoxColor(27);
-            ucSc1.picBoxColor2(1);
-            ucSc1.picBoxColor2(2);
-            ucSc1.picBoxColor2(3);
+   
         }
        
         private void recv_callback(string _msg)
@@ -212,8 +209,8 @@ namespace WindowsFormsApp4
                     {
                         panel_main.Controls.Add(ucSc1);
                         ucSc1.buttonColor( 32, 2, Color.Red ); //ucScreen1 문제생긴 공정에 빨간색 들어오게 하기
-                        ucSc1.picBoxColor( 24);  //ucScreen1 이동중 화살표 색상 변경
-                        ucSc1.picBoxColor2( 1);  //ucScreen1 이동 후 양품, 불량1, 불량2 화살표 색상 구분
+                        ucSc1.picBoxColor( 24 , "test");  //ucScreen1 이동중 화살표 색상 변경
+                        ucSc1.picBoxColor2( 1 , "test");  //ucScreen1 이동 후 양품, 불량1, 불량2 화살표 색상 구분
                     }
                     break;
                 case "공정 가동": panel_main.Controls.Add(ucSc2); break;
