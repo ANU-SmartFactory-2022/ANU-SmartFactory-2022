@@ -70,10 +70,7 @@ namespace WindowsFormsApp4
             m_server.start();
             label2.Text = login_Number;
             label3.Text = login_Name;
-            ucSc1.picBoxColor(27);
-            ucSc1.picBoxColor2(1);
-            ucSc1.picBoxColor2(2);
-            ucSc1.picBoxColor2(3);
+   
         }
        
         private void recv_callback(string _msg)
@@ -212,8 +209,8 @@ namespace WindowsFormsApp4
                     {
                         panel_main.Controls.Add(ucSc1);
                         ucSc1.buttonColor( 32, 2, Color.Red ); //ucScreen1 문제생긴 공정에 빨간색 들어오게 하기
-                        ucSc1.picBoxColor( 24);  //ucScreen1 이동중 화살표 색상 변경
-                        ucSc1.picBoxColor2( 1);  //ucScreen1 이동 후 양품, 불량1, 불량2 화살표 색상 구분
+                        ucSc1.picBoxColor( 24 , "test");  //ucScreen1 이동중 화살표 색상 변경
+                        ucSc1.picBoxColor2( 1 , "test");  //ucScreen1 이동 후 양품, 불량1, 불량2 화살표 색상 구분
                     }
                     break;
                 case "공정 가동": panel_main.Controls.Add(ucSc2); break;
