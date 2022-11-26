@@ -66,15 +66,15 @@ namespace WindowsFormsApp4.ucPanel
 					picBox.Visible = true;
 					if (picBox.Name == "pib_24")
 					{
-						picBox.Image = WindowsFormsApp4.Properties.Resources.이동중3;
+						picBox.Image = WindowsFormsApp4.Properties.Resources.작동1;
 					}
 					else if (picBox.Name == "pib_27")
 					{
-						picBox.Image = WindowsFormsApp4.Properties.Resources.이동중;
+						picBox.Image = WindowsFormsApp4.Properties.Resources.작동2;
 					}
 					else if (picBox.Name == "pib_32")
 					{
-						picBox.Image = WindowsFormsApp4.Properties.Resources.이동중2;
+						picBox.Image = WindowsFormsApp4.Properties.Resources.작동3;
 					}
 				}
 				else if (state == "OFF")
@@ -85,15 +85,15 @@ namespace WindowsFormsApp4.ucPanel
                 {
 					if (picBox.Name == "pib_24")
 					{
-						picBox.Image = WindowsFormsApp4.Properties.Resources.이동중3;
+						picBox.Image = WindowsFormsApp4.Properties.Resources.멈춤1;
 					}
 					else if (picBox.Name == "pib_27")
 					{
-						picBox.Image = WindowsFormsApp4.Properties.Resources.이동중;
+						picBox.Image = WindowsFormsApp4.Properties.Resources.멈춤2;
 					}
 					else if (picBox.Name == "pib_32")
 					{
-						picBox.Image = WindowsFormsApp4.Properties.Resources.이동중2;
+						picBox.Image = WindowsFormsApp4.Properties.Resources.멈춤3;
 					}
 				}
 			}
@@ -116,15 +116,15 @@ namespace WindowsFormsApp4.ucPanel
 					picBox1.Visible = true;
 					if (picBox1.Name == "pib_1")
 					{
-						picBox1.Image = WindowsFormsApp4.Properties.Resources.양품;
+						picBox1.Image = WindowsFormsApp4.Properties.Resources.작동1;
 					}
 					else if (picBox1.Name == "pib_2")
 					{
-						picBox1.Image = WindowsFormsApp4.Properties.Resources.불량1;
+						picBox1.Image = WindowsFormsApp4.Properties.Resources.작동2;
 					}
 					else if (picBox1.Name == "pib_3")
 					{
-						picBox1.Image = WindowsFormsApp4.Properties.Resources.불량2;
+						picBox1.Image = WindowsFormsApp4.Properties.Resources.작동3;
 					}
 				}
 				else if (state == "OFF")
@@ -135,15 +135,15 @@ namespace WindowsFormsApp4.ucPanel
 				{
 					if (picBox1.Name == "pib_1")
 					{
-						picBox1.Image = WindowsFormsApp4.Properties.Resources.양품;
+						picBox1.Image = WindowsFormsApp4.Properties.Resources.멈춤1;
 					}
 					else if (picBox1.Name == "pib_2")
 					{
-						picBox1.Image = WindowsFormsApp4.Properties.Resources.불량1;
+						picBox1.Image = WindowsFormsApp4.Properties.Resources.멈춤2;
 					}
 					else if (picBox1.Name == "pib_3")
 					{
-						picBox1.Image = WindowsFormsApp4.Properties.Resources.불량2;
+						picBox1.Image = WindowsFormsApp4.Properties.Resources.멈춤3;
 					}
 				}
 			}
