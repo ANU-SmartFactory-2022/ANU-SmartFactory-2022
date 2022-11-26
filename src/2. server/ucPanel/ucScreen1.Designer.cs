@@ -55,9 +55,9 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.panel7 = new System.Windows.Forms.Panel();
 			this.label7 = new System.Windows.Forms.Label();
-			this.pib_32 = new System.Windows.Forms.PictureBox();
-			this.pib_27 = new System.Windows.Forms.PictureBox();
 			this.pib_24 = new System.Windows.Forms.PictureBox();
+			this.pib_27 = new System.Windows.Forms.PictureBox();
+			this.pib_32 = new System.Windows.Forms.PictureBox();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -65,9 +65,9 @@
 			this.panel5.SuspendLayout();
 			this.panel6.SuspendLayout();
 			this.panel7.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pib_32)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pib_27)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pib_24)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pib_27)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pib_32)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -355,35 +355,35 @@
 			this.label7.TabIndex = 0;
 			this.label7.Text = "양품\r\n불량1\r\n불량2";
 			// 
-			// pib_32
+			// pib_24
 			// 
-			this.pib_32.Image = global::WindowsFormsApp4.Properties.Resources.화살표2;
-			this.pib_32.Location = new System.Drawing.Point(247, 390);
-			this.pib_32.Name = "pib_32";
-			this.pib_32.Size = new System.Drawing.Size(68, 69);
-			this.pib_32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pib_32.TabIndex = 6;
-			this.pib_32.TabStop = false;
+			this.pib_24.Image = global::WindowsFormsApp4.Properties.Resources.화살표2;
+			this.pib_24.Location = new System.Drawing.Point(248, 134);
+			this.pib_24.Name = "pib_24";
+			this.pib_24.Size = new System.Drawing.Size(67, 64);
+			this.pib_24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pib_24.TabIndex = 4;
+			this.pib_24.TabStop = false;
 			// 
 			// pib_27
 			// 
 			this.pib_27.Image = ((System.Drawing.Image)(resources.GetObject("pib_27.Image")));
-			this.pib_27.Location = new System.Drawing.Point(247, 249);
+			this.pib_27.Location = new System.Drawing.Point(248, 262);
 			this.pib_27.Name = "pib_27";
-			this.pib_27.Size = new System.Drawing.Size(68, 69);
+			this.pib_27.Size = new System.Drawing.Size(67, 64);
 			this.pib_27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pib_27.TabIndex = 5;
 			this.pib_27.TabStop = false;
 			// 
-			// pib_24
+			// pib_32
 			// 
-			this.pib_24.Image = global::WindowsFormsApp4.Properties.Resources.화살표3;
-			this.pib_24.Location = new System.Drawing.Point(247, 114);
-			this.pib_24.Name = "pib_24";
-			this.pib_24.Size = new System.Drawing.Size(68, 69);
-			this.pib_24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pib_24.TabIndex = 4;
-			this.pib_24.TabStop = false;
+			this.pib_32.Image = global::WindowsFormsApp4.Properties.Resources.화살표;
+			this.pib_32.Location = new System.Drawing.Point(248, 390);
+			this.pib_32.Name = "pib_32";
+			this.pib_32.Size = new System.Drawing.Size(67, 64);
+			this.pib_32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pib_32.TabIndex = 6;
+			this.pib_32.TabStop = false;
 			// 
 			// ucScreen1
 			// 
@@ -416,9 +416,9 @@
 			this.panel6.PerformLayout();
 			this.panel7.ResumeLayout(false);
 			this.panel7.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pib_32)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pib_27)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pib_24)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pib_27)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pib_32)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -451,5 +451,8 @@
 		private System.Windows.Forms.Button btn_32_3;
 		private System.Windows.Forms.Button btn_32_2;
 		private System.Windows.Forms.Button btn_32_1;
+		private System.Windows.Forms.PictureBox pib_24;
+		private System.Windows.Forms.PictureBox pib_27;
+		private System.Windows.Forms.PictureBox pib_32;
 	}
 }

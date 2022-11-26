@@ -4,4 +4,4 @@
 *.suo
 src/2. server/obj/
 src/2. server/bin/
-.vs/slnx.sqlite
+.vs/
