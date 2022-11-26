@@ -73,6 +73,36 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap 멈춤1 {
+            get {
+                object obj = ResourceManager.GetObject("멈춤1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 멈춤2 {
+            get {
+                object obj = ResourceManager.GetObject("멈춤2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 멈춤3 {
+            get {
+                object obj = ResourceManager.GetObject("멈춤3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap 불량1 {
             get {
                 object obj = ResourceManager.GetObject("불량1", resourceCulture);
@@ -103,9 +133,9 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap 이동중 {
+        internal static System.Drawing.Bitmap 작동1 {
             get {
-                object obj = ResourceManager.GetObject("이동중", resourceCulture);
+                object obj = ResourceManager.GetObject("작동1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +143,9 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap 이동중2 {
+        internal static System.Drawing.Bitmap 작동2 {
             get {
-                object obj = ResourceManager.GetObject("이동중2", resourceCulture);
+                object obj = ResourceManager.GetObject("작동2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +153,9 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap 이동중3 {
+        internal static System.Drawing.Bitmap 작동3 {
             get {
-                object obj = ResourceManager.GetObject("이동중3", resourceCulture);
+                object obj = ResourceManager.GetObject("작동3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
