@@ -120,6 +120,21 @@ namespace WindowsFormsApp4.ucPanel
 
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
+			
+		}
+
+        private void panel7_Paint_1(object sender, PaintEventArgs e)
+        {
+			
+        }
+
+        private void label7_Click_1(object sender, EventArgs e)
+        {
+			
+		}
+
+        private void ucScreen1_Load_1(object sender, EventArgs e)
+        {
 
         }
     }
