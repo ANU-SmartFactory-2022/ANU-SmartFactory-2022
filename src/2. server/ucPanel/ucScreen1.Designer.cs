@@ -54,9 +54,12 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.panel7 = new System.Windows.Forms.Panel();
 			this.label7 = new System.Windows.Forms.Label();
-			this.pib_24 = new System.Windows.Forms.PictureBox();
-			this.pib_27 = new System.Windows.Forms.PictureBox();
+			this.pib_3 = new System.Windows.Forms.PictureBox();
+			this.pib_1 = new System.Windows.Forms.PictureBox();
+			this.pib_2 = new System.Windows.Forms.PictureBox();
 			this.pib_32 = new System.Windows.Forms.PictureBox();
+			this.pib_27 = new System.Windows.Forms.PictureBox();
+			this.pib_24 = new System.Windows.Forms.PictureBox();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -64,9 +67,12 @@
 			this.panel5.SuspendLayout();
 			this.panel6.SuspendLayout();
 			this.panel7.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pib_24)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pib_27)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pib_3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pib_1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pib_2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pib_32)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pib_27)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pib_24)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -354,25 +360,35 @@
 			this.label7.TabIndex = 0;
 			this.label7.Text = "양품\r\n불량1\r\n불량2";
 			// 
-			// pib_24
+			// pib_3
 			// 
-			this.pib_24.Image = global::WindowsFormsApp4.Properties.Resources.화살표3;
-			this.pib_24.Location = new System.Drawing.Point(248, 144);
-			this.pib_24.Name = "pib_24";
-			this.pib_24.Size = new System.Drawing.Size(67, 64);
-			this.pib_24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pib_24.TabIndex = 4;
-			this.pib_24.TabStop = false;
+			this.pib_3.Image = global::WindowsFormsApp4.Properties.Resources.화살표3;
+			this.pib_3.Location = new System.Drawing.Point(468, 378);
+			this.pib_3.Name = "pib_3";
+			this.pib_3.Size = new System.Drawing.Size(67, 64);
+			this.pib_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pib_3.TabIndex = 9;
+			this.pib_3.TabStop = false;
 			// 
-			// pib_27
+			// pib_1
 			// 
-			this.pib_27.Image = global::WindowsFormsApp4.Properties.Resources.화살표;
-			this.pib_27.Location = new System.Drawing.Point(248, 262);
-			this.pib_27.Name = "pib_27";
-			this.pib_27.Size = new System.Drawing.Size(67, 64);
-			this.pib_27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pib_27.TabIndex = 5;
-			this.pib_27.TabStop = false;
+			this.pib_1.Image = global::WindowsFormsApp4.Properties.Resources.화살표2;
+			this.pib_1.Location = new System.Drawing.Point(468, 144);
+			this.pib_1.Name = "pib_1";
+			this.pib_1.Size = new System.Drawing.Size(67, 64);
+			this.pib_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pib_1.TabIndex = 8;
+			this.pib_1.TabStop = false;
+			// 
+			// pib_2
+			// 
+			this.pib_2.Image = global::WindowsFormsApp4.Properties.Resources.화살표;
+			this.pib_2.Location = new System.Drawing.Point(468, 262);
+			this.pib_2.Name = "pib_2";
+			this.pib_2.Size = new System.Drawing.Size(67, 64);
+			this.pib_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pib_2.TabIndex = 7;
+			this.pib_2.TabStop = false;
 			// 
 			// pib_32
 			// 
@@ -384,11 +400,34 @@
 			this.pib_32.TabIndex = 6;
 			this.pib_32.TabStop = false;
 			// 
+			// pib_27
+			// 
+			this.pib_27.Image = global::WindowsFormsApp4.Properties.Resources.화살표;
+			this.pib_27.Location = new System.Drawing.Point(248, 262);
+			this.pib_27.Name = "pib_27";
+			this.pib_27.Size = new System.Drawing.Size(67, 64);
+			this.pib_27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pib_27.TabIndex = 5;
+			this.pib_27.TabStop = false;
+			// 
+			// pib_24
+			// 
+			this.pib_24.Image = global::WindowsFormsApp4.Properties.Resources.화살표3;
+			this.pib_24.Location = new System.Drawing.Point(248, 144);
+			this.pib_24.Name = "pib_24";
+			this.pib_24.Size = new System.Drawing.Size(67, 64);
+			this.pib_24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pib_24.TabIndex = 4;
+			this.pib_24.TabStop = false;
+			// 
 			// ucScreen1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+			this.Controls.Add(this.pib_3);
+			this.Controls.Add(this.pib_1);
+			this.Controls.Add(this.pib_2);
 			this.Controls.Add(this.pib_32);
 			this.Controls.Add(this.pib_27);
 			this.Controls.Add(this.pib_24);
@@ -415,9 +454,12 @@
 			this.panel6.PerformLayout();
 			this.panel7.ResumeLayout(false);
 			this.panel7.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pib_24)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pib_27)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pib_3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pib_1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pib_2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pib_32)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pib_27)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pib_24)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -453,5 +495,8 @@
 		private System.Windows.Forms.PictureBox pib_24;
 		private System.Windows.Forms.PictureBox pib_27;
 		private System.Windows.Forms.PictureBox pib_32;
+		private System.Windows.Forms.PictureBox pib_2;
+		private System.Windows.Forms.PictureBox pib_1;
+		private System.Windows.Forms.PictureBox pib_3;
 	}
 }
