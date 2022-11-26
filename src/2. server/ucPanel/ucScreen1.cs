@@ -19,9 +19,10 @@ namespace WindowsFormsApp4.ucPanel
 
 		private void btn_Click(object sender, EventArgs e)
 		{
-            
-            MessageBox.Show("해당 공정에 문제가 발생하였습니다. 조치 하시겠습니다?", "공정 오류", MessageBoxButtons.YesNo);
-		}
+
+			MessageBox.Show("해당 공정에 문제가 발생하였습니다. 조치 하시겠습니다?", "공정 오류", MessageBoxButtons.YesNo);
+			
+		}	
 		
 		//문제가 생긴 공정 버튼을 빨간색으로 표시하는 코드
         public void buttonColor(int _inch, int _proc, Color _clr )
@@ -49,35 +50,29 @@ namespace WindowsFormsApp4.ucPanel
 		//--------------------------------------------------------------------
 		public void picBoxColor(int _inch)
 		{
-			var picBox_list = Controls
-				.OfType<PictureBox>();
-
-			foreach (var picbox in picBox_list)
+			try
 			{
-				try
-				{
-					var a = picbox.Controls
-										.OfType<PictureBox>()
-										.Where(pib => pib.Name == "pib_" + _inch.ToString())
-										.First();
-					if(a == pib_24)
-					{
-						a.Load(@"C: \Users\Admin\Desktop\화살표 모음\이동중\이동중3.png");
-					}
-					else if(a == pib_27)
-					{
-						a.Load(@"C: \Users\Admin\Desktop\화살표 모음\이동중\이동중.png");
-					}
-					else
-					{
-						a.Load(@"C: \Users\Admin\Desktop\화살표 모음\이동중\이동중2.png");
-					}
-					
-				}
-				catch (Exception ex)
-				{
+				var picBox = Controls
+					.OfType<PictureBox>()
+					.Where(pib => pib.Name == "pib_" + _inch.ToString())
+					.First();
 
+				if (picBox.Name == "pib_24")
+				{
+					picBox.Image = WindowsFormsApp4.Properties.Resources.이동중3;
 				}
+				else if (picBox.Name == "pib_27")
+				{
+					picBox.Image = WindowsFormsApp4.Properties.Resources.이동중;
+				}
+				else if (picBox.Name == "pib_32")
+				{
+					picBox.Image = WindowsFormsApp4.Properties.Resources.이동중2;
+				}
+			}
+			catch (Exception ex)
+			{
+
 			}
 		}
 		//--------------------------------------------------------------------

@@ -94,6 +94,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="socket_server.cs" />
     <Compile Include="ucPanel\ucScreen1.cs">
       <SubType>UserControl</SubType>
@@ -133,14 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="ucPanel\ucScreen1.resx">
       <DependentUpon>ucScreen1.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,13 +183,7 @@
     <None Include="Resources\free-icon-cogwheel-2499195.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\free-icon-tv-monitor-4018796.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\free-icon-ecg-monitor-5199552.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\캡처.PNG" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\free-icon-down-arrow-7860593.png" />
@@ -201,19 +195,14 @@
     <None Include="Resources\회사 로고.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\화살표1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\화살표.PNG" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Resources\free-icon-tv-monitor-4018796.png" />
+    <None Include="Resources\이동중.png" />
+    <None Include="Resources\이동중3.png" />
+    <None Include="Resources\이동중2.png" />
     <None Include="Resources\화살표2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\화살표3.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\화살표31.png" />
+    <None Include="Resources\화살표.PNG" />
+    <None Include="Resources\화살표.bmp" />
+    <Content Include="Resources\화살표3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

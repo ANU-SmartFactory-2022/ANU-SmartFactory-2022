@@ -63,26 +63,6 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap free_icon_cogwheel_2499195 {
-            get {
-                object obj = ResourceManager.GetObject("free-icon-cogwheel-2499195", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap free_icon_down_arrow_7860593 {
-            get {
-                object obj = ResourceManager.GetObject("free-icon-down-arrow-7860593", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
         internal static System.Drawing.Bitmap free_icon_ecg_monitor_5199552 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-ecg-monitor-5199552", resourceCulture);
@@ -93,9 +73,9 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap free_icon_font_computer_3917446 {
+        internal static System.Drawing.Bitmap 이동중 {
             get {
-                object obj = ResourceManager.GetObject("free-icon-font-computer-3917446", resourceCulture);
+                object obj = ResourceManager.GetObject("이동중", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +83,9 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap free_icon_tv_monitor_4018796 {
+        internal static System.Drawing.Bitmap 이동중2 {
             get {
-                object obj = ResourceManager.GetObject("free-icon-tv-monitor-4018796", resourceCulture);
+                object obj = ResourceManager.GetObject("이동중2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +93,9 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap 캡처 {
+        internal static System.Drawing.Bitmap 이동중3 {
             get {
-                object obj = ResourceManager.GetObject("캡처", resourceCulture);
+                object obj = ResourceManager.GetObject("이동중3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,16 +123,6 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap 화살표1 {
-            get {
-                object obj = ResourceManager.GetObject("화살표1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
         internal static System.Drawing.Bitmap 화살표2 {
             get {
                 object obj = ResourceManager.GetObject("화살표2", resourceCulture);
@@ -166,16 +136,6 @@ namespace WindowsFormsApp4.Properties {
         internal static System.Drawing.Bitmap 화살표3 {
             get {
                 object obj = ResourceManager.GetObject("화살표3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap 화살표31 {
-            get {
-                object obj = ResourceManager.GetObject("화살표31", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
