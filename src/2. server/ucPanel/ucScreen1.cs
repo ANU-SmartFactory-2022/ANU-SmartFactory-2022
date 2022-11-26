@@ -19,9 +19,14 @@ namespace WindowsFormsApp4.ucPanel
 
 		private void btn_Click(object sender, EventArgs e)
 		{
+			Button btn = (Button)sender;
+			DialogResult result= MessageBox.Show("해당 공정에 문제가 발생하였습니다. 조치 하시겠습니다?", "공정 오류", MessageBoxButtons.YesNo);
 
-			MessageBox.Show("해당 공정에 문제가 발생하였습니다. 조치 하시겠습니다?", "공정 오류", MessageBoxButtons.YesNo);
-			
+			if(result == DialogResult.Yes)
+			{
+				btn.BackColor= SystemColors.Window;
+			}
+
 		}	
 		
 		//문제가 생긴 공정 버튼을 빨간색으로 표시하는 코드
