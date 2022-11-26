@@ -451,8 +451,5 @@
 		private System.Windows.Forms.Button btn_32_3;
 		private System.Windows.Forms.Button btn_32_2;
 		private System.Windows.Forms.Button btn_32_1;
-		private System.Windows.Forms.PictureBox pib_24;
-		private System.Windows.Forms.PictureBox pib_27;
-		private System.Windows.Forms.PictureBox pib_32;
 	}
 }
