@@ -56,10 +56,6 @@ namespace TCPIP_Sample_CSharp {
 				TcpClient tc = await m_listener.AcceptTcpClientAsync().ConfigureAwait( false );
 				m_client_list.Add( tc );
 				m_recv_callback?.Invoke( string.Format( "Accept Client" ) );
-				foreach (var client in m_client_list)
-				{
-					client.GetStream().WriteAsync(Encoding.ASCII.GetBytes("START"), 0, 5);
-				}
 				// 새 쓰레드에서 처리
 				await Task.Factory.StartNew( thread_proc_on_recv, tc );
 			}

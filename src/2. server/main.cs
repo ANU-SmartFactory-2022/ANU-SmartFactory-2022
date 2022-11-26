@@ -39,7 +39,7 @@ namespace WindowsFormsApp4
         OracleCommand cmd = new OracleCommand();
         OracleDataReader rdr;
         OracleConnection conn = new OracleConnection(strConn);
-        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=hr ;Password=hr;";
+        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=System ;Password=20161268;";
         OracleDataAdapter adapt = new OracleDataAdapter();
 
         //서버 클라이언트 설정을 위한 객체 설정
@@ -70,11 +70,15 @@ namespace WindowsFormsApp4
             m_server.start();
             label2.Text = login_Number;
             label3.Text = login_Name;
+            ucSc1.picBoxColor(27);
+            ucSc1.picBoxColor2(1);
+            ucSc1.picBoxColor2(2);
+            ucSc1.picBoxColor2(3);
         }
        
         private void recv_callback(string _msg)
         {
-            if(_msg == )
+            if(_msg == "Accept Client")
             {
 
             }
