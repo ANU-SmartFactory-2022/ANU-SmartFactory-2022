@@ -74,7 +74,14 @@ namespace WindowsFormsApp4
        
         private void recv_callback(string _msg)
         {
-            checkmsg(_msg);
+            if(_msg == )
+            {
+
+            }
+            else
+            {
+                checkmsg(_msg);
+            }
         }
 
         delegate void StringArgReturningVoidDelegate(string _msg);
