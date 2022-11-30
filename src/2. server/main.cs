@@ -208,9 +208,6 @@ namespace WindowsFormsApp4
                 case "모니터링":
                     {
                         panel_main.Controls.Add(ucSc1);
-                        ucSc1.buttonColor( 32, 2, Color.Red ); //ucScreen1 문제생긴 공정에 빨간색 들어오게 하기
-                        ucSc1.picBoxColor( 24 , "test");  //ucScreen1 이동중 화살표 색상 변경
-                        ucSc1.picBoxColor2( 1 , "test");  //ucScreen1 이동 후 양품, 불량1, 불량2 화살표 색상 구분
                     }
                     break;
                 case "공정 가동": panel_main.Controls.Add(ucSc2); break;
