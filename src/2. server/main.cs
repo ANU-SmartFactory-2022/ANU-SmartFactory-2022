@@ -77,7 +77,7 @@ namespace WindowsFormsApp4
         {
             if(_msg == "Accept Client")
             {
-
+                m_server?.send("START");
             }
             else
             {
