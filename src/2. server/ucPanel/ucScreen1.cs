@@ -22,9 +22,6 @@ namespace WindowsFormsApp4.ucPanel
 			Button btn = (Button)sender;
 			DialogResult result= MessageBox.Show("해당 공정에 문제가 발생하였습니다. 조치 하시겠습니다?", "공정 오류", MessageBoxButtons.YesNo);
 			picBoxColor(27, "ON");  //테스트용
-			picBoxColor(32, "OFF"); //테스트용
-			picBoxColor2(1, "ON"); //테스트용
-			picBoxColor2(2, "WARING"); //테스트용
 			if (result == DialogResult.Yes)
 			{
 				btn.BackColor= SystemColors.Window;
@@ -149,6 +146,11 @@ namespace WindowsFormsApp4.ucPanel
 		}
 
         private void ucScreen1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

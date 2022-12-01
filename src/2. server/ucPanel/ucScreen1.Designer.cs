@@ -294,11 +294,12 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(62, 54);
+            this.label4.Location = new System.Drawing.Point(61, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 40);
             this.label4.TabIndex = 0;
             this.label4.Text = "양품";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel5
             // 
