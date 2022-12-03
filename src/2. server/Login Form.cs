@@ -23,6 +23,7 @@ namespace WindowsFormsApp4
                "(SERVICE_NAME=xe)));" +
                "User Id=hr;Password=hr;";
 
+
         string login_Name;
         string login_Number;
         public Login_Form()

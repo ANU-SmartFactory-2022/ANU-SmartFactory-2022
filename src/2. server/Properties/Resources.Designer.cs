@@ -73,6 +73,66 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap pib_24ON {
+            get {
+                object obj = ResourceManager.GetObject("pib_24ON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap pib_24WARING {
+            get {
+                object obj = ResourceManager.GetObject("pib_24WARING", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap pib_27ON {
+            get {
+                object obj = ResourceManager.GetObject("pib_27ON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap pib_27WARING {
+            get {
+                object obj = ResourceManager.GetObject("pib_27WARING", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap pib_32ON {
+            get {
+                object obj = ResourceManager.GetObject("pib_32ON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap pib_32WARING {
+            get {
+                object obj = ResourceManager.GetObject("pib_32WARING", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap 멈춤1 {
             get {
                 object obj = ResourceManager.GetObject("멈춤1", resourceCulture);
@@ -126,6 +186,36 @@ namespace WindowsFormsApp4.Properties {
         internal static System.Drawing.Bitmap 양품 {
             get {
                 object obj = ResourceManager.GetObject("양품", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 이동중 {
+            get {
+                object obj = ResourceManager.GetObject("이동중", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 이동중2 {
+            get {
+                object obj = ResourceManager.GetObject("이동중2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 이동중3 {
+            get {
+                object obj = ResourceManager.GetObject("이동중3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

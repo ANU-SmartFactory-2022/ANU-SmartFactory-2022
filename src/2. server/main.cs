@@ -21,7 +21,7 @@ namespace WindowsFormsApp4
         ucPanel.ucScreen3 ucSc3 = new ucPanel.ucScreen3 ();
         ucPanel.ucScreen4 ucSc4 = new ucPanel.ucScreen4 ();
         ucPanel.ucScreenHome ucScHome = new ucPanel.ucScreenHome();
-
+    
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
     (
@@ -32,7 +32,6 @@ namespace WindowsFormsApp4
      int nWidthEllipse,
      int nHeightEllipse
     );
-
         List<Button> btn_list = new List<Button>();
 
         //오라클 통신위한 객체 지정 및 설정
@@ -70,14 +69,15 @@ namespace WindowsFormsApp4
             m_server.start();
             label2.Text = login_Number;
             label3.Text = login_Name;
-   
+
+            button_click( btn_home, e );
         }
        
         private void recv_callback(string _msg)
         {
             if(_msg == "Accept Client")
             {
-
+                m_server?.send("START");
             }
             else
             {
@@ -96,15 +96,15 @@ namespace WindowsFormsApp4
                 case "QR_READING":
                     // DB 조회 및 인치값 발사하기
                     P_NUM = TCPmsg[1];
-                    string k = selectCommand("PINCH", "PRD", P_NUM);
-                    m_server?.send("REQUEST_RESULT," + k);
+                    string[] RESULTP = selectCommand("PINCH", "PRD", P_NUM).Split(',');
+                    m_server?.send("REQUEST_RESULT," + RESULTP[0]);
                     break;
                 case "RESULT":
                     //오라클 정리 DB축적
                     string RESULT = RESULTCH(TCPmsg[2]);
                     INSERTCommand(TCPmsg[1], RESULT);
                     P_NUM = TCPmsg[1];
-                    P_inch = selectCommand("PINCH", "PRD", P_NUM);
+                    string[] RESULTP1 = selectCommand("PINCH", "PRD", P_NUM).Split(',');
                     m_server?.send("DB_END");
                     break;
                 case "STUCK":
@@ -138,17 +138,21 @@ namespace WindowsFormsApp4
             }
             return ru;
         }
-        // inch 값을 도출하기 위한 함수
+        // 제품의 정보를 을 도출하기 위한 함수, split 0 인치 1패널 2 hz
         public string selectCommand(string num , string table , string result)
         {
-            cmd.CommandText = $"select {result} from {table} WHERE PPdNumber = '{num}' ";
+            cmd.CommandText = $"select * from {table} WHERE PPdNumber = '{num}' ";
             rdr = cmd.ExecuteReader();
             string inch = "";
+            string panel = "";
+            string hz = "";
             while (rdr.Read())
             {
                 inch = rdr["PINCH"].ToString();
+                panel = rdr["PPn"].ToString();
+                hz = rdr["PRfh"].ToString();
             }
-            return inch;
+            return inch +","+ panel+ "," + hz;
         }
 
         // 오라클 데이터 삽입을 위한 함수
@@ -175,14 +179,21 @@ namespace WindowsFormsApp4
                     if (Result1 == "핫")
                     {
                         ucSc1.buttonColor(Int32.Parse(inch), 1, Color.Red);
+                        ucSc1.picBoxColor2(2, "ON");
                     }
                     else if (Result1 == "스턱")
                     {
                         ucSc1.buttonColor(Int32.Parse(inch), 2, Color.Red);
+                        ucSc1.picBoxColor2(2, "ON");
                     }
                     else if (Result1 == "데드")
                     {
                         ucSc1.buttonColor(Int32.Parse(inch), 3, Color.Red);
+                        ucSc1.picBoxColor2(3, "ON");
+                    }
+                    else
+                    {
+                        ucSc1.picBoxColor2(1, "ON");
                     }
                 }
             }
@@ -208,9 +219,6 @@ namespace WindowsFormsApp4
                 case "모니터링":
                     {
                         panel_main.Controls.Add(ucSc1);
-                        ucSc1.buttonColor( 32, 2, Color.Red ); //ucScreen1 문제생긴 공정에 빨간색 들어오게 하기
-                        ucSc1.picBoxColor( 24 , "test");  //ucScreen1 이동중 화살표 색상 변경
-                        ucSc1.picBoxColor2( 1 , "test");  //ucScreen1 이동 후 양품, 불량1, 불량2 화살표 색상 구분
                     }
                     break;
                 case "공정 가동": panel_main.Controls.Add(ucSc2); break;
