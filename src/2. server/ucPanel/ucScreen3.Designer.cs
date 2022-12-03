@@ -45,10 +45,10 @@
 			// 
 			this.comboBox1.FormattingEnabled = true;
 			this.comboBox1.Items.AddRange(new object[] {
-            "24 inch",
-            "27 inch",
-            "32 inch",
-            "All"});
+            "전체",
+            "24",
+            "27",
+            "32"});
 			this.comboBox1.Location = new System.Drawing.Point(15, 70);
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(95, 20);
@@ -148,10 +148,10 @@
 			// 
 			this.comboBox2.FormattingEnabled = true;
 			this.comboBox2.Items.AddRange(new object[] {
-            "TN 패널",
-            "VA 패널",
-            "IPS 패널",
-            "All"});
+            "전체",
+            "TN",
+            "VA",
+            "IPS"});
 			this.comboBox2.Location = new System.Drawing.Point(136, 70);
 			this.comboBox2.Name = "comboBox2";
 			this.comboBox2.Size = new System.Drawing.Size(95, 20);
@@ -161,10 +161,10 @@
 			// 
 			this.comboBox3.FormattingEnabled = true;
 			this.comboBox3.Items.AddRange(new object[] {
-            "60hz",
-            "144hz",
-            "240hz",
-            "All"});
+            "전체",
+            "60",
+            "144",
+            "240"});
 			this.comboBox3.Location = new System.Drawing.Point(256, 70);
 			this.comboBox3.Name = "comboBox3";
 			this.comboBox3.Size = new System.Drawing.Size(95, 20);
