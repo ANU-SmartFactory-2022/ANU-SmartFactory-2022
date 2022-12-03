@@ -32,6 +32,7 @@
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.button1 = new System.Windows.Forms.Button();
 			this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
+			this.circularProgressBar2 = new CircularProgressBar.CircularProgressBar();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -79,14 +80,14 @@
 			this.circularProgressBar1.AnimationSpeed = 500;
 			this.circularProgressBar1.BackColor = System.Drawing.Color.Transparent;
 			this.circularProgressBar1.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.circularProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.circularProgressBar1.ForeColor = System.Drawing.Color.White;
+			this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
 			this.circularProgressBar1.InnerMargin = 2;
 			this.circularProgressBar1.InnerWidth = -1;
-			this.circularProgressBar1.Location = new System.Drawing.Point(556, 244);
+			this.circularProgressBar1.Location = new System.Drawing.Point(554, 118);
 			this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
 			this.circularProgressBar1.Name = "circularProgressBar1";
-			this.circularProgressBar1.OuterColor = System.Drawing.Color.Gray;
+			this.circularProgressBar1.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
 			this.circularProgressBar1.OuterMargin = -25;
 			this.circularProgressBar1.OuterWidth = 26;
 			this.circularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
@@ -105,11 +106,44 @@
 			this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
 			this.circularProgressBar1.Value = 68;
 			// 
+			// circularProgressBar2
+			// 
+			this.circularProgressBar2.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+			this.circularProgressBar2.AnimationSpeed = 500;
+			this.circularProgressBar2.BackColor = System.Drawing.Color.Transparent;
+			this.circularProgressBar2.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.circularProgressBar2.ForeColor = System.Drawing.Color.White;
+			this.circularProgressBar2.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+			this.circularProgressBar2.InnerMargin = 2;
+			this.circularProgressBar2.InnerWidth = -1;
+			this.circularProgressBar2.Location = new System.Drawing.Point(554, 350);
+			this.circularProgressBar2.MarqueeAnimationSpeed = 2000;
+			this.circularProgressBar2.Name = "circularProgressBar2";
+			this.circularProgressBar2.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+			this.circularProgressBar2.OuterMargin = -25;
+			this.circularProgressBar2.OuterWidth = 26;
+			this.circularProgressBar2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+			this.circularProgressBar2.ProgressWidth = 25;
+			this.circularProgressBar2.SecondaryFont = new System.Drawing.Font("굴림", 36F);
+			this.circularProgressBar2.Size = new System.Drawing.Size(202, 198);
+			this.circularProgressBar2.StartAngle = 270;
+			this.circularProgressBar2.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+			this.circularProgressBar2.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+			this.circularProgressBar2.SubscriptText = "";
+			this.circularProgressBar2.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+			this.circularProgressBar2.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+			this.circularProgressBar2.SuperscriptText = "";
+			this.circularProgressBar2.TabIndex = 4;
+			this.circularProgressBar2.Text = "불량률";
+			this.circularProgressBar2.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+			this.circularProgressBar2.Value = 68;
+			// 
 			// ucScreen3
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+			this.Controls.Add(this.circularProgressBar2);
 			this.Controls.Add(this.circularProgressBar1);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.dataGridView1);
@@ -128,5 +162,6 @@
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Button button1;
 		private CircularProgressBar.CircularProgressBar circularProgressBar1;
+		private CircularProgressBar.CircularProgressBar circularProgressBar2;
 	}
 }

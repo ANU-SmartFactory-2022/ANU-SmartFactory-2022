@@ -30,6 +30,12 @@ namespace WindowsFormsApp4.ucPanel
 				circularProgressBar1.Value = i;
 				circularProgressBar1.Update();
 			}
+
+			for (int j = 1; j <= 70; j++)
+			{
+				circularProgressBar2.Value = j;
+				circularProgressBar2.Update();
+			}
 		}
 
 		private void ucScreen3_Load(object sender, EventArgs e)
@@ -37,6 +43,10 @@ namespace WindowsFormsApp4.ucPanel
 			circularProgressBar1.Value = 0;
 			circularProgressBar1.Minimum = 0;
 			circularProgressBar1.Maximum = 100;
+
+			circularProgressBar2.Value = 0;
+			circularProgressBar2.Minimum = 0;
+			circularProgressBar2.Maximum = 100;
 		}
 	}
 }
