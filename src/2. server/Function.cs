@@ -107,5 +107,27 @@ namespace WindowsFormsApp4
             return dt;
         }
 
+        // 오라클 데이터 삽입을 위한 함수s
+        public void INSERTCommand(string[] Speci, string tname)
+        {
+            string commad = $"INSERT INTO {tname} VALUES (";
+            for (int i = 0; i < Speci.Length; i++)
+            {
+                if (i != Speci.Length - 1)
+                {
+                    commad += $"'{Speci[i]}',";
+                }
+                else
+                {
+                    commad += $"'{Speci[i]}'";
+                }
+            }
+            commad += ")";
+            cmd.CommandText = commad;
+            cmd.ExecuteNonQuery();
+            cmd.CommandText = "Commit";
+            cmd.ExecuteNonQuery();
+        }
+
     }
 }

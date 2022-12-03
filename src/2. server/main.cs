@@ -111,7 +111,7 @@ namespace WindowsFormsApp4
                     RESULTARRAY[1] = TCPmsg[1];
                     RESULTARRAY[2] = login_Number;
                     RESULTARRAY[3] = RESULT;
-                    INSERTCommand(RESULTARRAY, "PRM");
+                    Program.f_function.INSERTCommand(RESULTARRAY, "PRM");
                     P_NUM = TCPmsg[1];
                     string[] RESULTP1 = selectCommand("PRD", P_NUM).Split(',');
                     NOWINCH = RESULTP1[0];
@@ -168,29 +168,6 @@ namespace WindowsFormsApp4
             }
             return inch +","+ panel+ "," + hz;
         }
-
-        // 오라클 데이터 삽입을 위한 함수
-        public void INSERTCommand(string[] Speci, string tname)
-        {
-            string commad = $"INSERT INTO {tname} VALUES (";
-            for(int i=0; i < Speci.Length; i++)
-            {
-                if(i != Speci.Length -1 )
-                {
-                    commad += $"'{Speci[i]}',";
-                }
-                else
-                {
-                    commad += $"'{Speci[i]}'";
-                }
-            }
-            commad += ")";
-            cmd.CommandText = commad;
-            cmd.ExecuteNonQuery();
-            cmd.CommandText = "Commit";
-            cmd.ExecuteNonQuery();
-        }
-
         // 결과값을 확인 후 에러창을 띄위기 위한 함수 
         public void FINDERROR(string inch)
         {

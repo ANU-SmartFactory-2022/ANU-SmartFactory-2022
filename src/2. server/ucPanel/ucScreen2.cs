@@ -25,7 +25,7 @@ namespace WindowsFormsApp4.ucPanel
 
 		private void Lookup_Btn_Click(object sender, EventArgs e)
 		{
-            
+            GridSelect();
         }
 
         public string CreateName(string inch ,string panel, string hz, string num)
@@ -47,6 +47,33 @@ namespace WindowsFormsApp4.ucPanel
                     if (row.Cells[1].Value.ToString() == inch && row.Cells[2].Value.ToString() == panel && row.Cells[3].Value.ToString() == hz)
                     {
                         row.Cells[4].Value = Int32.Parse(row.Cells[4].Value.ToString()) + 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+
+                }
+
+            }
+        }
+
+        public void GridSelect( )
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                try
+                {
+                    int pack = Int32.Parse(row.Cells[4].Value.ToString());
+                    for(int i = 0; i < pack; i++)
+                    {
+                        string[] result = new string[5];
+                        result[0] = CreateName(row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), i.ToString());
+                        result[1] = DateTime.Now.ToString("yyyy-MM-dd-HH-ss");
+                        result[2] = row.Cells[1].Value.ToString();
+                        result[3] = row.Cells[2].Value.ToString();
+                        result[4] = row.Cells[3].Value.ToString();
+                        Program.f_function.INSERTCommand(result, "PRD");
                     }
                 }
                 catch (Exception ex)
