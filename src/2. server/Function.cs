@@ -110,23 +110,30 @@ namespace WindowsFormsApp4
         // 오라클 데이터 삽입을 위한 함수s
         public void INSERTCommand(string[] Speci, string tname)
         {
-            string commad = $"INSERT INTO {tname} VALUES (";
-            for (int i = 0; i < Speci.Length; i++)
+            try
             {
-                if (i != Speci.Length - 1)
+                string commad = $"INSERT INTO {tname} VALUES (";
+                for (int i = 0; i < Speci.Length; i++)
                 {
-                    commad += $"'{Speci[i]}',";
+                    if (i != Speci.Length - 1)
+                    {
+                        commad += $"'{Speci[i]}',";
+                    }
+                    else
+                    {
+                        commad += "TO_DATE('" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 'YYYY-MM-DD HH24:mi:ss')" + $", '{Speci[i]}')";
+                    }
                 }
-                else
-                {
-                    commad += $"'{Speci[i]}'";
-                }
+                cmd.CommandText = commad;
+                int q = cmd.ExecuteNonQuery();
+                cmd.CommandText = "Commit";
+                int k = cmd.ExecuteNonQuery();
             }
-            commad += ")";
-            cmd.CommandText = commad;
-            cmd.ExecuteNonQuery();
-            cmd.CommandText = "Commit";
-            cmd.ExecuteNonQuery();
+            catch(Exception ex)
+            {
+                System.Console.WriteLine(ex.Message);
+       
+            }
         }
 
     }
