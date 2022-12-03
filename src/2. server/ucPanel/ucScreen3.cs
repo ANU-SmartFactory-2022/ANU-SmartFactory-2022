@@ -23,6 +23,24 @@ namespace WindowsFormsApp4.ucPanel
 
 		}
 
+		
+
+		private void ucScreen3_Load(object sender, EventArgs e)
+		{
+			circularProgressBar1.Value = 0;
+			circularProgressBar1.Minimum = 0;
+			circularProgressBar1.Maximum = 100;
+
+			circularProgressBar2.Value = 0;
+			circularProgressBar2.Minimum = 0;
+			circularProgressBar2.Maximum = 100;
+
+			cb_inch.SelectedIndex = 0;
+			cb_hz.SelectedIndex = 0;
+			cb_panel.SelectedIndex = 0;
+
+		}
+
 		private void button1_Click(object sender, EventArgs e)
 		{
 			for (int i = 1; i <= 50; i++)
@@ -36,17 +54,13 @@ namespace WindowsFormsApp4.ucPanel
 				circularProgressBar2.Value = j;
 				circularProgressBar2.Update();
 			}
-		}
 
-		private void ucScreen3_Load(object sender, EventArgs e)
-		{
-			circularProgressBar1.Value = 0;
-			circularProgressBar1.Minimum = 0;
-			circularProgressBar1.Maximum = 100;
+			string str_inch = cb_inch.SelectedItem.ToString();
+			string str_panel = cb_panel.SelectedItem.ToString();
+			string str_hz = cb_hz.SelectedItem.ToString();
 
-			circularProgressBar2.Value = 0;
-			circularProgressBar2.Minimum = 0;
-			circularProgressBar2.Maximum = 100;
+			DataTable dt = Program.f_function.select_PRD(str_inch, str_panel, str_hz);
+			dataGridView1.DataSource = dt;
 		}
 	}
 }
