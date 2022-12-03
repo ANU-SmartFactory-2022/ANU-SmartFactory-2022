@@ -192,6 +192,7 @@
 			this.chart1.Name = "chart1";
 			series2.ChartArea = "ChartArea1";
 			series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+			series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			series2.Legend = "Legend1";
 			series2.Name = "Series1";
 			series2.Points.Add(dataPoint1);
