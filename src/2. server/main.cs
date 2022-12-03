@@ -91,27 +91,41 @@ namespace WindowsFormsApp4
             string[] TCPmsg = _msg.Split(',');
             string P_NUM = "";
             string P_inch = "";
+            string NOWINCH = "";
+            string NOWPANEL = "";
+            string NOWHZ = "";
             switch (TCPmsg[0])
             {
                 case "QR_READING":
                     // DB 조회 및 인치값 발사하기
                     P_NUM = TCPmsg[1];
-                    string[] RESULTP = selectCommand("PINCH", "PRD", P_NUM).Split(',');
+                    string[] RESULTP = selectCommand( "PRD", P_NUM).Split(',');
                     m_server?.send("REQUEST_RESULT," + RESULTP[0]);
                     break;
                 case "RESULT":
                     //오라클 정리 DB축적
                     string RESULT = RESULTCH(TCPmsg[2]);
-                    INSERTCommand(TCPmsg[1], RESULT);
+                    string[] RESULTARRAY = new string[4];
+                    string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    RESULTARRAY[0] = date;
+                    RESULTARRAY[1] = TCPmsg[1];
+                    RESULTARRAY[2] = login_Number;
+                    RESULTARRAY[3] = RESULT;
+                    Program.f_function.INSERTCommand(RESULTARRAY, "PRM");
                     P_NUM = TCPmsg[1];
-                    string[] RESULTP1 = selectCommand("PINCH", "PRD", P_NUM).Split(',');
+                    string[] RESULTP1 = selectCommand("PRD", P_NUM).Split(',');
+                    NOWINCH = RESULTP1[0];
+                    NOWPANEL = RESULTP1[1];
+                    NOWHZ = RESULTP1[2];
                     m_server?.send("DB_END");
+                    ucSc1.picBoxColor2(TCPmsg[2], "ON");
                     break;
                 case "STUCK":
                     ucSc1.Colorred();
                     break;
                 case "ROLLING_END":
                     FINDERROR(P_inch);
+                    ucSc2.GridAdd(NOWINCH,NOWPANEL,NOWHZ);
                     break;
             }
         }
@@ -139,9 +153,9 @@ namespace WindowsFormsApp4
             return ru;
         }
         // 제품의 정보를 을 도출하기 위한 함수, split 0 인치 1패널 2 hz
-        public string selectCommand(string num , string table , string result)
+        public string selectCommand( string table , string result)
         {
-            cmd.CommandText = $"select * from {table} WHERE PPdNumber = '{num}' ";
+            cmd.CommandText = $"select * from {table} WHERE PPdNumber = '{result}' ";
             rdr = cmd.ExecuteReader();
             string inch = "";
             string panel = "";
@@ -154,16 +168,6 @@ namespace WindowsFormsApp4
             }
             return inch +","+ panel+ "," + hz;
         }
-
-        // 오라클 데이터 삽입을 위한 함수
-        public void INSERTCommand(string Pnum, string result)
-        {
-            string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            cmd.CommandText = $"INSERT INTO PRM VALUES('{date}','{Pnum}','{login_Number}','{result}')";
-            rdr = cmd.ExecuteReader();
-            cmd.ExecuteNonQuery();
-        }
-
         // 결과값을 확인 후 에러창을 띄위기 위한 함수 
         public void FINDERROR(string inch)
         {
@@ -179,21 +183,14 @@ namespace WindowsFormsApp4
                     if (Result1 == "핫")
                     {
                         ucSc1.buttonColor(Int32.Parse(inch), 1, Color.Red);
-                        ucSc1.picBoxColor2(2, "ON");
                     }
                     else if (Result1 == "스턱")
                     {
                         ucSc1.buttonColor(Int32.Parse(inch), 2, Color.Red);
-                        ucSc1.picBoxColor2(2, "ON");
                     }
                     else if (Result1 == "데드")
                     {
                         ucSc1.buttonColor(Int32.Parse(inch), 3, Color.Red);
-                        ucSc1.picBoxColor2(3, "ON");
-                    }
-                    else
-                    {
-                        ucSc1.picBoxColor2(1, "ON");
                     }
                 }
             }

@@ -78,7 +78,7 @@ namespace WindowsFormsApp4.ucPanel
 			}
 		}
 		
-		public void picBoxColor2(int _num, string state)
+		public void picBoxColor2(string _num, string state)
 		{
 			try
 			{
@@ -93,12 +93,12 @@ namespace WindowsFormsApp4.ucPanel
 				else
 				{
 					string image = "";
-					if ( _num  == 1)
+					if ( _num  == "1")
                     {
 						image = "pib_32" + state;
 
 					}
-					else if ( _num == 2)
+					else if ( _num == "2")
                     {
 						image = "pib_27" + state;
 					}
