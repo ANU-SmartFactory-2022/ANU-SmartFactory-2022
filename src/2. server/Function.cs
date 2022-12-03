@@ -18,7 +18,7 @@ namespace WindowsFormsApp4
                "(host=localhost)(port=1521)))" +
                "(connect_data=(server=dedicated)" +
                "(service_name=xe)));" +
-               "user id=hr;password=hr;";
+               "user id=pd68;password=pd68;";
         public void connect()
         {
             conn = new OracleConnection(strconn);
@@ -35,6 +35,7 @@ namespace WindowsFormsApp4
             dataTable.Columns.Add("패널", typeof(string));
             dataTable.Columns.Add("주사율", typeof(string));
             dataTable.Columns.Add("주문수량", typeof(string));
+            dataTable.Columns.Add("완료수량", typeof(string));
 
             cmd.CommandText = $"select * from ORD";
             if (_ORDN != "")
