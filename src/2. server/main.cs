@@ -69,7 +69,8 @@ namespace WindowsFormsApp4
             m_server.start();
             label2.Text = login_Number;
             label3.Text = login_Name;
-   
+
+            button_click( btn_home, e );
         }
        
         private void recv_callback(string _msg)

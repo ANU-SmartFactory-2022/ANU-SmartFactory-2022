@@ -18,7 +18,7 @@ namespace WindowsFormsApp4
                "(host=localhost)(port=1521)))" +
                "(connect_data=(server=dedicated)" +
                "(service_name=xe)));" +
-               "user id=pd68;password=pd68;";
+               "user id=hr;password=hr;";
         public void connect()
         {
             conn = new OracleConnection(strconn);
