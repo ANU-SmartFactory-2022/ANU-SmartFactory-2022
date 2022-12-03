@@ -229,7 +229,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.ComboBox cb_inch;
+		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Button button1;
 		private CircularProgressBar.CircularProgressBar circularProgressBar1;

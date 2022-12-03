@@ -35,9 +35,9 @@ namespace WindowsFormsApp4.ucPanel
 			circularProgressBar2.Minimum = 0;
 			circularProgressBar2.Maximum = 100;
 
-			cb_inch.SelectedIndex = 0;
-			cb_hz.SelectedIndex = 0;
-			cb_panel.SelectedIndex = 0;
+			comboBox1.SelectedIndex = 0;
+			comboBox2.SelectedIndex = 0;
+			comboBox3.SelectedIndex = 0;
 
 		}
 
@@ -55,9 +55,9 @@ namespace WindowsFormsApp4.ucPanel
 				circularProgressBar2.Update();
 			}
 
-			string str_inch = cb_inch.SelectedItem.ToString();
-			string str_panel = cb_panel.SelectedItem.ToString();
-			string str_hz = cb_hz.SelectedItem.ToString();
+			string str_inch = comboBox1.SelectedItem.ToString();
+			string str_panel = comboBox2.SelectedItem.ToString();
+			string str_hz = comboBox3.SelectedItem.ToString();
 
 			DataTable dt = Program.f_function.select_PRD(str_inch, str_panel, str_hz);
 			dataGridView1.DataSource = dt;
