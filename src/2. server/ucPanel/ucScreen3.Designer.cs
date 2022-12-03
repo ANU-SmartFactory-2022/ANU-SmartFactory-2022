@@ -28,17 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 0D);
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 0D);
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 0D);
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 0D);
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 0D);
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 0D);
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 0D);
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 0D);
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 0D);
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 0D);
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.button1 = new System.Windows.Forms.Button();
-			this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
-			this.circularProgressBar2 = new CircularProgressBar.CircularProgressBar();
 			this.comboBox2 = new System.Windows.Forms.ComboBox();
 			this.comboBox3 = new System.Windows.Forms.ComboBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
+			this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.oracleDataAdapter1 = new Oracle.ManagedDataAccess.Client.OracleDataAdapter();
+			this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// comboBox1
@@ -79,70 +103,6 @@
 			this.button1.Text = "조회";
 			this.button1.UseVisualStyleBackColor = false;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
-			// 
-			// circularProgressBar1
-			// 
-			this.circularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-			this.circularProgressBar1.AnimationSpeed = 500;
-			this.circularProgressBar1.BackColor = System.Drawing.Color.Transparent;
-			this.circularProgressBar1.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.circularProgressBar1.ForeColor = System.Drawing.Color.White;
-			this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-			this.circularProgressBar1.InnerMargin = 2;
-			this.circularProgressBar1.InnerWidth = -1;
-			this.circularProgressBar1.Location = new System.Drawing.Point(554, 35);
-			this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
-			this.circularProgressBar1.Name = "circularProgressBar1";
-			this.circularProgressBar1.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-			this.circularProgressBar1.OuterMargin = -25;
-			this.circularProgressBar1.OuterWidth = 26;
-			this.circularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.circularProgressBar1.ProgressWidth = 25;
-			this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("굴림", 36F);
-			this.circularProgressBar1.Size = new System.Drawing.Size(202, 198);
-			this.circularProgressBar1.StartAngle = 270;
-			this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-			this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-			this.circularProgressBar1.SubscriptText = "";
-			this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-			this.circularProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-			this.circularProgressBar1.SuperscriptText = "";
-			this.circularProgressBar1.TabIndex = 3;
-			this.circularProgressBar1.Text = "불량률";
-			this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
-			this.circularProgressBar1.Value = 68;
-			// 
-			// circularProgressBar2
-			// 
-			this.circularProgressBar2.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-			this.circularProgressBar2.AnimationSpeed = 500;
-			this.circularProgressBar2.BackColor = System.Drawing.Color.Transparent;
-			this.circularProgressBar2.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.circularProgressBar2.ForeColor = System.Drawing.Color.White;
-			this.circularProgressBar2.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-			this.circularProgressBar2.InnerMargin = 2;
-			this.circularProgressBar2.InnerWidth = -1;
-			this.circularProgressBar2.Location = new System.Drawing.Point(554, 307);
-			this.circularProgressBar2.MarqueeAnimationSpeed = 2000;
-			this.circularProgressBar2.Name = "circularProgressBar2";
-			this.circularProgressBar2.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-			this.circularProgressBar2.OuterMargin = -25;
-			this.circularProgressBar2.OuterWidth = 26;
-			this.circularProgressBar2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.circularProgressBar2.ProgressWidth = 25;
-			this.circularProgressBar2.SecondaryFont = new System.Drawing.Font("굴림", 36F);
-			this.circularProgressBar2.Size = new System.Drawing.Size(202, 198);
-			this.circularProgressBar2.StartAngle = 270;
-			this.circularProgressBar2.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-			this.circularProgressBar2.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-			this.circularProgressBar2.SubscriptText = "";
-			this.circularProgressBar2.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-			this.circularProgressBar2.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-			this.circularProgressBar2.SuperscriptText = "";
-			this.circularProgressBar2.TabIndex = 4;
-			this.circularProgressBar2.Text = "불량률";
-			this.circularProgressBar2.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
-			this.circularProgressBar2.Value = 68;
 			// 
 			// comboBox2
 			// 
@@ -203,18 +163,85 @@
 			this.label3.TabIndex = 9;
 			this.label3.Text = "Hz";
 			// 
+			// chart2
+			// 
+			chartArea1.Name = "ChartArea1";
+			this.chart2.ChartAreas.Add(chartArea1);
+			legend1.Name = "Legend1";
+			this.chart2.Legends.Add(legend1);
+			this.chart2.Location = new System.Drawing.Point(214, 115);
+			this.chart2.Name = "chart2";
+			series1.ChartArea = "ChartArea1";
+			series1.Legend = "Legend1";
+			series1.Name = "Series1";
+			this.chart2.Series.Add(series1);
+			this.chart2.Size = new System.Drawing.Size(8, 8);
+			this.chart2.TabIndex = 11;
+			this.chart2.Text = "chart2";
+			// 
+			// chart1
+			// 
+			this.chart1.BackColor = System.Drawing.Color.Transparent;
+			chartArea2.BackColor = System.Drawing.Color.Transparent;
+			chartArea2.Name = "ChartArea1";
+			this.chart1.ChartAreas.Add(chartArea2);
+			legend2.Enabled = false;
+			legend2.Name = "Legend1";
+			this.chart1.Legends.Add(legend2);
+			this.chart1.Location = new System.Drawing.Point(552, 119);
+			this.chart1.Name = "chart1";
+			series2.ChartArea = "ChartArea1";
+			series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+			series2.Legend = "Legend1";
+			series2.Name = "Series1";
+			series2.Points.Add(dataPoint1);
+			series2.Points.Add(dataPoint2);
+			series2.Points.Add(dataPoint3);
+			series2.Points.Add(dataPoint4);
+			series2.Points.Add(dataPoint5);
+			this.chart1.Series.Add(series2);
+			this.chart1.Size = new System.Drawing.Size(216, 202);
+			this.chart1.TabIndex = 12;
+			this.chart1.Text = "chart1";
+			// 
+			// chart3
+			// 
+			this.chart3.BackColor = System.Drawing.Color.Transparent;
+			chartArea3.BackColor = System.Drawing.Color.Transparent;
+			chartArea3.Name = "ChartArea1";
+			this.chart3.ChartAreas.Add(chartArea3);
+			legend3.Enabled = false;
+			legend3.Name = "Legend1";
+			this.chart3.Legends.Add(legend3);
+			this.chart3.Location = new System.Drawing.Point(552, 361);
+			this.chart3.Name = "chart3";
+			series3.ChartArea = "ChartArea1";
+			series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+			series3.Legend = "Legend1";
+			series3.Name = "Series1";
+			series3.Points.Add(dataPoint6);
+			series3.Points.Add(dataPoint7);
+			series3.Points.Add(dataPoint8);
+			series3.Points.Add(dataPoint9);
+			series3.Points.Add(dataPoint10);
+			this.chart3.Series.Add(series3);
+			this.chart3.Size = new System.Drawing.Size(216, 202);
+			this.chart3.TabIndex = 13;
+			this.chart3.Text = "chart3";
+			// 
 			// ucScreen3
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+			this.Controls.Add(this.chart3);
+			this.Controls.Add(this.chart1);
+			this.Controls.Add(this.chart2);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.comboBox3);
 			this.Controls.Add(this.comboBox2);
-			this.Controls.Add(this.circularProgressBar2);
-			this.Controls.Add(this.circularProgressBar1);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.comboBox1);
@@ -222,6 +249,9 @@
 			this.Size = new System.Drawing.Size(771, 577);
 			this.Load += new System.EventHandler(this.ucScreen3_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -232,12 +262,14 @@
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Button button1;
-		private CircularProgressBar.CircularProgressBar circularProgressBar1;
-		private CircularProgressBar.CircularProgressBar circularProgressBar2;
 		private System.Windows.Forms.ComboBox comboBox2;
 		private System.Windows.Forms.ComboBox comboBox3;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+		private Oracle.ManagedDataAccess.Client.OracleDataAdapter oracleDataAdapter1;
+		private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+		private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
 	}
 }
