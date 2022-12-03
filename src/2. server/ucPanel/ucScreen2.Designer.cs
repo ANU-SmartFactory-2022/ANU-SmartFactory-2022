@@ -28,51 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.Lookup_Btn = new System.Windows.Forms.Button();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// Lookup_Btn
-			// 
-			this.Lookup_Btn.BackColor = System.Drawing.Color.LightSteelBlue;
-			this.Lookup_Btn.FlatAppearance.BorderSize = 0;
-			this.Lookup_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Lookup_Btn.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Lookup_Btn.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.Lookup_Btn.Location = new System.Drawing.Point(650, 33);
-			this.Lookup_Btn.Name = "Lookup_Btn";
-			this.Lookup_Btn.Size = new System.Drawing.Size(118, 34);
-			this.Lookup_Btn.TabIndex = 1;
-			this.Lookup_Btn.Text = "조회";
-			this.Lookup_Btn.UseVisualStyleBackColor = false;
-			this.Lookup_Btn.Click += new System.EventHandler(this.Lookup_Btn_Click);
-			// 
-			// dataGridView1
-			// 
-			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(0, 69);
-			this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.RowHeadersWidth = 51;
-			this.dataGridView1.RowTemplate.Height = 27;
-			this.dataGridView1.Size = new System.Drawing.Size(768, 472);
-			this.dataGridView1.TabIndex = 2;
-			// 
-			// ucScreen2
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-			this.Controls.Add(this.dataGridView1);
-			this.Controls.Add(this.Lookup_Btn);
-			this.Name = "ucScreen2";
-			this.Size = new System.Drawing.Size(771, 577);
-			this.Load += new System.EventHandler(this.ucScreen2_Load);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-			this.ResumeLayout(false);
+            this.Lookup_Btn = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // Lookup_Btn
+            // 
+            this.Lookup_Btn.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.Lookup_Btn.FlatAppearance.BorderSize = 0;
+            this.Lookup_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Lookup_Btn.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lookup_Btn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lookup_Btn.Location = new System.Drawing.Point(653, 543);
+            this.Lookup_Btn.Name = "Lookup_Btn";
+            this.Lookup_Btn.Size = new System.Drawing.Size(118, 34);
+            this.Lookup_Btn.TabIndex = 1;
+            this.Lookup_Btn.Text = "조회";
+            this.Lookup_Btn.UseVisualStyleBackColor = false;
+            this.Lookup_Btn.Click += new System.EventHandler(this.Lookup_Btn_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 69);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(768, 454);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // ucScreen2
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Lookup_Btn);
+            this.Name = "ucScreen2";
+            this.Size = new System.Drawing.Size(771, 577);
+            this.Load += new System.EventHandler(this.ucScreen2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
 
         }
 

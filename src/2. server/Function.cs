@@ -54,10 +54,6 @@ namespace WindowsFormsApp4
                 dataTable.Rows.Add(ordn, oinch, orfh, opn, onum);
 
             }
-
-
-
-
             return dataTable;
         }
     }
