@@ -115,13 +115,17 @@ namespace WindowsFormsApp4
                 string commad = $"INSERT INTO {tname} VALUES (";
                 for (int i = 0; i < Speci.Length; i++)
                 {
-                    if (i != Speci.Length - 1)
+                    if (i != Speci.Length - 1 && i != 1)
                     {
                         commad += $"'{Speci[i]}',";
                     }
+                    else if (i == 1)
+                    {
+                        commad += "TO_DATE('" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 'YYYY-MM-DD HH24:mi:ss') ," ;
+                    }
                     else
                     {
-                        commad += "TO_DATE('" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 'YYYY-MM-DD HH24:mi:ss')" + $", '{Speci[i]}')";
+                        commad += $"'{Speci[i]}')";
                     }
                 }
                 cmd.CommandText = commad;
