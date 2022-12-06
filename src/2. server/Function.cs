@@ -13,6 +13,8 @@ namespace WindowsFormsApp4
         OracleConnection conn;
         OracleCommand cmd;
         OracleDataReader rdr;
+        OracleTransaction STrans = null;
+        OracleTransaction transaction;
         string strconn = "data source=(description=" +
                "(address_list=(address=(protocol=tcp)" +
                "(host=localhost)(port=1521)))" +
@@ -115,13 +117,9 @@ namespace WindowsFormsApp4
                 string commad = $"INSERT INTO {tname} VALUES (";
                 for (int i = 0; i < Speci.Length; i++)
                 {
-                    if (i != Speci.Length - 1 && i != 1)
+                    if (i != Speci.Length - 1 )
                     {
                         commad += $"'{Speci[i]}',";
-                    }
-                    else if (i == 1)
-                    {
-                        commad += "TO_DATE('" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 'YYYY-MM-DD HH24:mi:ss') ," ;
                     }
                     else
                     {
@@ -129,9 +127,8 @@ namespace WindowsFormsApp4
                     }
                 }
                 cmd.CommandText = commad;
-                int q = cmd.ExecuteNonQuery();
-                cmd.CommandText = "Commit";
-                int k = cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
+                transaction.Commit();
             }
             catch(Exception ex)
             {
