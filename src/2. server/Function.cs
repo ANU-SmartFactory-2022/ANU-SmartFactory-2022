@@ -13,12 +13,14 @@ namespace WindowsFormsApp4
         OracleConnection conn;
         OracleCommand cmd;
         OracleDataReader rdr;
+        OracleTransaction STrans = null;
+        OracleTransaction transaction;
         string strconn = "data source=(description=" +
                "(address_list=(address=(protocol=tcp)" +
                "(host=localhost)(port=1521)))" +
                "(connect_data=(server=dedicated)" +
                "(service_name=xe)));" +
-               "user id=hr;password=hr;";
+               "user id=pd68;password=pd68;";
         public void connect()
         {
             conn = new OracleConnection(strconn);
@@ -27,6 +29,8 @@ namespace WindowsFormsApp4
             cmd.Connection = conn;
 
         }
+
+        //ORD 테이블 전체 불러오기
         public DataTable select_ORD(string _ORDN = "")
         {
             DataTable dataTable = new DataTable();
@@ -57,6 +61,8 @@ namespace WindowsFormsApp4
             }
             return dataTable;
         }
+        
+        //PRD 테이블 인치,주사율,패널 
         public DataTable select_PRD(string str_inch, string str_panel, string str_hz)
         {
             string query = "SELECT * FROM PRD ";
@@ -115,19 +121,18 @@ namespace WindowsFormsApp4
                 string commad = $"INSERT INTO {tname} VALUES (";
                 for (int i = 0; i < Speci.Length; i++)
                 {
-                    if (i != Speci.Length - 1)
+                    if (i != Speci.Length - 1 )
                     {
                         commad += $"'{Speci[i]}',";
                     }
                     else
                     {
-                        commad += "TO_DATE('" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 'YYYY-MM-DD HH24:mi:ss')" + $", '{Speci[i]}')";
+                        commad += $"'{Speci[i]}')";
                     }
                 }
                 cmd.CommandText = commad;
-                int q = cmd.ExecuteNonQuery();
-                cmd.CommandText = "Commit";
-                int k = cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
+                transaction.Commit();
             }
             catch(Exception ex)
             {
@@ -135,6 +140,7 @@ namespace WindowsFormsApp4
        
             }
         }
+
 
     }
 }

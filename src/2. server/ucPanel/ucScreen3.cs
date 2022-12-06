@@ -41,8 +41,7 @@ namespace WindowsFormsApp4.ucPanel
 			chart3.Series[0].Points.AddXY("데드픽셀", 45);
 			chart3.Series[0].Points.AddXY("스턱픽셀", 45);
 
-
-
+			
 
 		}
 
