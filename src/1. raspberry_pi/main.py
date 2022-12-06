@@ -42,7 +42,8 @@ def running():
             start_sensor_state = sensor.start_pos_detect()
             slide_sensor_state = sensor.slide_detect()
             
-            if tt==1: # recv_data == "START":
+            if recv_data == "START":
+                tt=2
                 if start_sensor_state == 1:
                     capture_img = camera.capture()
                     print("capture end")
@@ -51,7 +52,7 @@ def running():
                     socket_client.send("RESULT,"+str(qr_data)+","+str(pos))
                     print("send end")
 
-                    # pos = conveyor.Position.MIDDLE
+                    pos = conveyor.Position.MIDDLE
                     if pos == 1:
                         pos = conveyor.Position.TOP
                     elif pos == 2:
@@ -59,35 +60,32 @@ def running():
                     else:
                         pos = conveyor.Position.BOTTOM
 
-                    # conveyor.moving(pos)
                     conveyor.run()
-
                     time.sleep(0.5)
                     conveyor.stop()
-                    time.sleep(0.5)
+                    time.sleep(0.2)
                     conveyor.moving(pos)
+                    time.sleep(0.2)
 
+                    conveyor.run()
                     timer_start()
-                    time.sleep(1)
-
+                    time.sleep(0.8)
+                    
+            slide_sensor_state = sensor.slide_detect()
             if slide_sensor_state == 1:
                 timer_stop()
                 conveyor.stop()
                 socket_client.send("ROLLING_END")
+                conveyor.set_default_postion()
                 print("1 end")
             
             working_time = timer_check()
-            if timer_working() and working_time > 2:
+            if timer_working() and working_time > 1:
                 timer_stop()
                 conveyor.stop()
                 socket_client.send("STUCK")
                 print("2 end")
             
-            conveyor.set_default_postion()
-            conveyor.stop()
-            conveyor.step_end()
-            print("all end")
-            tt=2
 
     except Exception as e:
         print( type(e) )
@@ -96,10 +94,9 @@ def running():
 
 if __name__ == "__main__":
     print( "main" )
-    socket_client.connect_d('192.168.0.45', 8000 )
+    # socket_client.connect_d('192.168.0.45', 8000 )
     sensor.INIT()
     camera.INIT_1()
     conveyor.INIT_2()
     main_th = Thread( target=running )
     main_th.start()
-    # running()
