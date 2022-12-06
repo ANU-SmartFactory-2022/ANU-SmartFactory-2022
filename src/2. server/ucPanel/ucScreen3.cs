@@ -35,6 +35,7 @@ namespace WindowsFormsApp4.ucPanel
 			
 			chart1.Series[0].Points.AddXY("정상", 45);
 			chart1.Series[0].Points.AddXY("비정상", 50);
+			
 
 			chart3.Series[0].Points.AddXY("핫픽셀",45);
 			chart3.Series[0].Points.AddXY("데드픽셀", 45);

@@ -30,7 +30,7 @@ namespace WindowsFormsApp4.ucPanel
 
         public string CreateName(string inch ,string panel, string hz, string num)
         {
-            string code = inch[0] + "I" + panel[0] + "P" + hz[0] + "H" + DateTime.Now.ToString("dd - MM - yy") + num;
+            string code = inch[0] + "I" + panel[0] + "P" + hz[0] + "H" + DateTime.Now.ToString("ddMMyy") + num;
             return code;
         }
         private void ucScreen2_Load(object sender, EventArgs e)
@@ -67,12 +67,12 @@ namespace WindowsFormsApp4.ucPanel
                     int pack = Int32.Parse(row.Cells[4].Value.ToString());
                     for(int i = 0; i < pack; i++)
                     {
-                        string[] result = new string[5];
+                        string[] result = new string[4];
                         result[0] = CreateName(row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), i.ToString());
-                        result[1] = DateTime.Now.ToString("yyyy-MM-dd-HH-ss");
-                        result[2] = row.Cells[1].Value.ToString();
-                        result[3] = row.Cells[2].Value.ToString();
-                        result[4] = row.Cells[3].Value.ToString();
+
+                        result[1] = row.Cells[1].Value.ToString();
+                        result[2] = row.Cells[2].Value.ToString();
+                        result[3] = row.Cells[3].Value.ToString();
                         Program.f_function.INSERTCommand(result, "PRD");
                     }
                 }
