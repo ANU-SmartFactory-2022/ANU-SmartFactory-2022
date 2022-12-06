@@ -20,7 +20,7 @@ namespace WindowsFormsApp4
                "(host=localhost)(port=1521)))" +
                "(connect_data=(server=dedicated)" +
                "(service_name=xe)));" +
-               "user id=hr;password=hr;";
+               "user id=pd68;password=pd68;";
         public void connect()
         {
             conn = new OracleConnection(strconn);
@@ -29,6 +29,8 @@ namespace WindowsFormsApp4
             cmd.Connection = conn;
 
         }
+
+        //ORD 테이블 전체 불러오기
         public DataTable select_ORD(string _ORDN = "")
         {
             DataTable dataTable = new DataTable();
@@ -59,6 +61,8 @@ namespace WindowsFormsApp4
             }
             return dataTable;
         }
+        
+        //PRD 테이블 인치,주사율,패널 
         public DataTable select_PRD(string str_inch, string str_panel, string str_hz)
         {
             string query = "SELECT * FROM PRD ";
@@ -136,6 +140,7 @@ namespace WindowsFormsApp4
        
             }
         }
+
 
     }
 }
