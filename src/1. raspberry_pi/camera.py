@@ -47,22 +47,20 @@ def classify(img):
 
     blur = cv2.GaussianBlur(seg_img, ksize=(15,15), sigmaX=0)
     edged = cv2.Canny(blur, 50, 250)
-
+    
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (7,7))
     closed = cv2.morphologyEx(edged, cv2.MORPH_CLOSE, kernel)
-
     contours, _ = cv2.findContours(closed.copy(),cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     contours_xy = np.array(contours)
     contours_xy.shape
-    x_min, x_max = 0,0
+    x_min= 0
 
     value = list()
     for i in range(len(contours_xy)):
         for j in range(len(contours_xy[i])):
             value.append(contours_xy[i][j][0][0]) 
             x_min = min(value)
-            x_max = max(value)
             
     y_min = 0
     value = list()
@@ -72,9 +70,9 @@ def classify(img):
             value.append(contours_xy[i][j][0][1]) 
             y_min = min(value)
     
-    img_trim = img[y_min+30:y_min+420, x_min+30:x_min+1000]
+    img_trim = img[y_min+30:y_min+490, x_min+30:x_min+1110]
     bgr = img_trim[:,:,:3]
-
+    
     CLASSIFY_RESULT = 4
 
     color_mean = cv2.mean(bgr)
@@ -131,16 +129,9 @@ def classify(img):
     if color_mean[0]>250 and color_mean[1]>250 and color_mean[2]>250:
         cnt = cnt-1
 
-    # print('cnt:', cnt)
+    print('cnt:', cnt)
 
     if cnt==0:
         CLASSIFY_RESULT=2
         
     return CLASSIFY_RESULT
-
-
-# img = cv2.imread('../Image/cc.png')
-# t = classify(img)
-# print(t)
-
-# cv2.destroyAllWindows()

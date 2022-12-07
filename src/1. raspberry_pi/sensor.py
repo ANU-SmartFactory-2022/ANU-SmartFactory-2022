@@ -17,14 +17,4 @@ def start_pos_detect():
 def slide_detect():
     return GPIO.input(n)
     
-
-# try:
-#     INIT()
-    
-#     print(start_pos_detect())
-#     print(slide_detect())
-# except Exception as e:
-#     print( type(e) )
-#     print(e)
-
 GPIO.cleanup()
