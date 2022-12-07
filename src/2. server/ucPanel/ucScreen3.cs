@@ -11,12 +11,15 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp4.ucPanel
 {
+	
     public partial class ucScreen3 : UserControl
     {
         public ucScreen3()
         {
             InitializeComponent();
-        }
+			
+
+		}
 
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -27,11 +30,14 @@ namespace WindowsFormsApp4.ucPanel
 
 		private void ucScreen3_Load(object sender, EventArgs e)
 		{
+
+
+			
 			
 			comboBox1.SelectedIndex = 0;
 			comboBox2.SelectedIndex = 0;
 			comboBox3.SelectedIndex = 0;
-
+			
 			
 			chart1.Series[0].Points.AddXY("정상", 45);
 			chart1.Series[0].Points.AddXY("비정상", 50);
