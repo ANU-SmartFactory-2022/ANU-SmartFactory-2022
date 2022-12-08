@@ -45,12 +45,13 @@
 			this.panel_title.SuspendLayout();
 			this.panel_menu.SuspendLayout();
 			this.panel2.SuspendLayout();
-			this.panel_main.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel_title
 			// 
+			this.panel_title.Controls.Add(this.label2);
 			this.panel_title.Controls.Add(this.button6);
+			this.panel_title.Controls.Add(this.label3);
 			this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel_title.Location = new System.Drawing.Point(0, 0);
 			this.panel_title.Name = "panel_title";
@@ -206,8 +207,6 @@
 			// 
 			// panel_main
 			// 
-			this.panel_main.Controls.Add(this.label2);
-			this.panel_main.Controls.Add(this.label3);
 			this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel_main.Location = new System.Drawing.Point(186, 26);
 			this.panel_main.Name = "panel_main";
@@ -218,18 +217,22 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(267, 2);
+			this.label3.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+			this.label3.Location = new System.Drawing.Point(3, 2);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(38, 12);
+			this.label3.Size = new System.Drawing.Size(58, 21);
 			this.label3.TabIndex = 0;
 			this.label3.Text = "label3";
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(370, 3);
+			this.label2.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+			this.label2.Location = new System.Drawing.Point(128, 2);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(38, 12);
+			this.label2.Size = new System.Drawing.Size(58, 21);
 			this.label2.TabIndex = 7;
 			this.label2.Text = "label2";
 			// 
@@ -248,10 +251,9 @@
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.panel_title.ResumeLayout(false);
+			this.panel_title.PerformLayout();
 			this.panel_menu.ResumeLayout(false);
 			this.panel2.ResumeLayout(false);
-			this.panel_main.ResumeLayout(false);
-			this.panel_main.PerformLayout();
 			this.ResumeLayout(false);
 
         }
