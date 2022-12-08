@@ -55,9 +55,14 @@ namespace WindowsFormsApp4
                 string opn = rdr["OPN"].ToString();
                 string orfh = rdr["ORFH"].ToString();
                 string onum = rdr["ONUM"].ToString();
+
                 string ocom = rdr["OCOM"].ToString();
 
                 dataTable.Rows.Add(ordn, oinch, opn, orfh, onum, ocom);
+
+                string Ocom = rdr["Ocom"].ToString();
+                dataTable.Rows.Add(ordn, oinch, orfh, opn, onum, Ocom);
+
 
             }
             return dataTable;
