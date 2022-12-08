@@ -32,7 +32,7 @@
 			this.button6 = new System.Windows.Forms.Button();
 			this.panel_menu = new System.Windows.Forms.Panel();
 			this.PnlNav = new System.Windows.Forms.Panel();
-			this.button5 = new System.Windows.Forms.Button();
+			this.btn_stop = new System.Windows.Forms.Button();
 			this.btn_detail = new System.Windows.Forms.Button();
 			this.btn_summary = new System.Windows.Forms.Button();
 			this.btn_running = new System.Windows.Forms.Button();
@@ -42,6 +42,7 @@
 			this.panel_main = new System.Windows.Forms.Panel();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
+			this.btn_logout = new System.Windows.Forms.Button();
 			this.panel_title.SuspendLayout();
 			this.panel_menu.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -49,9 +50,7 @@
 			// 
 			// panel_title
 			// 
-			this.panel_title.Controls.Add(this.label2);
 			this.panel_title.Controls.Add(this.button6);
-			this.panel_title.Controls.Add(this.label3);
 			this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel_title.Location = new System.Drawing.Point(0, 0);
 			this.panel_title.Name = "panel_title";
@@ -79,8 +78,9 @@
 			// panel_menu
 			// 
 			this.panel_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+			this.panel_menu.Controls.Add(this.btn_logout);
 			this.panel_menu.Controls.Add(this.PnlNav);
-			this.panel_menu.Controls.Add(this.button5);
+			this.panel_menu.Controls.Add(this.btn_stop);
 			this.panel_menu.Controls.Add(this.btn_detail);
 			this.panel_menu.Controls.Add(this.btn_summary);
 			this.panel_menu.Controls.Add(this.btn_running);
@@ -100,21 +100,20 @@
 			this.PnlNav.Size = new System.Drawing.Size(3, 100);
 			this.PnlNav.TabIndex = 1;
 			// 
-			// button5
+			// btn_stop
 			// 
-			this.button5.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.button5.FlatAppearance.BorderSize = 0;
-			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.button5.Location = new System.Drawing.Point(0, 501);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(186, 50);
-			this.button5.TabIndex = 5;
-			this.button5.Text = "라인 긴급 중지";
-			this.button5.UseVisualStyleBackColor = true;
-			this.button5.Click += new System.EventHandler(this.button5_Click);
-			this.button5.Leave += new System.EventHandler(this.button5_Click);
+			this.btn_stop.FlatAppearance.BorderSize = 0;
+			this.btn_stop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_stop.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.btn_stop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+			this.btn_stop.Location = new System.Drawing.Point(0, 404);
+			this.btn_stop.Name = "btn_stop";
+			this.btn_stop.Size = new System.Drawing.Size(186, 50);
+			this.btn_stop.TabIndex = 5;
+			this.btn_stop.Text = "라인 긴급 중지";
+			this.btn_stop.UseVisualStyleBackColor = true;
+			this.btn_stop.Click += new System.EventHandler(this.button_click);
+			this.btn_stop.Leave += new System.EventHandler(this.button5_Click);
 			// 
 			// btn_detail
 			// 
@@ -180,6 +179,8 @@
 			// 
 			// panel2
 			// 
+			this.panel2.Controls.Add(this.label2);
+			this.panel2.Controls.Add(this.label3);
 			this.panel2.Controls.Add(this.btn_home);
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -219,22 +220,38 @@
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
 			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.label3.Location = new System.Drawing.Point(3, 2);
+			this.label3.Location = new System.Drawing.Point(3, 3);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(58, 21);
 			this.label3.TabIndex = 0;
 			this.label3.Text = "label3";
+			this.label3.Click += new System.EventHandler(this.label3_Click);
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
 			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.label2.Location = new System.Drawing.Point(128, 2);
+			this.label2.Location = new System.Drawing.Point(122, 3);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(58, 21);
 			this.label2.TabIndex = 7;
 			this.label2.Text = "label2";
+			// 
+			// btn_logout
+			// 
+			this.btn_logout.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.btn_logout.FlatAppearance.BorderSize = 0;
+			this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_logout.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.btn_logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+			this.btn_logout.Location = new System.Drawing.Point(0, 501);
+			this.btn_logout.Name = "btn_logout";
+			this.btn_logout.Size = new System.Drawing.Size(186, 50);
+			this.btn_logout.TabIndex = 6;
+			this.btn_logout.Text = "로그아웃";
+			this.btn_logout.UseVisualStyleBackColor = true;
+			this.btn_logout.Click += new System.EventHandler(this.button_click);
 			// 
 			// main
 			// 
@@ -251,9 +268,9 @@
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.panel_title.ResumeLayout(false);
-			this.panel_title.PerformLayout();
 			this.panel_menu.ResumeLayout(false);
 			this.panel2.ResumeLayout(false);
+			this.panel2.PerformLayout();
 			this.ResumeLayout(false);
 
         }
@@ -262,7 +279,7 @@
 
         private System.Windows.Forms.Panel panel_menu;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_stop;
         private System.Windows.Forms.Button btn_detail;
         private System.Windows.Forms.Button btn_summary;
         private System.Windows.Forms.Button btn_running;
@@ -275,6 +292,7 @@
 		private System.Windows.Forms.Button btn_home;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Button btn_logout;
 	}
 }
 
