@@ -252,5 +252,12 @@ namespace WindowsFormsApp4
             }
         }
 
+        //public void logout()
+        //{
+        //    this.Hide();
+        //    Login_Form.show();
+
+        //}
+
     }
 }

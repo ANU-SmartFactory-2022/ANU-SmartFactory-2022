@@ -42,27 +42,28 @@ namespace WindowsFormsApp4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //cmd.CommandText = $"select Mpw from Manager WHERE MId = '{textBox1.Text}'";
-            //rdr = cmd.ExecuteReader();
+            cmd.CommandText = $"select Mpw from Manager WHERE MId = '{textBox1.Text}'";
+            rdr = cmd.ExecuteReader();
             string pw = "";
-            //while (rdr.Read())
+            while (rdr.Read())
 
-            //{
-            //    pw = rdr["Mpw"].ToString();
-            //}
-            //if (textBox2.Text == pw)
+            {
+                pw = rdr["Mpw"].ToString();
+            }
+            if (textBox2.Text == pw)
 
-            //{
-                //cmd.CommandText = $"select * from Manager WHERE MId = '{textBox1.Text}'";
-                //rdr = cmd.ExecuteReader();
+            {
+                cmd.CommandText = $"select * from Manager WHERE MId = '{textBox1.Text}'";
+                rdr = cmd.ExecuteReader();
 
-                //while (rdr.Read())
-                //{
-                    //login_Number = rdr["MNumber"].ToString();
-                    //login_Name = rdr["MName"].ToString();
-                //}
+                while (rdr.Read())
+                {
+                    login_Number = rdr["MNumber"].ToString();
+                    login_Name = rdr["MName"].ToString();
+                }
+               
 
-                this.Hide();
+            this.Hide();
 
 
                 main1 = new main();
@@ -70,7 +71,7 @@ namespace WindowsFormsApp4
                 main1.login_Number = login_Number;
                 main1.Show();
 
-            //}
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -21,8 +21,10 @@ namespace WindowsFormsApp4
         public ucPanel.ucScreen3 ucSc3;
         public ucPanel.ucScreen4 ucSc4;
         public ucPanel.ucScreenHome ucScHome;
+        Login_Form Login_Form1;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
+
     (
      int nLeftRect,
      int nTopRect,
@@ -235,6 +237,12 @@ namespace WindowsFormsApp4
                 case "불량품 상세정보": panel_main.Controls.Add(ucSc4);
                     break;
                 case "모니터 공정": panel_main.Controls.Add(ucScHome);
+                    break;
+                case "로그아웃": this.Hide();
+                    
+                    Login_Form1 = new Login_Form();
+                    Login_Form1.Show();
+                           
                     break;
             }
         }
