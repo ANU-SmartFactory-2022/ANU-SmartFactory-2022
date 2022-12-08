@@ -138,12 +138,6 @@
     <Compile Include="ucPanel\ucScreenHome.Designer.cs">
       <DependentUpon>ucScreenHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucPanel\ucScreenStopPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucPanel\ucScreenStopPage.Designer.cs">
-      <DependentUpon>ucScreenStopPage.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,9 +163,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucPanel\ucScreenHome.resx">
       <DependentUpon>ucScreenHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucPanel\ucScreenStopPage.resx">
-      <DependentUpon>ucScreenStopPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>

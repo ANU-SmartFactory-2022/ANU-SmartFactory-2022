@@ -21,7 +21,6 @@ namespace WindowsFormsApp4
         public ucPanel.ucScreen3 ucSc3;
         public ucPanel.ucScreen4 ucSc4;
         public ucPanel.ucScreenHome ucScHome;
-        public ucPanel.ucScreenStopPage ucScStop;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
     (
@@ -54,7 +53,6 @@ namespace WindowsFormsApp4
             ucSc3 = new ucPanel.ucScreen3();
             ucSc4 = new ucPanel.ucScreen4();
             ucScHome = new ucPanel.ucScreenHome();
-            ucScStop = new ucPanel.ucScreenStopPage();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
             btn_list.Add(btn_monitoring);
@@ -62,7 +60,6 @@ namespace WindowsFormsApp4
             btn_list.Add(btn_summary);
             btn_list.Add(btn_detail);
             btn_list.Add(btn_home);
-            btn_list.Add(btn_stop);
             btn_list.Add(btn_logout);
         }
 
@@ -238,8 +235,6 @@ namespace WindowsFormsApp4
                     break;
                 case "모니터 공정": panel_main.Controls.Add(ucScHome);
                     break;
-                case "라인 긴급 중지": panel_main.Controls.Add(ucScStop);
-                    break;
             }
         }
 
@@ -293,6 +288,12 @@ namespace WindowsFormsApp4
 		{
 
 		}
+
+		private void btn_stop_Click(object sender, EventArgs e)
+		{
+            Button btn = (Button)sender;
+            DialogResult result = MessageBox.Show("공정을 멈추시겠습니까?", "라인 긴급 중지", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+        }
 
 		private void panel_MouseDown(object sender, MouseEventArgs e)
         {

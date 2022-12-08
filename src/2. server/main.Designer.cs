@@ -127,7 +127,7 @@
 			this.btn_stop.TabIndex = 5;
 			this.btn_stop.Text = "라인 긴급 중지";
 			this.btn_stop.UseVisualStyleBackColor = true;
-			this.btn_stop.Click += new System.EventHandler(this.button_click);
+			this.btn_stop.Click += new System.EventHandler(this.btn_stop_Click);
 			this.btn_stop.Leave += new System.EventHandler(this.button5_Click);
 			// 
 			// btn_detail
@@ -257,6 +257,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoSize = true;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
 			this.ClientSize = new System.Drawing.Size(951, 577);
 			this.Controls.Add(this.panel_main);
