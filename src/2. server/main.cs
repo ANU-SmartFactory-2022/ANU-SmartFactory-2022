@@ -16,12 +16,11 @@ namespace WindowsFormsApp4
     //패널 객체 생성, 메인창 선택 버튼 옆 작은 선택 패널 옮기기
     public partial class main : Form
     {
-        ucPanel.ucScreen1 ucSc1 = new ucPanel.ucScreen1();
-        ucPanel.ucScreen2 ucSc2 = new ucPanel.ucScreen2 ();
-        ucPanel.ucScreen3 ucSc3 = new ucPanel.ucScreen3 ();
-        ucPanel.ucScreen4 ucSc4 = new ucPanel.ucScreen4 ();
-        ucPanel.ucScreenHome ucScHome = new ucPanel.ucScreenHome();
-    
+        public ucPanel.ucScreen1 ucSc1;
+        public ucPanel.ucScreen2 ucSc2;
+        public ucPanel.ucScreen3 ucSc3;
+        public ucPanel.ucScreen4 ucSc4;
+        public ucPanel.ucScreenHome ucScHome;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
     (
@@ -38,7 +37,7 @@ namespace WindowsFormsApp4
         OracleCommand cmd = new OracleCommand();
         OracleDataReader rdr;
         OracleConnection conn = new OracleConnection(strConn);
-        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=hr ;Password=hr;";
+        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=pd68 ;Password=pd68;";
         OracleDataAdapter adapt = new OracleDataAdapter();
 
         //서버 클라이언트 설정을 위한 객체 설정
@@ -48,6 +47,12 @@ namespace WindowsFormsApp4
         public main()
         {
             InitializeComponent();
+
+            ucSc1 = new ucPanel.ucScreen1();
+            ucSc2 = new ucPanel.ucScreen2(this);
+            ucSc3 = new ucPanel.ucScreen3();
+            ucSc4 = new ucPanel.ucScreen4();
+            ucScHome = new ucPanel.ucScreenHome();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
             btn_list.Add(btn_monitoring);
@@ -184,15 +189,15 @@ namespace WindowsFormsApp4
                     string Result1 = rdr["PRResult"].ToString();
                     if (Result1 == "핫")
                     {
-                        ucSc1.buttonColor(Int32.Parse(inch), 1, Color.Red);
+                        ucSc1.buttonColor(Int32.Parse(inch), 1, Color.Red, ucSc1);
                     }
                     else if (Result1 == "스턱")
                     {
-                        ucSc1.buttonColor(Int32.Parse(inch), 2, Color.Red);
+                        ucSc1.buttonColor(Int32.Parse(inch), 2, Color.Red, ucSc1);
                     }
                     else if (Result1 == "데드")
                     {
-                        ucSc1.buttonColor(Int32.Parse(inch), 3, Color.Red);
+                        ucSc1.buttonColor(Int32.Parse(inch), 3, Color.Red, ucSc1);
                     }
                 }
             }
@@ -218,21 +223,35 @@ namespace WindowsFormsApp4
                 case "모니터링":
                     {
                         panel_main.Controls.Add(ucSc1);
+                        this.Invalidate();
+                        this.Update();
+                        this.Refresh();
                     }
                     break;
-                case "공정 가동": panel_main.Controls.Add(ucSc2); break;
-                case "통계": panel_main.Controls.Add(ucSc3); break;
-                case "불량품 상세정보": panel_main.Controls.Add(ucSc4); break;
-                case "모니터 공정": panel_main.Controls.Add(ucScHome); break;
+                case "공정 가동": panel_main.Controls.Add(ucSc2);                
+                    break;
+                case "통계": panel_main.Controls.Add(ucSc3);
+                    break;
+                case "불량품 상세정보": panel_main.Controls.Add(ucSc4);
+                    break;
+                case "모니터 공정": panel_main.Controls.Add(ucScHome);
+                    break;
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            ucSc2.factoryoperation(ucSc1);
+            ucSc1.Invalidate();
+            ucSc2.Invalidate();
             // message box
         }
-
-
+        public void doit()
+        {
+            ucSc2.factoryoperation(ucSc1);
+            ucSc1.Invalidate();
+            ucSc2.Invalidate();
+        }
         // 종료 x 버튼 
         private void button6_Click_1(object sender, EventArgs e)
         {
@@ -277,6 +296,7 @@ namespace WindowsFormsApp4
             MValX = e.X;
             MValY = e.Y;
         }
+
     }
 }
 

@@ -10,54 +10,65 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp4.ucPanel
 {
-    public partial class ucScreen1 : UserControl
-    {
+	public partial class ucScreen1 : UserControl
+	{		
         public ucScreen1()
         {
-            InitializeComponent();
+            InitializeComponent();	
         }
-
+		
 		private void btn_Click(object sender, EventArgs e)
 		{
 			Button btn = (Button)sender;
 			DialogResult result= MessageBox.Show("해당 공정에 문제가 발생하였습니다. 조치 하시겠습니다?", "공정 오류", MessageBoxButtons.YesNo);
-			picBoxColor(27, "ON");  //테스트용
 			if (result == DialogResult.Yes)
 			{
 				btn.BackColor= SystemColors.Window;
 			}
+			buttontest();
 
-		}	
-		
-		//문제가 생긴 공정 버튼을 빨간색으로 표시하는 코드
-        public void buttonColor(int _inch, int _proc, Color _clr )
-		{
-			var panel_list = Controls
-				.OfType<Panel>();
-
-			foreach (var panel in panel_list)
-			{
-				try
-				{
-					var b = panel.Controls
-										.OfType<Button>()
-										.Where(btn => btn.Name == "btn_" + _inch.ToString() + "_" + _proc.ToString() )
-										.First();
-
-					b.BackColor = _clr;
-				}
-				catch( Exception ex )
-				{
-
-				}
-			}
 		}
-		// 모니터 이동 중 화살표 색상 변경
-		public void picBoxColor(int _inch , string state)
+		//문제가 생긴 공정 버튼을 빨간색으로 표시하는 코드
+		public void buttonColor(int _inch, int _proc, Color _clr, ucScreen1 ucScreen1)
 		{
 			try
 			{
-				var picBox = Controls
+				var panel = ucScreen1.panel1;
+				if(_inch == 24)
+                {
+					panel = ucScreen1.panel1;
+                }
+				else if(_inch == 27)
+                {
+					panel = ucScreen1.panel2;
+				}
+				else
+                {
+					panel = ucScreen1.panel3;
+				}
+				var b = panel.Controls
+						.OfType<Button>()
+						.Where(btn => btn.Name == "btn_" + _inch.ToString() + "_" + _proc.ToString() )
+						.First();
+
+				b.BackColor = _clr;
+				Invalidate();
+			}
+			catch( Exception ex )
+			{
+
+			}
+		}
+		public void buttontest()
+        {
+			btn_24_1.BackColor = Color.Red;
+        }
+		// 모니터 이동 중 화살표 색상 변경
+		public void picBoxColor(int _inch , string state, ucScreen1 ucScreen1)
+		{
+			try
+			{
+				var picBox = ucScreen1.Controls
 					.OfType<PictureBox>()
 					.Where(pib => pib.Name == "pib_" + _inch.ToString())
 					.First();
@@ -70,14 +81,15 @@ namespace WindowsFormsApp4.ucPanel
 					Image img = (Image)Properties.Resources.ResourceManager.GetObject(picBox.Name + state, Properties.Resources.Culture);
 					picBox.Image = img;
 					picBox.Visible = true;
-				}
+				}			
 			}
 			catch (Exception ex)
 			{
 				
 			}
+
 		}
-		
+
 		public void picBoxColor2(string _num, string state)
 		{
 			try
@@ -137,8 +149,8 @@ namespace WindowsFormsApp4.ucPanel
 
         private void panel7_Paint_1(object sender, PaintEventArgs e)
         {
-			
-        }
+		
+		}
 
         private void label7_Click_1(object sender, EventArgs e)
         {
@@ -151,6 +163,11 @@ namespace WindowsFormsApp4.ucPanel
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

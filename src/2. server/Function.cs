@@ -20,7 +20,7 @@ namespace WindowsFormsApp4
                "(host=localhost)(port=1521)))" +
                "(connect_data=(server=dedicated)" +
                "(service_name=xe)));" +
-               "user id=hr;password=hr;";
+               "user id=pd68;password=pd68;";
         public void connect()
         {
             conn = new OracleConnection(strconn);
@@ -52,22 +52,26 @@ namespace WindowsFormsApp4
             {
                 string ordn = rdr["ORDN"].ToString();
                 string oinch = rdr["OINCH"].ToString();
-                string orfh = rdr["ORFH"].ToString();
                 string opn = rdr["OPN"].ToString();
+                string orfh = rdr["ORFH"].ToString();
                 string onum = rdr["ONUM"].ToString();
 
-                dataTable.Rows.Add(ordn, oinch, orfh, opn, onum);
+                string ocom = rdr["OCOM"].ToString();
+
+                dataTable.Rows.Add(ordn, oinch, opn, orfh, onum, ocom);
+
+
 
             }
             return dataTable;
         }
-        
+
         //PRD 테이블 인치,주사율,패널 
         public DataTable select_PRD(string str_inch, string str_panel, string str_hz)
         {
-            string query = "SELECT * FROM PRD ";
-            List< string > where_item = new List<string>();
-            
+            string query = "SELECT d.PINCH as 사이즈,d.PPN as 패널,d.PRFH as 주사율,count(*) as 출고_개수,count(CASE WHEN m.prresult='정상' THEN 1 END) as 정상_개수, count(*)-count(CASE WHEN m.prresult='정상' THEN 1 END) as 비정상_개수 FROM PRD d, PRM m";
+            List<string> where_item = new List<string>();
+
             if (str_inch != "전체")
             {
                 where_item.Add("PINCH = '" + str_inch + "'");
@@ -80,35 +84,40 @@ namespace WindowsFormsApp4
             {
                 where_item.Add("PRFH = '" + str_hz + "'");
             }
-
+            query += " where d.ppdnumber=m.prpdnumber";
             int where_item_cnt = where_item.Count();
             if (where_item_cnt > 0)
             {
-                query += "where ";
-                for ( int i = 0; i < where_item_cnt; i++)
+                for (int i = 0; i < where_item_cnt; i++)
                 {
-                    query += where_item[i];
-                    if( i < where_item_cnt - 1)
+                    if (i < where_item_cnt)
                     {
                         query += " AND ";
                     }
+                    query += where_item[i];
                 }
             }
-            
+            query += " group by d.PINCH,d.PPN,d.PRFH";
+
             DataTable dt = new DataTable();
             dt.Columns.Add("사이즈", typeof(string));
             dt.Columns.Add("패널", typeof(string));
             dt.Columns.Add("주사율", typeof(string));
+            dt.Columns.Add("출고_개수", typeof(string));
+            dt.Columns.Add("정상_개수", typeof(string));
+            dt.Columns.Add("비정상_개수", typeof(string));
             cmd.CommandText = query;
             rdr = cmd.ExecuteReader();
 
             while (rdr.Read())
             {
-                string pinch = rdr["PINCH"].ToString();
-                string ppn = rdr["PPN"].ToString();
-                string prfh = rdr["PRFH"].ToString();
-
-                dt.Rows.Add(pinch, ppn, prfh);
+                string pinch = rdr["사이즈"].ToString();
+                string ppn = rdr["패널"].ToString();
+                string prfh = rdr["주사율"].ToString();
+                string all_pd = rdr["출고_개수"].ToString();
+                string good_pd = rdr["정상_개수"].ToString();
+                string not_pd = rdr["비정상_개수"].ToString();
+                dt.Rows.Add(pinch, ppn, prfh, all_pd, good_pd, not_pd);
             }
             return dt;
         }
@@ -141,8 +150,107 @@ namespace WindowsFormsApp4
             }
         }
 
+        //정상제품 카운트
+        public string cnt_normal()
+        {
+             string normal1="";
+
+             cmd.CommandText = $"SELECT COUNT(*) FROM PRM WHERE PRResult = '정상'";
+             
+             rdr = cmd.ExecuteReader();
+             if (rdr.Read())
+             {
+                 normal1 = rdr["count(*)"].ToString();
+                 
+                return normal1;
+             }
+             else
+             {
+                 return "없습니다";
+             }           
+        }
+
+        //비정상 제품카운트
+        public string cnt_abnormal()
+        {
+            string abnormal1 = "";
+
+            cmd.CommandText = $"SELECT COUNT(*) FROM PRM WHERE PRResult != '정상'";
+
+            rdr = cmd.ExecuteReader();
+            if (rdr.Read())
+            {
+                abnormal1 = rdr["count(*)"].ToString();
+
+                return abnormal1;
+            }
+            else
+            {
+                return "없습니다";
+            }
+        }
+
+        //핫픽셀
+        public string cnt_hot()
+        {
+            string hot = "";
+
+            cmd.CommandText = $"SELECT COUNT(*) FROM PRM WHERE PRResult = '핫'";
+
+            rdr = cmd.ExecuteReader();
+            if (rdr.Read())
+            {
+                hot = rdr["count(*)"].ToString();
+
+                return hot;
+            }
+            else
+            {
+                return "없습니다";
+            }
+        }
 
         
+        //데드픽셀
+        public string cnt_dead()
+        {
+            string dead = "";
+
+            cmd.CommandText = $"SELECT COUNT(*) FROM PRM WHERE PRResult = '데드'";
+
+            rdr = cmd.ExecuteReader();
+            if (rdr.Read())
+            {
+                dead = rdr["count(*)"].ToString();
+
+                return dead;
+            }
+            else
+            {
+                return "없습니다";
+            }
+
+        }
+
+        //스턱픽셀
+        public string cnt_stuck()
+        {
+            string stuck = "";
+
+            cmd.CommandText = $"SELECT COUNT(*) FROM PRM WHERE PRResult = '스턱'";
+
+            rdr = cmd.ExecuteReader();
+            if (rdr.Read())
+            {
+                stuck = rdr["count(*)"].ToString();
+
+                return stuck;
+            }
+            else
+            {
+                return "없습니다";
+            }
+        }
 
     }
 }
