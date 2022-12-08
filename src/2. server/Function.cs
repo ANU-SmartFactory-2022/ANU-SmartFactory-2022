@@ -60,8 +60,6 @@ namespace WindowsFormsApp4
 
                 dataTable.Rows.Add(ordn, oinch, opn, orfh, onum, ocom);
 
-                string Ocom = rdr["Ocom"].ToString();
-                dataTable.Rows.Add(ordn, oinch, orfh, opn, onum, Ocom);
 
 
             }
