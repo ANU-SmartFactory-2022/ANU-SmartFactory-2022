@@ -52,11 +52,12 @@ namespace WindowsFormsApp4
             {
                 string ordn = rdr["ORDN"].ToString();
                 string oinch = rdr["OINCH"].ToString();
-                string orfh = rdr["ORFH"].ToString();
                 string opn = rdr["OPN"].ToString();
+                string orfh = rdr["ORFH"].ToString();
                 string onum = rdr["ONUM"].ToString();
+                string ocom = rdr["OCOM"].ToString();
 
-                dataTable.Rows.Add(ordn, oinch, orfh, opn, onum);
+                dataTable.Rows.Add(ordn, oinch, opn, orfh, onum, ocom);
 
             }
             return dataTable;
@@ -66,6 +67,7 @@ namespace WindowsFormsApp4
         public DataTable select_PRD(string str_inch, string str_panel, string str_hz)
         {
             string query = "SELECT * FROM PRD ";
+
             List< string > where_item = new List<string>();
             
             if (str_inch != "전체")
@@ -93,6 +95,7 @@ namespace WindowsFormsApp4
                         query += " AND ";
                     }
                 }
+
             }
             
             DataTable dt = new DataTable();
@@ -100,6 +103,7 @@ namespace WindowsFormsApp4
             dt.Columns.Add("패널", typeof(string));
             dt.Columns.Add("주사율", typeof(string));
             cmd.CommandText = query;
+            
             rdr = cmd.ExecuteReader();
 
             while (rdr.Read())
@@ -109,7 +113,11 @@ namespace WindowsFormsApp4
                 string prfh = rdr["PRFH"].ToString();
 
                 dt.Rows.Add(pinch, ppn, prfh);
+
             }
+
+           
+
             return dt;
         }
 
@@ -141,8 +149,49 @@ namespace WindowsFormsApp4
             }
         }
 
+        public string cnt_normal()
+        {
+             string normal1="";
 
-        
+             cmd.CommandText = $"SELECT COUNT(*) FROM PRM WHERE PRResult = '정상'";
+             
+             rdr = cmd.ExecuteReader();
+             if (rdr.Read())
+             {
+                 normal1 = rdr["count(*)"].ToString();
+                 
+                return normal1;
+             }
+             else
+             {
+                 return "없습니다";
+             }
+
+           
+       }
+
+        public string cnt_abnormal()
+        {
+            string abnormal1 = "";
+
+            cmd.CommandText = $"SELECT COUNT(*) FROM PRM WHERE PRResult != '정상'";
+
+            rdr = cmd.ExecuteReader();
+            if (rdr.Read())
+            {
+                abnormal1 = rdr["count(*)"].ToString();
+
+                return abnormal1;
+            }
+            else
+            {
+                return "없습니다";
+            }
+
+
+        }
+
+
 
     }
 }

@@ -18,7 +18,6 @@ namespace WindowsFormsApp4.ucPanel
         {
             InitializeComponent();
 			
-
 		}
 
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -30,25 +29,25 @@ namespace WindowsFormsApp4.ucPanel
 
 		private void ucScreen3_Load(object sender, EventArgs e)
 		{
-
-
-			
 			
 			comboBox1.SelectedIndex = 0;
 			comboBox2.SelectedIndex = 0;
 			comboBox3.SelectedIndex = 0;
-			
-			
-			chart1.Series[0].Points.AddXY("정상", 45);
-			chart1.Series[0].Points.AddXY("비정상", 50);
+
+
+			string normal = Program.f_function.cnt_normal();
+			string abnormal = Program.f_function.cnt_abnormal();
+
+			chart1.Series[0].Points.AddXY("정상", Int32.Parse(normal));
+			chart1.Series[0].Points.AddXY("비정상", Int32.Parse(abnormal));
 			
 
 			chart3.Series[0].Points.AddXY("핫픽셀",45);
 			chart3.Series[0].Points.AddXY("데드픽셀", 45);
 			chart3.Series[0].Points.AddXY("스턱픽셀", 45);
 
+			 
 			
-
 		}
 
 		private void button1_Click(object sender, EventArgs e)

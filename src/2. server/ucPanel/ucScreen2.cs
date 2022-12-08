@@ -31,7 +31,7 @@ namespace WindowsFormsApp4.ucPanel
 
         public string CreateName(string inch ,string panel, string hz, string num)
         {
-            string code = inch[0] + "I" + panel[0] + "P" + hz[0] + "H" + DateTime.Now.ToString("ddMMyy") + num;
+            string code = inch[1] + "I" + panel[0] + "P" + hz[0] + "H" + DateTime.Now.ToString("ddMMyy") + num;
             return code;
         }
         private void ucScreen2_Load(object sender, EventArgs e)
