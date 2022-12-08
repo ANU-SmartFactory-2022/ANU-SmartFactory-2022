@@ -60,6 +60,8 @@ namespace WindowsFormsApp4
             btn_list.Add(btn_summary);
             btn_list.Add(btn_detail);
             btn_list.Add(btn_home);
+            btn_list.Add(btn_stop);
+            btn_list.Add(btn_logout);
         }
 
         public string login_Number;
@@ -283,7 +285,12 @@ namespace WindowsFormsApp4
 
         }
 
-        private void panel_MouseDown(object sender, MouseEventArgs e)
+		private void label3_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void panel_MouseDown(object sender, MouseEventArgs e)
         {
             TagMove = true;
             MValX = e.X;
