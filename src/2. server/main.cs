@@ -21,7 +21,11 @@ namespace WindowsFormsApp4
         public ucPanel.ucScreen3 ucSc3;
         public ucPanel.ucScreen4 ucSc4;
         public ucPanel.ucScreenHome ucScHome;
+
         Login_Form Login_Form1;
+
+        public ucPanel.ucScreenStopPage ucScStop;
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
 
@@ -39,7 +43,7 @@ namespace WindowsFormsApp4
         OracleCommand cmd = new OracleCommand();
         OracleDataReader rdr;
         OracleConnection conn = new OracleConnection(strConn);
-        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=pd68 ;Password=pd68;";
+        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=hr ;Password=hr;";
         OracleDataAdapter adapt = new OracleDataAdapter();
 
         //서버 클라이언트 설정을 위한 객체 설정
@@ -55,6 +59,7 @@ namespace WindowsFormsApp4
             ucSc3 = new ucPanel.ucScreen3();
             ucSc4 = new ucPanel.ucScreen4();
             ucScHome = new ucPanel.ucScreenHome();
+            ucScStop = new ucPanel.ucScreenStopPage();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
             btn_list.Add(btn_monitoring);
@@ -238,11 +243,15 @@ namespace WindowsFormsApp4
                     break;
                 case "모니터 공정": panel_main.Controls.Add(ucScHome);
                     break;
+
                 case "로그아웃": this.Hide();
                     
                     Login_Form1 = new Login_Form();
                     Login_Form1.Show();
-                           
+                    break;
+
+                case "라인 긴급 중지": panel_main.Controls.Add(ucScStop);
+
                     break;
             }
         }

@@ -63,6 +63,16 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap free_icon_caution_4539472 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-caution-4539472", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap free_icon_ecg_monitor_5199552 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-ecg-monitor-5199552", resourceCulture);
