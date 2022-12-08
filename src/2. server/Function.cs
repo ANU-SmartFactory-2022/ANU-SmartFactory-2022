@@ -20,7 +20,7 @@ namespace WindowsFormsApp4
                "(host=localhost)(port=1521)))" +
                "(connect_data=(server=dedicated)" +
                "(service_name=xe)));" +
-               "user id=pd68;password=pd68;";
+               "user id=hr;password=hr;";
         public void connect()
         {
             conn = new OracleConnection(strconn);
@@ -55,8 +55,8 @@ namespace WindowsFormsApp4
                 string orfh = rdr["ORFH"].ToString();
                 string opn = rdr["OPN"].ToString();
                 string onum = rdr["ONUM"].ToString();
-
-                dataTable.Rows.Add(ordn, oinch, orfh, opn, onum);
+                string Ocom = rdr["Ocom"].ToString();
+                dataTable.Rows.Add(ordn, oinch, orfh, opn, onum, Ocom);
 
             }
             return dataTable;
