@@ -29,6 +29,7 @@ namespace WindowsFormsApp4.ucPanel
         }
         private void Lookup_Btn_Click(object sender, EventArgs e)
         {
+            GridSelect();
             factoryoperation(ucsrennl);
         }
         public string CreateName(string inch ,string panel, string hz, string num)
@@ -39,6 +40,10 @@ namespace WindowsFormsApp4.ucPanel
         private void ucScreen2_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Program.f_function.select_ORD("");
+        }
+        public void Update(ucScreen2 ucsrennl)
+        {
+            ucsrennl.dataGridView1.DataSource = Program.f_function.select_ORD("");
         }
         public void GridAdd(string inch, string panel ,string hz)
         {

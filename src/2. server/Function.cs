@@ -20,7 +20,7 @@ namespace WindowsFormsApp4
                "(host=localhost)(port=1521)))" +
                "(connect_data=(server=dedicated)" +
                "(service_name=xe)));" +
-               "user id=pd68;password=pd68;";
+               "user id=hr;password=hr;";
         public void connect()
         {
             conn = new OracleConnection(strconn);
@@ -149,7 +149,22 @@ namespace WindowsFormsApp4
        
             }
         }
+        public void GridUpdate2(string inch, string panel, string hz)
+        {      
+            try
+            {
+                string COM= $"UPDATE ORD SET Ocom = Ocom + 1 WHERE (OINCH = {inch} AND OPn = '{panel}' AND ORfh = {hz})";
+                cmd.CommandText = "";
+                cmd.CommandText = COM;
+                cmd.ExecuteNonQuery();
+                transaction.Commit();
+            }
+            catch (Exception ex)
+            {
+                System.Console.WriteLine(ex.Message);
 
+            }
+        }
         //정상제품 카운트
         public string cnt_normal()
         {

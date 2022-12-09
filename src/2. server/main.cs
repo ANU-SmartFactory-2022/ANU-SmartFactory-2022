@@ -37,18 +37,18 @@ namespace WindowsFormsApp4
         OracleCommand cmd = new OracleCommand();
         OracleDataReader rdr;
         OracleConnection conn = new OracleConnection(strConn);
-        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=pd68 ;Password=pd68;";
+        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=hr;Password=hr;";
         OracleDataAdapter adapt = new OracleDataAdapter();
 
         //서버 클라이언트 설정을 위한 객체 설정
         socket_server m_server = null;
-        
+
 
         public main()
         {
             InitializeComponent();
 
-            ucSc1 = new ucPanel.ucScreen1();
+            ucSc1 = new ucPanel.ucScreen1(this);
             ucSc2 = new ucPanel.ucScreen2(this);
             ucSc3 = new ucPanel.ucScreen3();
             ucSc4 = new ucPanel.ucScreen4();
@@ -77,12 +77,12 @@ namespace WindowsFormsApp4
             label2.Text = login_Number;
             label3.Text = login_Name;
 
-            button_click( btn_home, e );
+            button_click(btn_home, e);
         }
-       
+
         private void recv_callback(string _msg)
         {
-            if(_msg == "Accept Client")
+            if (_msg == "Accept Client")
             {
                 m_server?.send("START");
             }
@@ -90,23 +90,26 @@ namespace WindowsFormsApp4
             {
                 checkmsg(_msg);
             }
+            MessageBox.Show(_msg);
+            //테스트용 
         }
 
         delegate void StringArgReturningVoidDelegate(string _msg);
+        string P_NUM = "";
+        string P_inch = "";
+        string NOWINCH = "";
+        string NOWPANEL = "";
+        string NOWHZ = "";
         private void checkmsg(string _msg)
         {
             string[] TCPmsg = _msg.Split(',');
-            string P_NUM = "";
-            string P_inch = "";
-            string NOWINCH = "";
-            string NOWPANEL = "";
-            string NOWHZ = "";
+
             switch (TCPmsg[0])
             {
                 case "QR_READING":
                     // DB 조회 및 인치값 발사하기
                     P_NUM = TCPmsg[1];
-                    string[] RESULTP = selectCommand( "PRD", P_NUM).Split(',');
+                    string[] RESULTP = selectCommand("PRD", P_NUM).Split(',');
                     m_server?.send("REQUEST_RESULT," + RESULTP[0]);
                     break;
                 case "RESULT":
@@ -131,8 +134,9 @@ namespace WindowsFormsApp4
                     ucSc1.Colorred();
                     break;
                 case "ROLLING_END":
-                    FINDERROR(P_inch);
-                    ucSc2.GridAdd(NOWINCH,NOWPANEL,NOWHZ);
+                    Program.f_function.GridUpdate2(NOWINCH, NOWPANEL, NOWHZ);
+                    FINDERROR(NOWINCH);
+                    m_server?.send("START");
                     break;
             }
         }
@@ -160,7 +164,7 @@ namespace WindowsFormsApp4
             return ru;
         }
         // 제품의 정보를 을 도출하기 위한 함수, split 0 인치 1패널 2 hz
-        public string selectCommand( string table , string result)
+        public string selectCommand(string table, string result)
         {
             cmd.CommandText = $"select * from {table} WHERE PPdNumber = '{result}' ";
             rdr = cmd.ExecuteReader();
@@ -173,12 +177,12 @@ namespace WindowsFormsApp4
                 panel = rdr["PPn"].ToString();
                 hz = rdr["PRfh"].ToString();
             }
-            return inch +","+ panel+ "," + hz;
+            return inch + "," + panel + "," + hz;
         }
         // 결과값을 확인 후 에러창을 띄위기 위한 함수 
         public void FINDERROR(string inch)
         {
-            cmd.CommandText = $"SELECT  PRResult, PINCH,COUNT(*) cnt , RATIO_TO_REPORT(COUNT(*)) OVER() rat FROM PRD INNER JOIN PRM ON PRD.PPdNumber = PRM.PRPdNumber Where PINCH = '{inch}' and PRResult != 4 GROUP BY PRResult,PINCH";
+            cmd.CommandText = $"SELECT  PRResult, PINCH,COUNT(*) cnt , RATIO_TO_REPORT(COUNT(*)) OVER() rat FROM PRD INNER JOIN PRM ON PRD.PPdNumber = PRM.PRPdNumber Where PINCH = '{inch}' GROUP BY PRResult,PINCH";
             rdr = cmd.ExecuteReader();
             double num = 0.0;
             while (rdr.Read())
@@ -202,14 +206,16 @@ namespace WindowsFormsApp4
                 }
             }
         }
+        public void Gridupdate()
+        {
+            ucSc2.Update(ucSc2);
+        }
         private void button_click( object sender, EventArgs e )
         {
             Button btn = (Button)sender;
             PnlNav.Height = btn.Height;
             PnlNav.Top = btn.Top;
             PnlNav.Left = btn.Left;
-
-            
             foreach( var item in btn_list )
 			{
                 item.BackColor = Color.FromArgb(24, 30, 54);
@@ -228,7 +234,9 @@ namespace WindowsFormsApp4
                         this.Refresh();
                     }
                     break;
-                case "공정 가동": panel_main.Controls.Add(ucSc2);                
+                case "공정 가동":
+                    Gridupdate();
+                    panel_main.Controls.Add(ucSc2);                
                     break;
                 case "통계": panel_main.Controls.Add(ucSc3);
                     break;
