@@ -35,6 +35,7 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.Lookup_Btn = new System.Windows.Forms.Button();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.button1 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -49,7 +50,7 @@
 			this.Lookup_Btn.Name = "Lookup_Btn";
 			this.Lookup_Btn.Size = new System.Drawing.Size(176, 34);
 			this.Lookup_Btn.TabIndex = 1;
-			this.Lookup_Btn.Text = "새로고침";
+			this.Lookup_Btn.Text = "공정";
 			this.Lookup_Btn.UseVisualStyleBackColor = false;
 			this.Lookup_Btn.Click += new System.EventHandler(this.Lookup_Btn_Click);
 			// 
@@ -107,12 +108,27 @@
 			this.dataGridView1.Size = new System.Drawing.Size(768, 506);
 			this.dataGridView1.TabIndex = 2;
 			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
+			this.button1.FlatAppearance.BorderSize = 0;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.button1.Location = new System.Drawing.Point(395, 33);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(176, 34);
+			this.button1.TabIndex = 3;
+			this.button1.Text = "새로고침";
+			this.button1.UseVisualStyleBackColor = false;
+			// 
 			// ucScreen2
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.Lookup_Btn);
 			this.Name = "ucScreen2";
@@ -127,6 +143,7 @@
 		private System.Windows.Forms.Button Lookup_Btn;
 
         private System.Windows.Forms.DataGridView dataGridView1;
-    }
+		private System.Windows.Forms.Button button1;
+	}
 
 }
