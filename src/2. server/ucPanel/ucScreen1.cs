@@ -94,11 +94,11 @@ namespace WindowsFormsApp4.ucPanel
 
 		}
 
-		public void picBoxColor2(string _num, string state)
+		public void picBoxColor2(string _num, string state , ucScreen1 ucScreen1)
 		{
 			try
 			{
-				var picBox1 = Controls
+				var picBox1 = ucScreen1.Controls
 					.OfType<PictureBox>()
 					.Where(pib => pib.Name == "pib_" + _num.ToString())
 					.First();

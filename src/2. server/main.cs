@@ -21,7 +21,7 @@ namespace WindowsFormsApp4
         public ucPanel.ucScreen3 ucSc3;
         public ucPanel.ucScreen4 ucSc4;
         public ucPanel.ucScreenHome ucScHome;
-
+        public bool stop;
         Login_Form Login_Form1;
 
         public ucPanel.ucScreenStopPage ucScStop;
@@ -61,9 +61,9 @@ namespace WindowsFormsApp4
             ucSc3 = new ucPanel.ucScreen3();
             ucSc4 = new ucPanel.ucScreen4();
             ucScHome = new ucPanel.ucScreenHome();
-            ucScStop = new ucPanel.ucScreenStopPage();
+            ucScStop = new ucPanel.ucScreenStopPage(this);
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-
+            stop = true;
             btn_list.Add(btn_monitoring);
             btn_list.Add(btn_running);
             btn_list.Add(btn_summary);
@@ -78,11 +78,15 @@ namespace WindowsFormsApp4
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //test---
+            //오라클시작
             conn.Open();
             cmd.Connection = conn;
+
+            //서버 시작
             m_server = new socket_server(recv_callback);
             m_server.start();
+
+            //기존에 로그인 폼에서 조회한 로그인정보 수신
             label2.Text = login_Number;
             label3.Text = login_Name;
 
@@ -99,16 +103,17 @@ namespace WindowsFormsApp4
             {
                 checkmsg(_msg);
             }
+            //테스트용 수신된 글자 메시지박스로 보이기
             MessageBox.Show(_msg);
-            //테스트용 
         }
 
         delegate void StringArgReturningVoidDelegate(string _msg);
+        //각종 제품정보를 저장하기 위한 함수 설정
         string P_NUM = "";
-        string P_inch = "";
         string NOWINCH = "";
         string NOWPANEL = "";
         string NOWHZ = "";
+        string RESULT = "";
         private void checkmsg(string _msg)
         {
             string[] TCPmsg = _msg.Split(',');
@@ -123,7 +128,7 @@ namespace WindowsFormsApp4
                     break;
                 case "RESULT":
                     //오라클 정리 DB축적
-                    string RESULT = RESULTCH(TCPmsg[2]);
+                    RESULT = RESULTCH(TCPmsg[2]);
                     string[] RESULTARRAY = new string[4];
                     string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                     RESULTARRAY[0] = date;
@@ -137,10 +142,10 @@ namespace WindowsFormsApp4
                     NOWPANEL = RESULTP1[1];
                     NOWHZ = RESULTP1[2];
                     m_server?.send("DB_END");
-                    ucSc1.picBoxColor2(TCPmsg[2], "ON");
+                    ucSc1.picBoxColor2(TCPmsg[2], "ON" , ucSc1);
                     break;
                 case "STUCK":
-                    ucSc1.Colorred();
+                    ucSc1.picBoxColor2(RESULT, "WARING", ucSc1);
                     break;
                 case "ROLLING_END":
                     Program.f_function.GridUpdate2(NOWINCH, NOWPANEL, NOWHZ);
@@ -149,7 +154,6 @@ namespace WindowsFormsApp4
                     break;
             }
         }
-
         //값 변환 함수 들어온 숫자에 따라 결과로 변환
         public string RESULTCH(string RESULT)
         {
@@ -215,12 +219,51 @@ namespace WindowsFormsApp4
                 }
             }
         }
+        // 다멈추는 함수
+        public void allstop(bool state, ucPanel.ucScreen1 ucSc1)
+        {
+            if(state)
+            {
+                for(int i = 1; i <= 4; i++)
+                {
+                    ucSc1.buttonColor(24, i, Color.Red, ucSc1);
+                    ucSc1.buttonColor(27, i, Color.Red, ucSc1);
+                    ucSc1.buttonColor(32, i, Color.Red, ucSc1);
+                }
+                ucSc1.picBoxColor(24, "WARING", ucSc1);
+                ucSc1.picBoxColor(27, "WARING", ucSc1);
+                ucSc1.picBoxColor(32, "WARING", ucSc1);
+                ucSc1.picBoxColor2("1", "WARING", ucSc1);
+                ucSc1.picBoxColor2("2", "WARING", ucSc1);
+                ucSc1.picBoxColor2("3", "WARING", ucSc1);
+                stop = false;
+            }
+            else
+            {
+                for (int i = 1; i <= 4; i++)
+                {
+                    ucSc1.buttonColor(24, i, SystemColors.Window, ucSc1);
+                    ucSc1.buttonColor(27, i, SystemColors.Window, ucSc1);
+                    ucSc1.buttonColor(32, i, SystemColors.Window, ucSc1);
+                }
+                ucSc1.picBoxColor(24, "STATE", ucSc1);
+                ucSc1.picBoxColor(27, "STATE", ucSc1);
+                ucSc1.picBoxColor(32, "STATE", ucSc1);
+                ucSc1.picBoxColor2("1", "STATE", ucSc1);
+                ucSc1.picBoxColor2("2", "STATE", ucSc1);
+                ucSc1.picBoxColor2("3", "STATE", ucSc1);
+                stop = true;
+                ucSc2.factoryoperation(ucSc1);
+            }
+        }
+        //Screen2의 그리드 갱신 (오라클 다시불러오기)
         public void Gridupdate()
         {
             ucSc2.Update(ucSc2);
         }
         private void button_click( object sender, EventArgs e )
         {
+            // 좌측 버튼 클릭상태에 따른 색상변환
             Button btn = (Button)sender;
             PnlNav.Height = btn.Height;
             PnlNav.Top = btn.Top;
@@ -233,6 +276,7 @@ namespace WindowsFormsApp4
 
 
             panel_main.Controls.Clear();
+            // 모니터 화면 전환 
             switch (btn.Text)
             {
                 case "모니터링":
@@ -255,11 +299,9 @@ namespace WindowsFormsApp4
                     break;
 
                 case "로그아웃": this.Hide();
-                    
-                    Login_Form1 = new Login_Form();
+                                        Login_Form1 = new Login_Form();
                     Login_Form1.Show();
                     break;
-
                 case "라인 긴급 중지": panel_main.Controls.Add(ucScStop);
 
                     break;
@@ -268,16 +310,7 @@ namespace WindowsFormsApp4
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ucSc2.factoryoperation(ucSc1);
-            ucSc1.Invalidate();
-            ucSc2.Invalidate();
             // message box
-        }
-        public void doit()
-        {
-            ucSc2.factoryoperation(ucSc1);
-            ucSc1.Invalidate();
-            ucSc2.Invalidate();
         }
         // 종료 x 버튼 
         private void button6_Click_1(object sender, EventArgs e)
