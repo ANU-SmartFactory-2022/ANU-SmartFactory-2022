@@ -93,6 +93,16 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap pib_24STATE {
+            get {
+                object obj = ResourceManager.GetObject("pib_24STATE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap pib_24WARING {
             get {
                 object obj = ResourceManager.GetObject("pib_24WARING", resourceCulture);
@@ -113,6 +123,16 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap pib_27STATE {
+            get {
+                object obj = ResourceManager.GetObject("pib_27STATE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap pib_27WARING {
             get {
                 object obj = ResourceManager.GetObject("pib_27WARING", resourceCulture);
@@ -126,6 +146,16 @@ namespace WindowsFormsApp4.Properties {
         internal static System.Drawing.Bitmap pib_32ON {
             get {
                 object obj = ResourceManager.GetObject("pib_32ON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap pib_32STATE {
+            get {
+                object obj = ResourceManager.GetObject("pib_32STATE", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,36 +296,6 @@ namespace WindowsFormsApp4.Properties {
         internal static System.Drawing.Bitmap 홈버튼_이미지 {
             get {
                 object obj = ResourceManager.GetObject("홈버튼 이미지", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap 화살표 {
-            get {
-                object obj = ResourceManager.GetObject("화살표", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap 화살표2 {
-            get {
-                object obj = ResourceManager.GetObject("화살표2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap 화살표3 {
-            get {
-                object obj = ResourceManager.GetObject("화살표3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

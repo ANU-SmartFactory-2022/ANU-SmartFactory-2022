@@ -367,7 +367,7 @@
 			// 
 			// pib_3
 			// 
-			this.pib_3.Image = global::WindowsFormsApp4.Properties.Resources.화살표3;
+			this.pib_3.Image = global::WindowsFormsApp4.Properties.Resources.pib_24STATE;
 			this.pib_3.Location = new System.Drawing.Point(468, 378);
 			this.pib_3.Name = "pib_3";
 			this.pib_3.Size = new System.Drawing.Size(67, 64);
@@ -377,7 +377,7 @@
 			// 
 			// pib_1
 			// 
-			this.pib_1.Image = global::WindowsFormsApp4.Properties.Resources.화살표2;
+			this.pib_1.Image = global::WindowsFormsApp4.Properties.Resources.pib_32STATE;
 			this.pib_1.Location = new System.Drawing.Point(468, 144);
 			this.pib_1.Name = "pib_1";
 			this.pib_1.Size = new System.Drawing.Size(67, 64);
@@ -387,7 +387,7 @@
 			// 
 			// pib_2
 			// 
-			this.pib_2.Image = global::WindowsFormsApp4.Properties.Resources.화살표;
+			this.pib_2.Image = global::WindowsFormsApp4.Properties.Resources.pib_27STATE;
 			this.pib_2.Location = new System.Drawing.Point(468, 262);
 			this.pib_2.Name = "pib_2";
 			this.pib_2.Size = new System.Drawing.Size(67, 64);
@@ -397,7 +397,7 @@
 			// 
 			// pib_32
 			// 
-			this.pib_32.Image = global::WindowsFormsApp4.Properties.Resources.화살표2;
+			this.pib_32.Image = global::WindowsFormsApp4.Properties.Resources.pib_32STATE;
 			this.pib_32.Location = new System.Drawing.Point(248, 378);
 			this.pib_32.Name = "pib_32";
 			this.pib_32.Size = new System.Drawing.Size(67, 64);
@@ -407,7 +407,7 @@
 			// 
 			// pib_27
 			// 
-			this.pib_27.Image = global::WindowsFormsApp4.Properties.Resources.화살표;
+			this.pib_27.Image = global::WindowsFormsApp4.Properties.Resources.pib_27STATE;
 			this.pib_27.Location = new System.Drawing.Point(248, 262);
 			this.pib_27.Name = "pib_27";
 			this.pib_27.Size = new System.Drawing.Size(67, 64);
@@ -417,7 +417,7 @@
 			// 
 			// pib_24
 			// 
-			this.pib_24.Image = global::WindowsFormsApp4.Properties.Resources.화살표3;
+			this.pib_24.Image = global::WindowsFormsApp4.Properties.Resources.pib_24STATE;
 			this.pib_24.Location = new System.Drawing.Point(248, 144);
 			this.pib_24.Name = "pib_24";
 			this.pib_24.Size = new System.Drawing.Size(67, 64);

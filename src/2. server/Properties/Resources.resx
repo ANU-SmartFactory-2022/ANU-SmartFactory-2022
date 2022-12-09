@@ -154,13 +154,13 @@
   <data name="이동중2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\이동중2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="화살표" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="pib_27STATE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\화살표.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="불량1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\불량1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="화살표2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="pib_32STATE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\화살표2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pib_27ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -175,7 +175,7 @@
   <data name="작동1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\작동1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="화살표3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="pib_24STATE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\화살표3.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="불량2" type="System.Resources.ResXFileRef, System.Windows.Forms">

@@ -57,7 +57,6 @@ namespace WindowsFormsApp4
             ucSc4 = new ucPanel.ucScreen4();
             ucScHome = new ucPanel.ucScreenHome();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            stop = true;
             btn_list.Add(btn_monitoring);
             btn_list.Add(btn_running);
             btn_list.Add(btn_summary);
@@ -229,7 +228,7 @@ namespace WindowsFormsApp4
                 ucSc1.picBoxColor2("1", "WARING", ucSc1);
                 ucSc1.picBoxColor2("2", "WARING", ucSc1);
                 ucSc1.picBoxColor2("3", "WARING", ucSc1);
-                stop = false;
+                
             }
             else
             {
@@ -245,7 +244,7 @@ namespace WindowsFormsApp4
                 ucSc1.picBoxColor2("1", "STATE", ucSc1);
                 ucSc1.picBoxColor2("2", "STATE", ucSc1);
                 ucSc1.picBoxColor2("3", "STATE", ucSc1);
-                stop = true;
+                
                 ucSc2.factoryoperation(ucSc1);
             }
         }
