@@ -54,7 +54,7 @@ namespace WindowsFormsApp4
             ucSc1 = new ucPanel.ucScreen1(this);
             ucSc2 = new ucPanel.ucScreen2(this);
             ucSc3 = new ucPanel.ucScreen3();
-            ucSc4 = new ucPanel.ucScreen4();
+            ucSc4 = new ucPanel.ucScreen4(this);
             ucScHome = new ucPanel.ucScreenHome();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             btn_list.Add(btn_monitoring);
@@ -366,7 +366,6 @@ namespace WindowsFormsApp4
             MValX = e.X;
             MValY = e.Y;
         }
-
     }
 }
 

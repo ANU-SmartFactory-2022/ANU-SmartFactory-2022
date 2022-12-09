@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApp4.ucPanel;
 
 namespace WindowsFormsApp4
 {
@@ -13,6 +14,7 @@ namespace WindowsFormsApp4
         OracleConnection conn;
         OracleCommand cmd;
         OracleDataReader rdr;
+        OracleDataAdapter adapt = new OracleDataAdapter();
         OracleTransaction STrans = null;
         OracleTransaction transaction;
         string strconn = "data source=(description=" +
@@ -266,13 +268,15 @@ namespace WindowsFormsApp4
                 return "없습니다";
             }
         }
-
-        //public void logout()
-        //{
-        //    this.Hide();
-        //    Login_Form.show();
-
-        //}
-
+        public DataSet dataColumn(string d, string f, string a, ucScreen4 ucsrennl)
+        {
+            string command = "select G.MNUMBER 담당_사원, D.PPDNUMBER 제품_번호, D.PINCH 사이즈, D.PPN 패널, D.PRFH 주사율, D.PDATE 제작_날짜, M.PRTIME 분류_날짜, M.PRRESULT 분류_결과 " +
+                "from MANAGER G, PRD D, PRM M where G.MNUMBER = M.PRNUMBER and " +
+                "D.PPDNUMBER = M.PRPDNUMBER and G.MName = '김재홍' and M.PRRESULT != '정상'";
+            adapt.SelectCommand = new OracleCommand(command, conn);
+            DataSet ds = new DataSet();
+            adapt.Fill(ds);
+            return ds;
+        }
     }
 }
