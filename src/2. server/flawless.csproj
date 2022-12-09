@@ -138,6 +138,12 @@
     <Compile Include="ucPanel\ucScreenHome.Designer.cs">
       <DependentUpon>ucScreenHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucPanel\ucScreenStopPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPanel\ucScreenStopPage.Designer.cs">
+      <DependentUpon>ucScreenStopPage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucPanel\ucScreenHome.resx">
       <DependentUpon>ucScreenHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPanel\ucScreenStopPage.resx">
+      <DependentUpon>ucScreenStopPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
@@ -203,6 +212,7 @@
     <None Include="Resources\회사 로고.PNG" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\free-icon-caution-4539472.png" />
     <Content Include="Resources\free-icon-tv-monitor-4018796.png" />
     <None Include="Resources\이동중.png" />
     <None Include="Resources\이동중3.png" />
