@@ -116,5 +116,10 @@ namespace WindowsFormsApp4.ucPanel
 
             }
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

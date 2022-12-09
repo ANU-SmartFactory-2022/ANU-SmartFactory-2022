@@ -354,10 +354,30 @@ namespace WindowsFormsApp4
 
 		}
 
+
+
 		private void btn_stop_Click(object sender, EventArgs e)
 		{
             Button btn = (Button)sender;
-            DialogResult result = MessageBox.Show("공정을 멈추시겠습니까?", "라인 긴급 중지", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (btn.Text == "라인 긴급 중지")
+            {
+                DialogResult result = MessageBox.Show("공정을 멈추시겠습니까?", "라인 긴급 중지", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    btn.Text = "라인 재가동";
+                    allstop(true, ucSc1);
+                }
+            }
+            else if(btn.Text == "라인 재가동")
+            {
+                DialogResult result = MessageBox.Show("공정을 재가동하시겠습니까?", "라인 재가동", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    btn.Text = "라인 긴급 중지";
+                    allstop(false, ucSc1);
+                    ucSc2.factoryoperation(ucSc1);
+                }
+            }
         }
 
 		private void panel_MouseDown(object sender, MouseEventArgs e)
