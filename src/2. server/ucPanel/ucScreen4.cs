@@ -22,24 +22,29 @@ namespace WindowsFormsApp4.ucPanel
            
         }
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-            chart1.Series[0].Points.AddXY("승호짱이", 45);
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
 
-		private void button2_Click(object sender, EventArgs e)
-		{
-            chart1.Series[0].Points.AddXY("이해한", 70);
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
 
-		private void button3_Click(object sender, EventArgs e)
-		{
-            chart1.Series[0].Points.AddXY("그대로", 90);
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
 
-		private void button4_Click(object sender, EventArgs e)
-		{
-            chart1.Series[0].Points.AddXY("만들어봄", 14);
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
-	}
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
