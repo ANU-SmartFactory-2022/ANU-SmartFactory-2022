@@ -41,6 +41,10 @@ namespace WindowsFormsApp4.ucPanel
         {
             dataGridView1.DataSource = Program.f_function.select_ORD("");
         }
+        public void Update(ucScreen2 ucsrennl)
+        {
+            ucsrennl.dataGridView1.DataSource = Program.f_function.select_ORD("");
+        }
         public void GridAdd(string inch, string panel ,string hz)
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)

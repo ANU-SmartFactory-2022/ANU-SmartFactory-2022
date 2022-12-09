@@ -53,8 +53,6 @@ namespace WindowsFormsApp4.ucPanel
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-	
-
 			string str_inch = comboBox1.SelectedItem.ToString();
 			string str_panel = comboBox2.SelectedItem.ToString();
 			string str_hz = comboBox3.SelectedItem.ToString();

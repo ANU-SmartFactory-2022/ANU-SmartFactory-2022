@@ -149,7 +149,22 @@ namespace WindowsFormsApp4
        
             }
         }
+        public void GridUpdate2(string inch, string panel, string hz)
+        {      
+            try
+            {
+                string COM= $"UPDATE ORD SET Ocom = Ocom + 1 WHERE (OINCH = {inch} AND OPn = '{panel}' AND ORfh = {hz})";
+                cmd.CommandText = "";
+                cmd.CommandText = COM;
+                cmd.ExecuteNonQuery();
+                transaction.Commit();
+            }
+            catch (Exception ex)
+            {
+                System.Console.WriteLine(ex.Message);
 
+            }
+        }
         //정상제품 카운트
         public string cnt_normal()
         {
