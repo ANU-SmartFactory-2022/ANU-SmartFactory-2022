@@ -21,6 +21,7 @@ namespace WindowsFormsApp4
         public ucPanel.ucScreen3 ucSc3;
         public ucPanel.ucScreen4 ucSc4;
         public ucPanel.ucScreenHome ucScHome;
+        Login_Form Login_Form1;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
 
@@ -39,10 +40,10 @@ namespace WindowsFormsApp4
         OracleDataReader rdr;
         OracleConnection conn = new OracleConnection(strConn);
 
-        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=hr;Password=hr;";
+        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=pd68;Password=pd68;";
 
         OracleDataAdapter adapt = new OracleDataAdapter();
-
+        OracleTransaction transaction;
         //서버 클라이언트 설정을 위한 객체 설정
         socket_server m_server = null;
 
@@ -288,6 +289,25 @@ namespace WindowsFormsApp4
                 case "불량품 상세정보": panel_main.Controls.Add(ucSc4);
                     break;
                 case "모니터 공정": panel_main.Controls.Add(ucScHome);
+                    break;
+                case "로그아웃":
+                    
+                    this.Hide();
+
+                    Login_Form1 = new Login_Form();
+                    Login_Form1.Show();
+
+                    //cmd.CommandText = $"INSERT INTO CON VALUES ('0', {login_Number} ,TO_CHAR(sysdate,'YYYY-MM-DD HH24:mi:SS'))";
+                    try
+                    {
+                        cmd.CommandText = $"UPDATE CON SET CLTIME = TO_CHAR(sysdate,'YYYY-MM-DD HH24:mi:SS') WHERE CLTIME = '0'";
+                        cmd.ExecuteNonQuery();
+                        transaction.Commit();
+                    }
+                    catch(Exception ex)
+                    {
+
+                    }
                     break;
             }
         }

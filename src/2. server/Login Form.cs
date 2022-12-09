@@ -21,7 +21,7 @@ namespace WindowsFormsApp4
                "(HOST=localhost)(PORT=1521)))" +
                "(CONNECT_DATA=(SERVER=DEDICATED)" +
                "(SERVICE_NAME=xe)));" +
-               "User Id=hr;Password=hr;";
+               "User Id=pd68;Password=pd68;";
 
 
         string login_Name;
@@ -61,10 +61,11 @@ namespace WindowsFormsApp4
                     login_Number = rdr["MNumber"].ToString();
                     login_Name = rdr["MName"].ToString();
                 }
-               
 
             this.Hide();
 
+                cmd.CommandText = $"INSERT INTO CON VALUES (TO_CHAR(sysdate,'YYYY-MM-DD HH24:mi:SS'), {login_Number} ,'0')";
+                cmd.ExecuteNonQuery();
 
                 main1 = new main();
                 main1.login_Name = login_Name;
@@ -73,6 +74,8 @@ namespace WindowsFormsApp4
 
             }
         }
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {
