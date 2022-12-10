@@ -118,8 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="이동중" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\이동중.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="불량1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\불량1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pib_24ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pib_24ON.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pib_32ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pib_32ON.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-statistics-8367611" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-statistics-8367611.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="멈춤1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\멈춤1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-motherboard-7259440" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-motherboard-7259440.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pib_24STATE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\화살표3.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="멈춤2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\멈춤2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="양품" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\양품.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="회사 로고" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\회사 로고.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-robotic-arm-8019037" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-robotic-arm-8019037.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="작동2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\작동2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,8 +157,26 @@
   <data name="멈춤3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\멈춤3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pib_27ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pib_27ON.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="불량2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\불량2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="작동3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\작동3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pib_32STATE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\화살표2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="이동중2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\이동중2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pib_32WARING" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pib_32WARING.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pib_27STATE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\화살표.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pib_27WARING" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pib_27WARING.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,61 +184,28 @@
   <data name="pib_24WARING" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pib_24WARING.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="양품" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\양품.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pib_32WARING" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pib_32WARING.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="멈춤2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\멈춤2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="멈춤1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\멈춤1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pib_24ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pib_24ON.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="이동중2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\이동중2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pib_27STATE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\화살표.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="불량1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\불량1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pib_32STATE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\화살표2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pib_27ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pib_27ON.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="이동중3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\이동중3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="홈버튼 이미지" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\홈버튼 이미지.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="작동1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\작동1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="free-icon-404-error-5975189" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-404-error-5975189.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pib_24STATE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\화살표3.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="free-icon-reload-7561740" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-reload-7561740.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="불량2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\불량2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="회사 로고" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\회사 로고.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pib_32ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pib_32ON.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="이동중" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\이동중.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="free-icon-ecg-monitor-5199552" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\free-icon-ecg-monitor-5199552.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="free-icon-caution-4539472" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\free-icon-caution-4539472.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="이동중3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\이동중3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="작동1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\작동1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-stop-bullying-2452756" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-stop-bullying-2452756.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

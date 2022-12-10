@@ -33,15 +33,15 @@
 			this.panel_menu = new System.Windows.Forms.Panel();
 			this.btn_logout = new System.Windows.Forms.Button();
 			this.PnlNav = new System.Windows.Forms.Panel();
+			this.panel2 = new System.Windows.Forms.Panel();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.panel_main = new System.Windows.Forms.Panel();
 			this.btn_stop = new System.Windows.Forms.Button();
 			this.btn_detail = new System.Windows.Forms.Button();
 			this.btn_summary = new System.Windows.Forms.Button();
 			this.btn_running = new System.Windows.Forms.Button();
 			this.btn_monitoring = new System.Windows.Forms.Button();
-			this.panel2 = new System.Windows.Forms.Panel();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.panel_main = new System.Windows.Forms.Panel();
 			this.btn_home = new System.Windows.Forms.Button();
 			this.panel_title.SuspendLayout();
 			this.panel_menu.SuspendLayout();
@@ -115,83 +115,6 @@
 			this.PnlNav.Size = new System.Drawing.Size(3, 100);
 			this.PnlNav.TabIndex = 1;
 			// 
-			// btn_stop
-			// 
-			this.btn_stop.FlatAppearance.BorderSize = 0;
-			this.btn_stop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btn_stop.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.btn_stop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.btn_stop.Location = new System.Drawing.Point(0, 404);
-			this.btn_stop.Name = "btn_stop";
-			this.btn_stop.Size = new System.Drawing.Size(186, 50);
-			this.btn_stop.TabIndex = 5;
-			this.btn_stop.Text = "라인 긴급 중지";
-			this.btn_stop.UseVisualStyleBackColor = true;
-			this.btn_stop.Click += new System.EventHandler(this.btn_stop_Click);
-			this.btn_stop.Leave += new System.EventHandler(this.button5_Click);
-			// 
-			// btn_detail
-			// 
-			this.btn_detail.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btn_detail.FlatAppearance.BorderSize = 0;
-			this.btn_detail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btn_detail.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.btn_detail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.btn_detail.Location = new System.Drawing.Point(0, 294);
-			this.btn_detail.Name = "btn_detail";
-			this.btn_detail.Size = new System.Drawing.Size(186, 50);
-			this.btn_detail.TabIndex = 4;
-			this.btn_detail.Text = "불량품 상세정보";
-			this.btn_detail.UseVisualStyleBackColor = true;
-			this.btn_detail.Click += new System.EventHandler(this.button_click);
-			// 
-			// btn_summary
-			// 
-			this.btn_summary.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btn_summary.FlatAppearance.BorderSize = 0;
-			this.btn_summary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btn_summary.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.btn_summary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.btn_summary.Location = new System.Drawing.Point(0, 244);
-			this.btn_summary.Name = "btn_summary";
-			this.btn_summary.Size = new System.Drawing.Size(186, 50);
-			this.btn_summary.TabIndex = 3;
-			this.btn_summary.Text = "통계";
-			this.btn_summary.UseVisualStyleBackColor = true;
-			this.btn_summary.Click += new System.EventHandler(this.button_click);
-			// 
-			// btn_running
-			// 
-			this.btn_running.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btn_running.FlatAppearance.BorderSize = 0;
-			this.btn_running.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btn_running.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.btn_running.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.btn_running.Location = new System.Drawing.Point(0, 194);
-			this.btn_running.Name = "btn_running";
-			this.btn_running.Size = new System.Drawing.Size(186, 50);
-			this.btn_running.TabIndex = 2;
-			this.btn_running.Text = "공정 가동";
-			this.btn_running.UseVisualStyleBackColor = true;
-			this.btn_running.Click += new System.EventHandler(this.button_click);
-			// 
-			// btn_monitoring
-			// 
-			this.btn_monitoring.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btn_monitoring.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btn_monitoring.FlatAppearance.BorderSize = 0;
-			this.btn_monitoring.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btn_monitoring.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.btn_monitoring.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.btn_monitoring.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btn_monitoring.Location = new System.Drawing.Point(0, 144);
-			this.btn_monitoring.Name = "btn_monitoring";
-			this.btn_monitoring.Size = new System.Drawing.Size(186, 50);
-			this.btn_monitoring.TabIndex = 1;
-			this.btn_monitoring.Text = "모니터링";
-			this.btn_monitoring.UseVisualStyleBackColor = true;
-			this.btn_monitoring.Click += new System.EventHandler(this.button_click);
-			// 
 			// panel2
 			// 
 			this.panel2.Controls.Add(this.label2);
@@ -234,6 +157,92 @@
 			this.panel_main.Size = new System.Drawing.Size(765, 551);
 			this.panel_main.TabIndex = 2;
 			this.panel_main.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_main_Paint);
+			// 
+			// btn_stop
+			// 
+			this.btn_stop.FlatAppearance.BorderSize = 0;
+			this.btn_stop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_stop.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.btn_stop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+			this.btn_stop.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_stop_bullying_2452756;
+			this.btn_stop.Location = new System.Drawing.Point(0, 404);
+			this.btn_stop.Name = "btn_stop";
+			this.btn_stop.Size = new System.Drawing.Size(186, 50);
+			this.btn_stop.TabIndex = 5;
+			this.btn_stop.Text = "라인 긴급 중지";
+			this.btn_stop.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+			this.btn_stop.UseVisualStyleBackColor = true;
+			this.btn_stop.Click += new System.EventHandler(this.btn_stop_Click);
+			this.btn_stop.Leave += new System.EventHandler(this.button5_Click);
+			// 
+			// btn_detail
+			// 
+			this.btn_detail.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btn_detail.FlatAppearance.BorderSize = 0;
+			this.btn_detail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_detail.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.btn_detail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+			this.btn_detail.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_404_error_5975189;
+			this.btn_detail.Location = new System.Drawing.Point(0, 294);
+			this.btn_detail.Name = "btn_detail";
+			this.btn_detail.Size = new System.Drawing.Size(186, 50);
+			this.btn_detail.TabIndex = 4;
+			this.btn_detail.Text = "상세정보";
+			this.btn_detail.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+			this.btn_detail.UseVisualStyleBackColor = true;
+			this.btn_detail.Click += new System.EventHandler(this.button_click);
+			// 
+			// btn_summary
+			// 
+			this.btn_summary.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btn_summary.FlatAppearance.BorderSize = 0;
+			this.btn_summary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_summary.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.btn_summary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+			this.btn_summary.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_statistics_8367611;
+			this.btn_summary.Location = new System.Drawing.Point(0, 244);
+			this.btn_summary.Name = "btn_summary";
+			this.btn_summary.Size = new System.Drawing.Size(186, 50);
+			this.btn_summary.TabIndex = 3;
+			this.btn_summary.Text = "제품통계";
+			this.btn_summary.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+			this.btn_summary.UseVisualStyleBackColor = true;
+			this.btn_summary.Click += new System.EventHandler(this.button_click);
+			// 
+			// btn_running
+			// 
+			this.btn_running.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btn_running.FlatAppearance.BorderSize = 0;
+			this.btn_running.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_running.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.btn_running.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+			this.btn_running.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_robotic_arm_8019037;
+			this.btn_running.Location = new System.Drawing.Point(0, 194);
+			this.btn_running.Name = "btn_running";
+			this.btn_running.Size = new System.Drawing.Size(186, 50);
+			this.btn_running.TabIndex = 2;
+			this.btn_running.Text = "공정가동";
+			this.btn_running.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+			this.btn_running.UseVisualStyleBackColor = true;
+			this.btn_running.Click += new System.EventHandler(this.button_click);
+			// 
+			// btn_monitoring
+			// 
+			this.btn_monitoring.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btn_monitoring.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btn_monitoring.FlatAppearance.BorderSize = 0;
+			this.btn_monitoring.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_monitoring.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.btn_monitoring.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+			this.btn_monitoring.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_motherboard_7259440;
+			this.btn_monitoring.Location = new System.Drawing.Point(0, 144);
+			this.btn_monitoring.Name = "btn_monitoring";
+			this.btn_monitoring.Size = new System.Drawing.Size(186, 50);
+			this.btn_monitoring.TabIndex = 1;
+			this.btn_monitoring.Text = "모니터링";
+			this.btn_monitoring.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+			this.btn_monitoring.UseVisualStyleBackColor = true;
+			this.btn_monitoring.Click += new System.EventHandler(this.button_click);
 			// 
 			// btn_home
 			// 
