@@ -136,11 +136,17 @@
   <data name="멈춤1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\멈춤1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="free-icon-reload-7324616 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-reload-7324616 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="free-icon-404-error-5975189" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\free-icon-404-error-5975189.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pib_24STATE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\화살표3.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-checking-4691580" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-checking-4691580.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="멈춤2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\멈춤2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,7 +220,7 @@
   <data name="작동1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\작동1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="free-icon-reload-7324616 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\free-icon-reload-7324616 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="free-icon-computer-8281294" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-computer-8281294.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
