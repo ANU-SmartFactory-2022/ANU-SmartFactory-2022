@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -46,9 +47,9 @@
 			this.Lookup_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Lookup_Btn.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Lookup_Btn.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.Lookup_Btn.Location = new System.Drawing.Point(618, 35);
+			this.Lookup_Btn.Location = new System.Drawing.Point(592, 33);
 			this.Lookup_Btn.Name = "Lookup_Btn";
-			this.Lookup_Btn.Size = new System.Drawing.Size(150, 32);
+			this.Lookup_Btn.Size = new System.Drawing.Size(176, 34);
 			this.Lookup_Btn.TabIndex = 1;
 			this.Lookup_Btn.Text = "공정";
 			this.Lookup_Btn.UseVisualStyleBackColor = false;
@@ -115,13 +116,11 @@
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.button1.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_reload_5255398;
-			this.button1.Location = new System.Drawing.Point(3, 35);
+			this.button1.Location = new System.Drawing.Point(395, 33);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(144, 32);
+			this.button1.Size = new System.Drawing.Size(176, 34);
 			this.button1.TabIndex = 3;
 			this.button1.Text = "새로고침";
-			this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.button1.UseVisualStyleBackColor = false;
 			// 
 			// ucScreen2

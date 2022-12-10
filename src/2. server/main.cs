@@ -107,6 +107,7 @@ namespace WindowsFormsApp4
         string NOWPANEL = "";
         string NOWHZ = "";
         string RESULT = "";
+        string RESULT1 = "";
         private void checkmsg(string _msg)
         {
             string[] TCPmsg = _msg.Split(',');
@@ -122,6 +123,8 @@ namespace WindowsFormsApp4
                 case "RESULT":
                     //오라클 정리 DB축적
                     RESULT = RESULTCH(TCPmsg[2]);
+                    ucSc1.label7.Text = RESULT;
+                    RESULT1 = TCPmsg[2];
                     string[] RESULTARRAY = new string[4];
                     string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                     RESULTARRAY[0] = date;
@@ -142,8 +145,12 @@ namespace WindowsFormsApp4
                     break;
                 case "ROLLING_END":
                     Program.f_function.GridUpdate2(NOWINCH, NOWPANEL, NOWHZ);
-                    FINDERROR(NOWINCH);
+                    ucSc1.picBoxColor2(RESULT1, "STATE", ucSc1);
+                    Gridupdate();
                     m_server?.send("START");
+                    allstop(false, ucSc1);
+                    ucSc2.factoryoperation(ucSc1);
+                    FINDERROR(NOWINCH);
                     break;
             }
         }

@@ -63,9 +63,9 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap free_icon_404_error_5975189 {
+        internal static System.Drawing.Bitmap free_icon_caution_4539472 {
             get {
-                object obj = ResourceManager.GetObject("free-icon-404-error-5975189", resourceCulture);
+                object obj = ResourceManager.GetObject("free-icon-caution-4539472", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,6 +83,7 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+
         internal static System.Drawing.Bitmap free_icon_motherboard_7259440 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-motherboard-7259440", resourceCulture);
@@ -133,6 +134,8 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+
+
         internal static System.Drawing.Bitmap pib_24ON {
             get {
                 object obj = ResourceManager.GetObject("pib_24ON", resourceCulture);

@@ -25,10 +25,29 @@ namespace WindowsFormsApp4.ucPanel
 		private void btn_Click(object sender, EventArgs e)
 		{
 			Button btn = (Button)sender;
-			DialogResult result= MessageBox.Show("해당 공정에 문제가 발생하였습니다. 조치 하시겠습니다?", "공정 오류", MessageBoxButtons.YesNo);
-			if (result == DialogResult.Yes)
+			if(btn.BackColor == Color.Green)
+            {
+				DialogResult result2 = MessageBox.Show("해당 공정을 중지하겠습니까?", "공정 중지", MessageBoxButtons.YesNo);
+				if (result2 == DialogResult.Yes)
+				{
+					btn.BackColor = SystemColors.Window;
+				}
+			}
+			else if(btn.BackColor == Color.Red)
+            {
+				DialogResult result = MessageBox.Show("해당 공정에 문제가 발생하였습니다. 조치 하시겠습니다?", "공정 오류", MessageBoxButtons.YesNo);
+				if (result == DialogResult.Yes)
+				{
+					btn.BackColor = Color.Green;
+				}
+			}
+			else
 			{
-				btn.BackColor = Color.Green;
+				DialogResult result3 = MessageBox.Show("해당 공정을 가동하겠습니까?", "공정 시작", MessageBoxButtons.YesNo);
+				if (result3 == DialogResult.Yes)
+				{
+					btn.BackColor = Color.Green;
+				}
 			}
 
 		}
@@ -138,7 +157,7 @@ namespace WindowsFormsApp4.ucPanel
         }
         private void ucScreen1_Load(object sender, EventArgs e)
         {
-
+			
         }
 
         private void label7_Click(object sender, EventArgs e)

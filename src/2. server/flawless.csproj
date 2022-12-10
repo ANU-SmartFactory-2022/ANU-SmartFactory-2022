@@ -204,14 +204,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\free-icon-caution-4539472.png" />
-    <None Include="Resources\Button-Refresh-icon.png" />
-    <None Include="Resources\free-icon-reload-7561740.png" />
-    <None Include="Resources\free-icon-motherboard-7259440.png" />
-    <None Include="Resources\free-icon-robotic-arm-8019037.png" />
-    <None Include="Resources\free-icon-statistics-8367611.png" />
-    <None Include="Resources\free-icon-404-error-5975189.png" />
-    <None Include="Resources\free-icon-stop-bullying-2452756.png" />
-    <None Include="Resources\free-icon-reload-5255398.png" />
     <Content Include="Resources\free-icon-tv-monitor-4018796.png" />
     <None Include="Resources\이동중.png" />
     <None Include="Resources\이동중3.png" />
@@ -231,7 +223,6 @@
     <None Include="Resources\pib_24ON.gif" />
     <None Include="Resources\pib_27ON.gif" />
     <None Include="Resources\pib_32ON.gif" />
-    <None Include="Resources\Market-Analysis-icon.png" />
     <Content Include="Resources\화살표3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

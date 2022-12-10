@@ -113,7 +113,8 @@
 			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
 			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
 			this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-			this.dataGridView1.Location = new System.Drawing.Point(15, 107);
+			this.dataGridView1.EnableHeadersVisualStyles = false;
+			this.dataGridView1.Location = new System.Drawing.Point(15, 119);
 			this.dataGridView1.Name = "dataGridView1";
 			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
