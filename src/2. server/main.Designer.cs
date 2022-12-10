@@ -250,14 +250,14 @@
 			this.btn_home.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btn_home.FlatAppearance.BorderSize = 0;
 			this.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btn_home.Font = new System.Drawing.Font("굴림", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.btn_home.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
 			this.btn_home.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
 			this.btn_home.Image = global::WindowsFormsApp4.Properties.Resources.홈버튼_이미지;
 			this.btn_home.Location = new System.Drawing.Point(0, 0);
 			this.btn_home.Name = "btn_home";
 			this.btn_home.Size = new System.Drawing.Size(186, 144);
 			this.btn_home.TabIndex = 0;
-			this.btn_home.Text = "Flawless";
+			this.btn_home.Text = "모니터 공정";
 			this.btn_home.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			this.btn_home.UseVisualStyleBackColor = false;
 			this.btn_home.Click += new System.EventHandler(this.button_click);
