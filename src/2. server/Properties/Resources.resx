@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="free-icon-404-error-5975189" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\free-icon-404-error-5975189.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="불량1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\불량1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pib_24ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pib_24ON.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -132,9 +132,6 @@
   </data>
   <data name="멈춤1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\멈춤1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="free-icon-stop-bullying-2452756" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\free-icon-stop-bullying-2452756.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="free-icon-motherboard-7259440" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\free-icon-motherboard-7259440.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,11 +184,11 @@
   <data name="pib_24WARING" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pib_24WARING.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="불량1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\불량1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="홈버튼 이미지" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\홈버튼 이미지.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-404-error-5975189" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-404-error-5975189.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="free-icon-reload-7561740" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\free-icon-reload-7561740.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,7 +205,7 @@
   <data name="작동1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\작동1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="free-icon-reload-5255398" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\free-icon-reload-5255398.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="free-icon-stop-bullying-2452756" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-stop-bullying-2452756.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
