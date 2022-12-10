@@ -47,7 +47,7 @@
 			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(143)))), ((int)(((byte)(77)))));
 			this.label1.Location = new System.Drawing.Point(0, 388);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(771, 64);
+			this.label1.Size = new System.Drawing.Size(976, 64);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "label1";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -62,7 +62,7 @@
 			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(143)))), ((int)(((byte)(77)))));
 			this.label3.Location = new System.Drawing.Point(0, 452);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(771, 27);
+			this.label3.Size = new System.Drawing.Size(976, 27);
 			this.label3.TabIndex = 2;
 			this.label3.Text = "label3";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -70,9 +70,9 @@
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = global::WindowsFormsApp4.Properties.Resources.회사_로고;
-			this.pictureBox1.Location = new System.Drawing.Point(208, 75);
+			this.pictureBox1.Location = new System.Drawing.Point(311, 75);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(420, 310);
+			this.pictureBox1.Size = new System.Drawing.Size(665, 310);
 			this.pictureBox1.TabIndex = 3;
 			this.pictureBox1.TabStop = false;
 			// 
@@ -85,7 +85,7 @@
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label1);
 			this.Name = "ucScreenHome";
-			this.Size = new System.Drawing.Size(771, 577);
+			this.Size = new System.Drawing.Size(976, 551);
 			this.Load += new System.EventHandler(this.ucScreenHome_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
