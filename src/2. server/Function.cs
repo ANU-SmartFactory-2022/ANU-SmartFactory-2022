@@ -22,7 +22,7 @@ namespace WindowsFormsApp4
                "(host=localhost)(port=1521)))" +
                "(connect_data=(server=dedicated)" +
                "(service_name=xe)));" +
-               "user id=pd68;password=pd68;";
+               "user id=hr;password=hr;";
         public void connect()
         {
             conn = new OracleConnection(strconn);
@@ -268,11 +268,39 @@ namespace WindowsFormsApp4
                 return "없습니다";
             }
         }
-        public DataSet dataColumn(string d, string f, string a, ucScreen4 ucsrennl)
+        public DataSet dataColumn(string[] date, string name, string[] result)
         {
-            string command = "select G.MNUMBER 담당_사원, D.PPDNUMBER 제품_번호, D.PINCH 사이즈, D.PPN 패널, D.PRFH 주사율, D.PDATE 제작_날짜, M.PRTIME 분류_날짜, M.PRRESULT 분류_결과 " +
-                "from MANAGER G, PRD D, PRM M where G.MNUMBER = M.PRNUMBER and " +
-                "D.PPDNUMBER = M.PRPDNUMBER and G.MName = '김재홍' and M.PRRESULT != '정상'";
+            string command = "select CONCAT(G.MName, CONCAT(CONCAT('(', G.MNUMBER), ')')) as 담당_사원, D.PPDNUMBER as 제품_번호,D.PINCH as 사이즈,D.PPN as 패널,D.PRFH as 주사율, D.PDATE as 제작_날짜, M.PRTIME as 분류_날짜, M.PRRESULT as 분류_결과 " +
+                            "from MANAGER G, PRD D, PRM M " +
+                            "where G.MNUMBER = M.PRNUMBER and D.PPDNUMBER = M.PRPDNUMBER";
+            if (name != "") command += $"and G.MName = '{name}' ";
+            command += $" and TO_NUMBER(replace(substr(PDATE, 0, 10), '-', '')) between {result[0]} and {result[1]}";
+
+            int stack = 0;
+            for(int i=0; i<date.Length; i++)
+            {
+                if(date[i] != null && stack == 0)
+                {
+                    command += $" and (M.PRRESULT = '{date[i]}' ";
+                    stack++;
+                }
+                if(date[i] != null && stack != 0)
+                {
+                    command += $" or M.PRRESULT = '{date[i]}' ";
+                }
+            }
+            if (stack != 0) command += ")";
+            adapt.SelectCommand = new OracleCommand(command, conn);
+            DataSet ds = new DataSet();
+            adapt.Fill(ds);
+            return ds;
+        }
+
+        public DataSet dataColumnproduct(string name)
+        {
+            string command = "select CONCAT(G.MName, CONCAT(CONCAT('(', G.MNUMBER), ')')) as 담당_사원, D.PPDNUMBER as 제품_번호,D.PINCH as 사이즈,D.PPN as 패널,D.PRFH as 주사율, D.PDATE as 제작_날짜, M.PRTIME as 분류_날짜, M.PRRESULT as 분류_결과 " +
+                            "from MANAGER G, PRD D, PRM M " +
+                            $"where G.MNUMBER = M.PRNUMBER and D.PPDNUMBER = M.PRPDNUMBER and D.PPDNUMBER = '{name}' ";
             adapt.SelectCommand = new OracleCommand(command, conn);
             DataSet ds = new DataSet();
             adapt.Fill(ds);

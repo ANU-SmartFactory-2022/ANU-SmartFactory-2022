@@ -58,7 +58,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(3, 69);
+            this.checkBox1.Location = new System.Drawing.Point(21, 69);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(48, 16);
             this.checkBox1.TabIndex = 1;
@@ -69,44 +69,44 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(3, 108);
+            this.checkBox2.Location = new System.Drawing.Point(21, 108);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(64, 16);
+            this.checkBox2.Size = new System.Drawing.Size(36, 16);
             this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "핫 픽셀";
+            this.checkBox2.Text = "핫";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(73, 69);
+            this.checkBox3.Location = new System.Drawing.Point(75, 69);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(76, 16);
+            this.checkBox3.Size = new System.Drawing.Size(48, 16);
             this.checkBox3.TabIndex = 3;
-            this.checkBox3.Text = "데드 픽셀";
+            this.checkBox3.Text = "데드";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(73, 108);
+            this.checkBox4.Location = new System.Drawing.Point(75, 108);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(76, 16);
+            this.checkBox4.Size = new System.Drawing.Size(48, 16);
             this.checkBox4.TabIndex = 4;
-            this.checkBox4.Text = "스턱 픽셀";
+            this.checkBox4.Text = "스턱";
             this.checkBox4.UseVisualStyleBackColor = true;
             this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(166, 84);
+            this.dateTimePicker1.Location = new System.Drawing.Point(138, 88);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(148, 21);
             this.dateTimePicker1.TabIndex = 6;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(348, 84);
+            this.dateTimePicker2.Location = new System.Drawing.Point(320, 88);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(144, 21);
             this.dateTimePicker2.TabIndex = 7;
@@ -116,7 +116,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(317, 76);
+            this.label5.Location = new System.Drawing.Point(289, 80);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(28, 30);
@@ -127,14 +127,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(520, 84);
+            this.textBox1.Location = new System.Drawing.Point(492, 88);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(141, 21);
             this.textBox1.TabIndex = 9;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(677, 84);
+            this.button1.Location = new System.Drawing.Point(649, 88);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 21);
             this.button1.TabIndex = 10;
@@ -144,14 +144,14 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(166, 20);
+            this.textBox2.Location = new System.Drawing.Point(138, 20);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(148, 21);
             this.textBox2.TabIndex = 11;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(348, 20);
+            this.button2.Location = new System.Drawing.Point(320, 20);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 21);
             this.button2.TabIndex = 12;
@@ -163,7 +163,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(34, 20);
+            this.label1.Location = new System.Drawing.Point(17, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 20);
             this.label1.TabIndex = 13;
@@ -174,7 +174,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(163, 67);
+            this.label2.Location = new System.Drawing.Point(135, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 14);
             this.label2.TabIndex = 14;
@@ -184,7 +184,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(517, 67);
+            this.label3.Location = new System.Drawing.Point(489, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 14);
             this.label3.TabIndex = 15;
