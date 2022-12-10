@@ -121,9 +121,6 @@
   <data name="free-icon-stop-bullying-2452756" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\free-icon-stop-bullying-2452756.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="free-icon-reload-5255398" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\free-icon-reload-5255398.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="pib_24ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pib_24ON.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -144,9 +141,6 @@
   </data>
   <data name="pib_24STATE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\화살표3.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="free-icon-checking-4691580" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\free-icon-checking-4691580.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="멈춤2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\멈춤2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,9 +174,6 @@
   </data>
   <data name="pib_32STATE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\화살표2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="free-icon-reload-7324616" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\free-icon-reload-7324616.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="이동중2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\이동중2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -83,16 +83,6 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap free_icon_checking_4691580 {
-            get {
-                object obj = ResourceManager.GetObject("free-icon-checking-4691580", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
         internal static System.Drawing.Bitmap free_icon_computer_8281294 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-computer-8281294", resourceCulture);
@@ -116,26 +106,6 @@ namespace WindowsFormsApp4.Properties {
         internal static System.Drawing.Bitmap free_icon_motherboard_7259440 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-motherboard-7259440", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap free_icon_reload_5255398 {
-            get {
-                object obj = ResourceManager.GetObject("free-icon-reload-5255398", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap free_icon_reload_7324616 {
-            get {
-                object obj = ResourceManager.GetObject("free-icon-reload-7324616", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
