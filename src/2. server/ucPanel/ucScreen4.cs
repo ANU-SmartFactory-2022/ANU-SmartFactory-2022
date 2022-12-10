@@ -55,9 +55,7 @@ namespace WindowsFormsApp4.ucPanel
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DataSet ds = Program.f_function.dataColumnproduct(textBox2.Text);
-            dataGridView2.DataSource = ds.Tables[0].DefaultView;
-            dataGridView2.Update();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
