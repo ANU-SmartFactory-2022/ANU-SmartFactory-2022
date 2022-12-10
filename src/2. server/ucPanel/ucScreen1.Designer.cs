@@ -430,7 +430,6 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
-			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
 			this.Controls.Add(this.pib_3);
 			this.Controls.Add(this.pib_1);
@@ -446,7 +445,7 @@
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
 			this.Name = "ucScreen1";
-			this.Size = new System.Drawing.Size(744, 543);
+			this.Size = new System.Drawing.Size(976, 551);
 			this.Load += new System.EventHandler(this.ucScreen1_Load_1);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();

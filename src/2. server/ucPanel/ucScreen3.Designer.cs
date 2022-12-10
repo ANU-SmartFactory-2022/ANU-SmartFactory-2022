@@ -113,7 +113,7 @@
 			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
 			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
 			this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-			this.dataGridView1.Location = new System.Drawing.Point(15, 119);
+			this.dataGridView1.Location = new System.Drawing.Point(15, 107);
 			this.dataGridView1.Name = "dataGridView1";
 			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
@@ -291,7 +291,7 @@
 			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.comboBox1);
 			this.Name = "ucScreen3";
-			this.Size = new System.Drawing.Size(771, 577);
+			this.Size = new System.Drawing.Size(976, 551);
 			this.Load += new System.EventHandler(this.ucScreen3_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();

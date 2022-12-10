@@ -50,7 +50,7 @@
 			// 
 			this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
 			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView2.Location = new System.Drawing.Point(0, 130);
+			this.dataGridView2.Location = new System.Drawing.Point(0, 115);
 			this.dataGridView2.Name = "dataGridView2";
 			this.dataGridView2.RowTemplate.Height = 23;
 			this.dataGridView2.Size = new System.Drawing.Size(771, 444);
@@ -229,7 +229,7 @@
 			this.Controls.Add(this.checkBox1);
 			this.Controls.Add(this.dataGridView2);
 			this.Name = "ucScreen4";
-			this.Size = new System.Drawing.Size(771, 577);
+			this.Size = new System.Drawing.Size(976, 551);
 			this.Load += new System.EventHandler(this.ucScreen4_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
 			this.ResumeLayout(false);

@@ -103,16 +103,6 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap free_icon_reload_7561740 {
-            get {
-                object obj = ResourceManager.GetObject("free-icon-reload-7561740", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
         internal static System.Drawing.Bitmap free_icon_robotic_arm_8019037 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-robotic-arm-8019037", resourceCulture);
