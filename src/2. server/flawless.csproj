@@ -204,6 +204,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\free-icon-caution-4539472.png" />
+    <None Include="Resources\free-icon-motherboard-7259440.png" />
+    <None Include="Resources\free-icon-robotic-arm-8019037.png" />
+    <None Include="Resources\free-icon-statistics-8367611.png" />
+    <None Include="Resources\free-icon-404-error-5975189.png" />
+    <None Include="Resources\free-icon-stop-bullying-2452756.png" />
+    <None Include="Resources\free-icon-reload-5255398.png" />
+    <None Include="Resources\free-icon-reload-7324616.png" />
+    <None Include="Resources\free-icon-reload-7324616 %281%29.png" />
     <Content Include="Resources\free-icon-tv-monitor-4018796.png" />
     <None Include="Resources\이동중.png" />
     <None Include="Resources\이동중3.png" />

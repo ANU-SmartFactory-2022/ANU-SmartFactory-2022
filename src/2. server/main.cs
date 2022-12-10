@@ -287,13 +287,13 @@ namespace WindowsFormsApp4
                         this.Refresh();
                     }
                     break;
-                case "공정 가동":
+                case "공정가동":
                     Gridupdate();
                     panel_main.Controls.Add(ucSc2);                
                     break;
-                case "통계": panel_main.Controls.Add(ucSc3);
+                case "제품통계": panel_main.Controls.Add(ucSc3);
                     break;
-                case "불량품 상세정보": panel_main.Controls.Add(ucSc4);
+                case "상세정보": panel_main.Controls.Add(ucSc4);
                     break;
                 case "모니터 공정": panel_main.Controls.Add(ucScHome);
                     break;
