@@ -386,6 +386,7 @@ namespace WindowsFormsApp4
             MValX = e.X;
             MValY = e.Y;
         }
+        
     }
 }
 
