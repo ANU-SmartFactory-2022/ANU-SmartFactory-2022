@@ -164,7 +164,7 @@
 			this.btn_stop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btn_stop.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
 			this.btn_stop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.btn_stop.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_stop_bullying_2452756;
+			this.btn_stop.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_urgency_4326670;
 			this.btn_stop.Location = new System.Drawing.Point(0, 404);
 			this.btn_stop.Name = "btn_stop";
 			this.btn_stop.Size = new System.Drawing.Size(186, 50);
@@ -182,7 +182,7 @@
 			this.btn_detail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btn_detail.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
 			this.btn_detail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.btn_detail.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_404_error_5975189;
+			this.btn_detail.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_data_gathering_6078597;
 			this.btn_detail.Location = new System.Drawing.Point(0, 294);
 			this.btn_detail.Name = "btn_detail";
 			this.btn_detail.Size = new System.Drawing.Size(186, 50);
@@ -199,7 +199,7 @@
 			this.btn_summary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btn_summary.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
 			this.btn_summary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.btn_summary.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_statistics_8367611;
+			this.btn_summary.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_stats_164424;
 			this.btn_summary.Location = new System.Drawing.Point(0, 244);
 			this.btn_summary.Name = "btn_summary";
 			this.btn_summary.Size = new System.Drawing.Size(186, 50);
@@ -216,7 +216,7 @@
 			this.btn_running.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btn_running.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
 			this.btn_running.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.btn_running.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_robotic_arm_8019037;
+			this.btn_running.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_conveyor_924555;
 			this.btn_running.Location = new System.Drawing.Point(0, 194);
 			this.btn_running.Name = "btn_running";
 			this.btn_running.Size = new System.Drawing.Size(186, 50);
