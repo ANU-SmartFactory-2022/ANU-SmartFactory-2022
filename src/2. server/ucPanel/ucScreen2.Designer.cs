@@ -46,7 +46,7 @@
 			this.Lookup_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Lookup_Btn.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Lookup_Btn.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.Lookup_Btn.Location = new System.Drawing.Point(782, 30);
+			this.Lookup_Btn.Location = new System.Drawing.Point(1064, 30);
 			this.Lookup_Btn.Name = "Lookup_Btn";
 			this.Lookup_Btn.Size = new System.Drawing.Size(176, 34);
 			this.Lookup_Btn.TabIndex = 1;
@@ -105,7 +105,7 @@
 			this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
 			this.dataGridView1.RowTemplate.Height = 27;
 			this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dataGridView1.Size = new System.Drawing.Size(973, 480);
+			this.dataGridView1.Size = new System.Drawing.Size(1240, 480);
 			this.dataGridView1.TabIndex = 2;
 			// 
 			// button1
@@ -132,7 +132,7 @@
 			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.Lookup_Btn);
 			this.Name = "ucScreen2";
-			this.Size = new System.Drawing.Size(976, 551);
+			this.Size = new System.Drawing.Size(1243, 551);
 			this.Load += new System.EventHandler(this.ucScreen2_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);

@@ -65,11 +65,11 @@ namespace WindowsFormsApp4
             this.Hide();
 
 
-                cmd.CommandText = $"INSERT INTO CON VALUES (TO_CHAR(sysdate,'YYYY-MM-DD HH24:mi:SS'), {login_Number} ,'0')";
-                cmd.ExecuteNonQuery();
+                //cmd.CommandText = $"INSERT INTO CON VALUES (TO_CHAR(sysdate,'YYYY-MM-DD HH24:mi:SS'), {login_Number} ,'0')";
+                //cmd.ExecuteNonQuery();
 
-                cmd.CommandText = $"INSERT INTO CON VALUES (TO_CHAR(sysdate,'YYYY-MM-DD HH24:mi:SS'), {login_Number} ,'0')";
-                cmd.ExecuteNonQuery();
+                //cmd.CommandText = $"INSERT INTO CON VALUES (TO_CHAR(sysdate,'YYYY-MM-DD HH24:mi:SS'), {login_Number} ,'0')";
+                //cmd.ExecuteNonQuery();
 
 
                 main1 = new main();

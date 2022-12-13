@@ -54,7 +54,7 @@
 			this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel_title.Location = new System.Drawing.Point(0, 0);
 			this.panel_title.Name = "panel_title";
-			this.panel_title.Size = new System.Drawing.Size(1162, 26);
+			this.panel_title.Size = new System.Drawing.Size(1429, 26);
 			this.panel_title.TabIndex = 0;
 			this.panel_title.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_title_Paint);
 			this.panel_title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_MouseDown);
@@ -67,7 +67,7 @@
 			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
 			this.button6.ForeColor = System.Drawing.Color.White;
-			this.button6.Location = new System.Drawing.Point(1134, 3);
+			this.button6.Location = new System.Drawing.Point(1401, 1);
 			this.button6.Name = "button6";
 			this.button6.Size = new System.Drawing.Size(25, 25);
 			this.button6.TabIndex = 6;
@@ -258,7 +258,7 @@
 			this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel_main.Location = new System.Drawing.Point(186, 26);
 			this.panel_main.Name = "panel_main";
-			this.panel_main.Size = new System.Drawing.Size(976, 551);
+			this.panel_main.Size = new System.Drawing.Size(1243, 551);
 			this.panel_main.TabIndex = 2;
 			this.panel_main.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_main_Paint);
 			// 
@@ -268,7 +268,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-			this.ClientSize = new System.Drawing.Size(1162, 577);
+			this.ClientSize = new System.Drawing.Size(1429, 577);
 			this.Controls.Add(this.panel_main);
 			this.Controls.Add(this.panel_menu);
 			this.Controls.Add(this.panel_title);

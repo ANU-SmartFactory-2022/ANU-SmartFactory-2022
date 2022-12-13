@@ -249,7 +249,7 @@
 			this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle5;
 			this.dataGridView2.RowTemplate.Height = 27;
 			this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dataGridView2.Size = new System.Drawing.Size(973, 422);
+			this.dataGridView2.Size = new System.Drawing.Size(1237, 422);
 			this.dataGridView2.TabIndex = 16;
 			// 
 			// ucScreen4
@@ -273,7 +273,7 @@
 			this.Controls.Add(this.checkBox2);
 			this.Controls.Add(this.checkBox1);
 			this.Name = "ucScreen4";
-			this.Size = new System.Drawing.Size(976, 551);
+			this.Size = new System.Drawing.Size(1243, 551);
 			this.Load += new System.EventHandler(this.ucScreen4_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
 			this.ResumeLayout(false);

@@ -183,7 +183,7 @@
 			legend2.Enabled = false;
 			legend2.Name = "Legend1";
 			this.chart1.Legends.Add(legend2);
-			this.chart1.Location = new System.Drawing.Point(757, 115);
+			this.chart1.Location = new System.Drawing.Point(1024, 115);
 			this.chart1.Name = "chart1";
 			series2.ChartArea = "ChartArea1";
 			series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
@@ -209,7 +209,7 @@
 			legend3.Enabled = false;
 			legend3.Name = "Legend1";
 			this.chart3.Legends.Add(legend3);
-			this.chart3.Location = new System.Drawing.Point(760, 349);
+			this.chart3.Location = new System.Drawing.Point(1024, 346);
 			this.chart3.Name = "chart3";
 			series3.ChartArea = "ChartArea1";
 			series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
@@ -276,7 +276,7 @@
 			this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
 			this.dataGridView1.RowTemplate.Height = 27;
 			this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dataGridView1.Size = new System.Drawing.Size(748, 451);
+			this.dataGridView1.Size = new System.Drawing.Size(1015, 451);
 			this.dataGridView1.TabIndex = 14;
 			// 
 			// ucScreen3
@@ -296,7 +296,7 @@
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.comboBox1);
 			this.Name = "ucScreen3";
-			this.Size = new System.Drawing.Size(976, 551);
+			this.Size = new System.Drawing.Size(1243, 551);
 			this.Load += new System.EventHandler(this.ucScreen3_Load);
 			((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
