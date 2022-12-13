@@ -117,6 +117,7 @@ namespace WindowsFormsApp4.ucPanel
 		{
 			try
 			{
+				if (_num == "4") _num = "3";
 				var picBox1 = ucScreen1.Controls
 					.OfType<PictureBox>()
 					.Where(pib => pib.Name == "pib_" + _num.ToString())
@@ -130,7 +131,7 @@ namespace WindowsFormsApp4.ucPanel
 					string image = "";
 					if ( _num  == "1")
                     {
-						image = "pib_32" + state;
+						image = "pib_24" + state;
 
 					}
 					else if ( _num == "2")
@@ -139,7 +140,7 @@ namespace WindowsFormsApp4.ucPanel
 					}
 					else
                     {
-						image = "pib_24" + state;
+						image = "pib_32" + state;
 					}
 					Image img = (Image)Properties.Resources.ResourceManager.GetObject(image, Properties.Resources.Culture);
 					picBox1.Image = img;
