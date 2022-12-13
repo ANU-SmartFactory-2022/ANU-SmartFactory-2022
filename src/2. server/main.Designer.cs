@@ -33,16 +33,16 @@
 			this.panel_menu = new System.Windows.Forms.Panel();
 			this.btn_logout = new System.Windows.Forms.Button();
 			this.PnlNav = new System.Windows.Forms.Panel();
-			this.panel2 = new System.Windows.Forms.Panel();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.panel_main = new System.Windows.Forms.Panel();
 			this.btn_stop = new System.Windows.Forms.Button();
 			this.btn_detail = new System.Windows.Forms.Button();
 			this.btn_summary = new System.Windows.Forms.Button();
 			this.btn_running = new System.Windows.Forms.Button();
 			this.btn_monitoring = new System.Windows.Forms.Button();
+			this.panel2 = new System.Windows.Forms.Panel();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
 			this.btn_home = new System.Windows.Forms.Button();
+			this.panel_main = new System.Windows.Forms.Panel();
 			this.panel_title.SuspendLayout();
 			this.panel_menu.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -114,49 +114,6 @@
 			this.PnlNav.Name = "PnlNav";
 			this.PnlNav.Size = new System.Drawing.Size(3, 100);
 			this.PnlNav.TabIndex = 1;
-			// 
-			// panel2
-			// 
-			this.panel2.Controls.Add(this.label2);
-			this.panel2.Controls.Add(this.label3);
-			this.panel2.Controls.Add(this.btn_home);
-			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel2.Location = new System.Drawing.Point(0, 0);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(186, 144);
-			this.panel2.TabIndex = 0;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.label2.Location = new System.Drawing.Point(122, 3);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(58, 21);
-			this.label2.TabIndex = 7;
-			this.label2.Text = "label2";
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			this.label3.Location = new System.Drawing.Point(3, 3);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(58, 21);
-			this.label3.TabIndex = 0;
-			this.label3.Text = "label3";
-			this.label3.Click += new System.EventHandler(this.label3_Click);
-			// 
-			// panel_main
-			// 
-			this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel_main.Location = new System.Drawing.Point(186, 26);
-			this.panel_main.Name = "panel_main";
-			this.panel_main.Size = new System.Drawing.Size(976, 551);
-			this.panel_main.TabIndex = 2;
-			this.panel_main.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_main_Paint);
 			// 
 			// btn_stop
 			// 
@@ -244,6 +201,40 @@
 			this.btn_monitoring.UseVisualStyleBackColor = true;
 			this.btn_monitoring.Click += new System.EventHandler(this.button_click);
 			// 
+			// panel2
+			// 
+			this.panel2.Controls.Add(this.label2);
+			this.panel2.Controls.Add(this.label3);
+			this.panel2.Controls.Add(this.btn_home);
+			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel2.Location = new System.Drawing.Point(0, 0);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(186, 144);
+			this.panel2.TabIndex = 0;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+			this.label2.Location = new System.Drawing.Point(-1, 24);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(70, 21);
+			this.label2.TabIndex = 7;
+			this.label2.Text = "(label2)";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+			this.label3.Location = new System.Drawing.Point(3, 3);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(58, 21);
+			this.label3.TabIndex = 0;
+			this.label3.Text = "label3";
+			this.label3.Click += new System.EventHandler(this.label3_Click);
+			// 
 			// btn_home
 			// 
 			this.btn_home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
@@ -261,6 +252,15 @@
 			this.btn_home.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			this.btn_home.UseVisualStyleBackColor = false;
 			this.btn_home.Click += new System.EventHandler(this.button_click);
+			// 
+			// panel_main
+			// 
+			this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel_main.Location = new System.Drawing.Point(186, 26);
+			this.panel_main.Name = "panel_main";
+			this.panel_main.Size = new System.Drawing.Size(976, 551);
+			this.panel_main.TabIndex = 2;
+			this.panel_main.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_main_Paint);
 			// 
 			// main
 			// 

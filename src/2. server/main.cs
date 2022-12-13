@@ -387,6 +387,8 @@ namespace WindowsFormsApp4
             }
         }
 
+
+
 		private void panel_MouseDown(object sender, MouseEventArgs e)
         {
             TagMove = true;
