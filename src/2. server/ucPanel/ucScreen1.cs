@@ -195,5 +195,32 @@ namespace WindowsFormsApp4.ucPanel
         {
 
         }
+
+        private void pib_3_Click(object sender, EventArgs e)
+        {
+			DialogResult result2 = MessageBox.Show("해당 공정을 재가동하겠습니까?", "공정 재가동", MessageBoxButtons.YesNo);
+			if (result2 == DialogResult.Yes)
+			{
+				pib_3.Image = (Image)Properties.Resources.ResourceManager.GetObject("pib_32ON", Properties.Resources.Culture);
+			}
+		}
+
+        private void pib_2_Click(object sender, EventArgs e)
+        {
+			DialogResult result2 = MessageBox.Show("해당 공정을 재가동하겠습니까?", "공정 재가동", MessageBoxButtons.YesNo);
+			if (result2 == DialogResult.Yes)
+			{
+				pib_2.Image = (Image)Properties.Resources.ResourceManager.GetObject("pib_27ON", Properties.Resources.Culture);
+			}
+		}
+
+        private void pib_1_Click(object sender, EventArgs e)
+        {
+			DialogResult result2 = MessageBox.Show("해당 공정을 재가동하겠습니까?", "공정 재가동", MessageBoxButtons.YesNo);
+			if (result2 == DialogResult.Yes)
+			{
+				pib_1.Image = (Image)Properties.Resources.ResourceManager.GetObject("pib_24ON", Properties.Resources.Culture);
+			}
+		}
     }
 }

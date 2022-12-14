@@ -51,7 +51,7 @@ namespace WindowsFormsApp4
         public main()
         {
             InitializeComponent();
-
+            state = "WAIT";
             ucSc1 = new ucPanel.ucScreen1(this);
             ucSc2 = new ucPanel.ucScreen2(this);
             ucSc3 = new ucPanel.ucScreen3();
@@ -80,23 +80,22 @@ namespace WindowsFormsApp4
             m_server.start();
 
             //기존에 로그인 폼에서 조회한 로그인정보 수신
-            label3.Text = login_Name + "(" + login_Number + ")" + " 관리자님";
+            label3.Text = login_Name + " 관리자님";
 
             button_click(btn_home, e);
         }
-
+        public string state ;
         private void recv_callback(string _msg)
         {
             if (_msg == "Accept Client")
             {
-                m_server?.send("START");
+                MessageBox.Show("기기의 접속이 감지되었습니다");
             }
             else
             {
                 checkmsg(_msg);
             }
             //테스트용 수신된 글자 메시지박스로 보이기
-            MessageBox.Show(_msg);
         }
 
         delegate void StringArgReturningVoidDelegate(string _msg);
@@ -140,7 +139,8 @@ namespace WindowsFormsApp4
                     ucSc1.picBoxColor2(TCPmsg[2], "ON" , ucSc1);
                     break;
                 case "STUCK":
-                    ucSc1.picBoxColor2(RESULT, "WARING", ucSc1);
+                    ucSc1.picBoxColor2(RESULT1, "WARING", ucSc1);
+                    state = "WAIT";
                     break;
                 case "ROLLING_END":
                     Program.f_function.GridUpdate2(NOWINCH, NOWPANEL, NOWHZ);
@@ -150,7 +150,12 @@ namespace WindowsFormsApp4
                     allstop(false, ucSc1);
                     ucSc2.factoryoperation(ucSc1);
                     FINDERROR(NOWINCH);
+                    state = "START";
                     break;
+                case "STEATE":
+                    m_server?.send(state);
+                    break;
+
             }
         }
         //값 변환 함수 들어온 숫자에 따라 결과로 변환
@@ -379,6 +384,7 @@ namespace WindowsFormsApp4
                 DialogResult result = MessageBox.Show("공정을 재가동하시겠습니까?", "라인 재가동", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
+                    state = "START";
                     btn.Text = "라인 긴급 중지";
                     allstop(false, ucSc1);
                     ucSc2.factoryoperation(ucSc1);
