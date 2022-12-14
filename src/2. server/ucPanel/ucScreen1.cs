@@ -13,6 +13,7 @@ namespace WindowsFormsApp4.ucPanel
 	public partial class ucScreen1 : UserControl
 	{
 		ucScreen1 ucsrennl;
+		main main;
 		public ucScreen1()
         {
             InitializeComponent();	
@@ -20,6 +21,7 @@ namespace WindowsFormsApp4.ucPanel
 		public ucScreen1(object mainForm)
 		{
 			InitializeComponent();
+			main = ((main)mainForm);
 			ucsrennl = ((main)mainForm).ucSc1;
 		}
 		private void btn_Click(object sender, EventArgs e)
@@ -202,6 +204,7 @@ namespace WindowsFormsApp4.ucPanel
 			if (result2 == DialogResult.Yes)
 			{
 				pib_3.Image = (Image)Properties.Resources.ResourceManager.GetObject("pib_32ON", Properties.Resources.Culture);
+				main.state = "START";
 			}
 		}
 
@@ -211,6 +214,7 @@ namespace WindowsFormsApp4.ucPanel
 			if (result2 == DialogResult.Yes)
 			{
 				pib_2.Image = (Image)Properties.Resources.ResourceManager.GetObject("pib_27ON", Properties.Resources.Culture);
+				main.state = "START";
 			}
 		}
 
@@ -220,6 +224,7 @@ namespace WindowsFormsApp4.ucPanel
 			if (result2 == DialogResult.Yes)
 			{
 				pib_1.Image = (Image)Properties.Resources.ResourceManager.GetObject("pib_24ON", Properties.Resources.Culture);
+				main.state = "START";
 			}
 		}
     }

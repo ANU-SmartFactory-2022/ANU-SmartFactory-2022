@@ -152,7 +152,7 @@ namespace WindowsFormsApp4
                     FINDERROR(NOWINCH);
                     state = "START";
                     break;
-                case "STEATE":
+                case "STATE":
                     m_server?.send(state);
                     break;
 
