@@ -43,12 +43,12 @@ namespace WindowsFormsApp4.ucPanel
 			string stuck = Program.f_function.cnt_stuck();
 
 
-			chart1.Series[0].Points.AddXY("정상", Int32.Parse(normal));
-			chart1.Series[0].Points.AddXY("비정상", Int32.Parse(abnormal));
+			chart1.Series[0].Points.AddXY($"정상\n{Int32.Parse(normal)}", Int32.Parse(normal));
+			chart1.Series[0].Points.AddXY($"비정상\n{Int32.Parse(abnormal)}", Int32.Parse(abnormal));
 
-			chart3.Series[0].Points.AddXY("핫픽셀", Int32.Parse(hot));
-			chart3.Series[0].Points.AddXY("데드픽셀", Int32.Parse(dead));
-			chart3.Series[0].Points.AddXY("스턱픽셀", Int32.Parse(stuck));			
+			chart3.Series[0].Points.AddXY($"핫픽셀\n{Int32.Parse(hot)}", Int32.Parse(hot));
+			chart3.Series[0].Points.AddXY($"데드픽셀\n{Int32.Parse(dead)}", Int32.Parse(dead));
+			chart3.Series[0].Points.AddXY($"스턱픽셀\n{ Int32.Parse(stuck)}", Int32.Parse(stuck));			
 		}
 
 		private void button1_Click(object sender, EventArgs e)
