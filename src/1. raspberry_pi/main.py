@@ -35,58 +35,69 @@ def timer_working():
 
 def running():
     try:
-        tt=1
         while True:
             time.sleep( 1 )
             recv_data = socket_client.recv_d()
+            print(recv_data)
             start_sensor_state = sensor.start_pos_detect()
             slide_sensor_state = sensor.slide_detect()
-            
+
+            if recv_data == "STOP":
+                break
+
             if recv_data == "START":
-                tt=2
-                if start_sensor_state == 1:
-                    capture_img = camera.capture()
-                    print("capture end")
-                    qr_data = camera.qr(capture_img)
-                    pos = camera.classify(capture_img)
-                    socket_client.send("RESULT,"+str(qr_data)+","+str(pos))
-                    print("send end")
+                while 1:
+                    start_sensor_state = sensor.start_pos_detect()
+                    if start_sensor_state==1:
+                        break
+                time.sleep(3)
+                # if start_sensor_state == 1:
+                capture_img = camera.capture()
+                qr_data = camera.qr(capture_img)
+                pos = camera.classify(capture_img)
+                socket_client.send("RESULT,"+str(qr_data)+","+str(pos))
+                print("send end " +str(qr_data)+","+str(pos)+"\n")
 
+                pos = conveyor.Position.MIDDLE
+                if pos == 1:
+                    pos = conveyor.Position.TOP
+                elif pos == 2:
                     pos = conveyor.Position.MIDDLE
-                    if pos == 1:
-                        pos = conveyor.Position.TOP
-                    elif pos == 2:
-                        pos = conveyor.Position.MIDDLE
-                    else:
-                        pos = conveyor.Position.BOTTOM
+                else:
+                    pos = conveyor.Position.BOTTOM
 
-                    conveyor.run()
-                    time.sleep(0.5)
+                conveyor.run()
+                time.sleep(0.5)
+                conveyor.stop()
+                time.sleep(0.2)
+                conveyor.moving(pos)
+                time.sleep(0.2)
+
+                conveyor.run()
+                timer_start()
+                time.sleep(0.9)
+                
+                slide_sensor_state = sensor.slide_detect()
+                print(str(slide_sensor_state))
+                if slide_sensor_state == 1:
+                    timer_stop()
                     conveyor.stop()
+                    socket_client.send("ROLLING_END")
                     time.sleep(0.2)
-                    conveyor.moving(pos)
+                    conveyor.set_default_postion()
+                    print("1 end")
+                
+                time.sleep(0.5)
+                working_time = timer_check()
+                if timer_working() and working_time > 1:
+                    timer_stop()
+                    conveyor.stop()
+                    socket_client.send("STUCK")
                     time.sleep(0.2)
-
-                    conveyor.run()
-                    timer_start()
-                    time.sleep(0.8)
-                    
-            slide_sensor_state = sensor.slide_detect()
-            if slide_sensor_state == 1:
-                timer_stop()
-                conveyor.stop()
-                socket_client.send("ROLLING_END")
-                conveyor.set_default_postion()
-                print("1 end")
+                    conveyor.set_default_postion()
+                    print("2 end")
+                
             
-            working_time = timer_check()
-            if timer_working() and working_time > 1:
-                timer_stop()
-                conveyor.stop()
-                socket_client.send("STUCK")
-                print("2 end")
-            
-
     except Exception as e:
         print( type(e) )
         print(e)
@@ -94,7 +105,7 @@ def running():
 
 if __name__ == "__main__":
     print( "main" )
-    # socket_client.connect_d('192.168.0.45', 8000 )
+    socket_client.connect_d('192.168.0.35', 8000)
     sensor.INIT()
     camera.INIT_1()
     conveyor.INIT_2()
