@@ -63,9 +63,29 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap free_icon_caution_4539472 {
+        internal static System.Drawing.Bitmap free_icon_computer_8281294 {
             get {
-                object obj = ResourceManager.GetObject("free-icon-caution-4539472", resourceCulture);
+                object obj = ResourceManager.GetObject("free-icon-computer-8281294", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_conveyor_924555 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-conveyor-924555", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_data_gathering_6078597 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-data-gathering-6078597", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -76,6 +96,36 @@ namespace WindowsFormsApp4.Properties {
         internal static System.Drawing.Bitmap free_icon_ecg_monitor_5199552 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-ecg-monitor-5199552", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_reload_7456726 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-reload-7456726", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_stats_164424 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-stats-164424", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_urgency_4326670 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-urgency-4326670", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

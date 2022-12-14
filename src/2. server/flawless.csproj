@@ -204,6 +204,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\free-icon-caution-4539472.png" />
+    <None Include="Resources\free-icon-motherboard-7259440.png" />
+    <None Include="Resources\free-icon-robotic-arm-8019037.png" />
+    <None Include="Resources\free-icon-statistics-8367611.png" />
+    <None Include="Resources\free-icon-404-error-5975189.png" />
+    <None Include="Resources\free-icon-stop-bullying-2452756.png" />
+    <None Include="Resources\free-icon-reload-5255398.png" />
+    <None Include="Resources\free-icon-reload-7324616.png" />
+    <None Include="Resources\free-icon-reload-7324616 %281%29.png" />
+    <None Include="Resources\free-icon-checking-4691580.png" />
+    <None Include="Resources\free-icon-computer-8281294.png" />
+    <None Include="Resources\free-icon-conveyor-924555.png" />
+    <None Include="Resources\free-icon-stats-164424.png" />
+    <None Include="Resources\free-icon-data-gathering-6078597.png" />
+    <None Include="Resources\free-icon-data-gathering-60785971.png" />
+    <None Include="Resources\free-icon-data-gathering-60785972.png" />
+    <None Include="Resources\free-icon-reload-7456726.png" />
     <Content Include="Resources\free-icon-tv-monitor-4018796.png" />
     <None Include="Resources\이동중.png" />
     <None Include="Resources\이동중3.png" />
@@ -223,6 +239,7 @@
     <None Include="Resources\pib_24ON.gif" />
     <None Include="Resources\pib_27ON.gif" />
     <None Include="Resources\pib_32ON.gif" />
+    <None Include="Resources\free-icon-urgency-4326670.png" />
     <Content Include="Resources\화살표3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

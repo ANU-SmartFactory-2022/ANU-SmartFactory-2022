@@ -4,7 +4,6 @@ from collections import deque
 import sensor
 from enum import Enum
 
-
 AIN1=3
 BIN1=7
 AIN2=5
@@ -21,7 +20,6 @@ def INIT_2():
     GPIO.setup(AIN2,GPIO.OUT)
     GPIO.setup(BIN2,GPIO.OUT)
     GPIO.setup(con,GPIO.OUT,initial=GPIO.LOW)
-
 
 class Position(Enum):
     TOP = 1
@@ -44,11 +42,6 @@ def motor(Angle,Way):
         time.sleep(0.02)
         
         sig.rotate(Way)
-
-    GPIO.output(AIN1,0)
-    GPIO.output(BIN1,0)
-    GPIO.output(AIN2,0)
-    GPIO.output(BIN2,0)
 
 def moving( _position:Position ):
     global currnet_pos

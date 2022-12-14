@@ -25,10 +25,29 @@ namespace WindowsFormsApp4.ucPanel
 		private void btn_Click(object sender, EventArgs e)
 		{
 			Button btn = (Button)sender;
-			DialogResult result= MessageBox.Show("해당 공정에 문제가 발생하였습니다. 조치 하시겠습니다?", "공정 오류", MessageBoxButtons.YesNo);
-			if (result == DialogResult.Yes)
+			if(btn.BackColor == Color.Green)
+            {
+				DialogResult result2 = MessageBox.Show("해당 공정을 중지하겠습니까?", "공정 중지", MessageBoxButtons.YesNo);
+				if (result2 == DialogResult.Yes)
+				{
+					btn.BackColor = SystemColors.Window;
+				}
+			}
+			else if(btn.BackColor == Color.Red)
+            {
+				DialogResult result = MessageBox.Show("해당 공정에 문제가 발생하였습니다. 조치 하시겠습니다?", "공정 오류", MessageBoxButtons.YesNo);
+				if (result == DialogResult.Yes)
+				{
+					btn.BackColor = Color.Green;
+				}
+			}
+			else
 			{
-				btn.BackColor = Color.Green;
+				DialogResult result3 = MessageBox.Show("해당 공정을 가동하겠습니까?", "공정 시작", MessageBoxButtons.YesNo);
+				if (result3 == DialogResult.Yes)
+				{
+					btn.BackColor = Color.Green;
+				}
 			}
 
 		}
@@ -98,6 +117,7 @@ namespace WindowsFormsApp4.ucPanel
 		{
 			try
 			{
+				if (_num == "4") _num = "3";
 				var picBox1 = ucScreen1.Controls
 					.OfType<PictureBox>()
 					.Where(pib => pib.Name == "pib_" + _num.ToString())
@@ -111,7 +131,7 @@ namespace WindowsFormsApp4.ucPanel
 					string image = "";
 					if ( _num  == "1")
                     {
-						image = "pib_32" + state;
+						image = "pib_24" + state;
 
 					}
 					else if ( _num == "2")
@@ -120,7 +140,7 @@ namespace WindowsFormsApp4.ucPanel
 					}
 					else
                     {
-						image = "pib_24" + state;
+						image = "pib_32" + state;
 					}
 					Image img = (Image)Properties.Resources.ResourceManager.GetObject(image, Properties.Resources.Culture);
 					picBox1.Image = img;
@@ -138,7 +158,7 @@ namespace WindowsFormsApp4.ucPanel
         }
         private void ucScreen1_Load(object sender, EventArgs e)
         {
-
+			
         }
 
         private void label7_Click(object sender, EventArgs e)

@@ -1,8 +1,8 @@
 import RPi.GPIO as GPIO
 import time
 
-m = 19
-n = 21
+m = 13
+n = 15
 
 def INIT():
     GPIO.setwarnings(False)
@@ -16,5 +16,3 @@ def start_pos_detect():
 
 def slide_detect():
     return GPIO.input(n)
-    
-GPIO.cleanup()

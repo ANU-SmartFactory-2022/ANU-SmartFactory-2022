@@ -55,16 +55,14 @@ namespace WindowsFormsApp4.ucPanel
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DataSet ds = Program.f_function.dataColumnproduct(textBox2.Text);
-            dataGridView2.DataSource = ds.Tables[0].DefaultView;
-            dataGridView2.Update();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string[] datetime = new string[2];
-            datetime[0] = Regex.Replace(dateTimePicker1.Text, @"[^0-9]", "");
-            datetime[1] = Regex.Replace(dateTimePicker2.Text, @"[^0-9]", "");
+            datetime[0] = dateTimePicker1.Value.ToString("yyyyMMdd");
+            datetime[1] = dateTimePicker2.Value.ToString("yyyyMMdd");
             string[] result = new string[4];
             if (checkBox1.Checked) result[0] = checkBox1.Text;
             if (checkBox2.Checked) result[1] = checkBox2.Text;

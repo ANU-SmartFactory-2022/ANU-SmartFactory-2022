@@ -80,8 +80,7 @@ namespace WindowsFormsApp4
             m_server.start();
 
             //기존에 로그인 폼에서 조회한 로그인정보 수신
-            label2.Text = login_Number;
-            label3.Text = login_Name;
+            label3.Text = login_Name + "(" + login_Number + ")" + " 관리자님";
 
             button_click(btn_home, e);
         }
@@ -107,6 +106,7 @@ namespace WindowsFormsApp4
         string NOWPANEL = "";
         string NOWHZ = "";
         string RESULT = "";
+        string RESULT1 = "";
         private void checkmsg(string _msg)
         {
             string[] TCPmsg = _msg.Split(',');
@@ -122,6 +122,8 @@ namespace WindowsFormsApp4
                 case "RESULT":
                     //오라클 정리 DB축적
                     RESULT = RESULTCH(TCPmsg[2]);
+                    ucSc1.label7.Text = RESULT;
+                    RESULT1 = TCPmsg[2];
                     string[] RESULTARRAY = new string[4];
                     string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                     RESULTARRAY[0] = date;
@@ -142,8 +144,12 @@ namespace WindowsFormsApp4
                     break;
                 case "ROLLING_END":
                     Program.f_function.GridUpdate2(NOWINCH, NOWPANEL, NOWHZ);
-                    FINDERROR(NOWINCH);
+                    ucSc1.picBoxColor2(RESULT1, "STATE", ucSc1);
+                    Gridupdate();
                     m_server?.send("START");
+                    allstop(false, ucSc1);
+                    ucSc2.factoryoperation(ucSc1);
+                    FINDERROR(NOWINCH);
                     break;
             }
         }
@@ -280,13 +286,13 @@ namespace WindowsFormsApp4
                         this.Refresh();
                     }
                     break;
-                case "공정 가동":
+                case "공정가동":
                     Gridupdate();
                     panel_main.Controls.Add(ucSc2);                
                     break;
-                case "통계": panel_main.Controls.Add(ucSc3);
+                case "제품통계": panel_main.Controls.Add(ucSc3);
                     break;
-                case "불량품 상세정보": panel_main.Controls.Add(ucSc4);
+                case "상세정보": panel_main.Controls.Add(ucSc4);
                     break;
                 case "모니터 공정": panel_main.Controls.Add(ucScHome);
                     break;
@@ -380,7 +386,12 @@ namespace WindowsFormsApp4
             }
         }
 
-		private void panel_MouseDown(object sender, MouseEventArgs e)
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_MouseDown(object sender, MouseEventArgs e)
         {
             TagMove = true;
             MValX = e.X;

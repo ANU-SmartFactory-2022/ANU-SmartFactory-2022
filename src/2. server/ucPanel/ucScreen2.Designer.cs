@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -47,7 +46,7 @@
 			this.Lookup_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Lookup_Btn.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Lookup_Btn.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.Lookup_Btn.Location = new System.Drawing.Point(592, 33);
+			this.Lookup_Btn.Location = new System.Drawing.Point(1064, 30);
 			this.Lookup_Btn.Name = "Lookup_Btn";
 			this.Lookup_Btn.Size = new System.Drawing.Size(176, 34);
 			this.Lookup_Btn.TabIndex = 1;
@@ -61,8 +60,8 @@
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
 			dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
 			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Snow;
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
 			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
 			this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -106,21 +105,21 @@
 			this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
 			this.dataGridView1.RowTemplate.Height = 27;
 			this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dataGridView1.Size = new System.Drawing.Size(768, 506);
+			this.dataGridView1.Size = new System.Drawing.Size(1240, 480);
 			this.dataGridView1.TabIndex = 2;
 			// 
 			// button1
 			// 
-			this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
+			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
 			this.button1.FlatAppearance.BorderSize = 0;
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.button1.Location = new System.Drawing.Point(395, 33);
+			this.button1.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_reload_7456726;
+			this.button1.Location = new System.Drawing.Point(3, 16);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(176, 34);
+			this.button1.Size = new System.Drawing.Size(49, 48);
 			this.button1.TabIndex = 3;
-			this.button1.Text = "새로고침";
 			this.button1.UseVisualStyleBackColor = false;
 			// 
 			// ucScreen2
@@ -133,7 +132,7 @@
 			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.Lookup_Btn);
 			this.Name = "ucScreen2";
-			this.Size = new System.Drawing.Size(771, 577);
+			this.Size = new System.Drawing.Size(1243, 551);
 			this.Load += new System.EventHandler(this.ucScreen2_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
