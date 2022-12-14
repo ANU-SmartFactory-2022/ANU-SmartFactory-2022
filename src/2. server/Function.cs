@@ -287,7 +287,8 @@ namespace WindowsFormsApp4
                     command += $" or M.PRRESULT = '{date[i]}' ";
                 }
             }
-            command += $") and TO_NUMBER(replace(substr(PDATE, 0, 10), '-', '')) between {result[0]} and {result[1]}";
+            if (count != true) command += ")";
+            command += $" and REGEXP_REPLACE(substr(D.PDATE, 1, 10), '[^0-9]') between {result[0]} and {result[1]}";
             adapt.SelectCommand = new OracleCommand(command, conn);
             DataSet ds = new DataSet();
             adapt.Fill(ds);

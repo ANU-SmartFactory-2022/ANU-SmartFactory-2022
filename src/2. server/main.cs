@@ -80,8 +80,7 @@ namespace WindowsFormsApp4
             m_server.start();
 
             //기존에 로그인 폼에서 조회한 로그인정보 수신
-            label2.Text = login_Number;
-            label3.Text = login_Name;
+            label3.Text = login_Name + "(" + login_Number + ")" + " 관리자님";
 
             button_click(btn_home, e);
         }
@@ -387,9 +386,12 @@ namespace WindowsFormsApp4
             }
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
 
+        }
 
-		private void panel_MouseDown(object sender, MouseEventArgs e)
+        private void panel_MouseDown(object sender, MouseEventArgs e)
         {
             TagMove = true;
             MValX = e.X;
