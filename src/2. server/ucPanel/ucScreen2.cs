@@ -14,6 +14,7 @@ namespace WindowsFormsApp4.ucPanel
     public partial class ucScreen2 : UserControl
     {
         ucScreen1 ucsrennl;
+        main main;
         public ucScreen2()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace WindowsFormsApp4.ucPanel
         {
             InitializeComponent();
             ucsrennl = ((main)mainForm).ucSc1;
+            main = ((main)mainForm);
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -29,6 +31,8 @@ namespace WindowsFormsApp4.ucPanel
         }
         private void Lookup_Btn_Click(object sender, EventArgs e)
         {
+            main.state = "START";
+            main.allstop(false, ucsrennl);
             GridSelect();
             factoryoperation(ucsrennl);
         }
