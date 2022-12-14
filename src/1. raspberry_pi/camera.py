@@ -122,10 +122,3 @@ def classify(img):
         CLASSIFY_RESULT=2
         
     return CLASSIFY_RESULT
-
-# INIT_1()
-# img = cv2.imread("./Image/8.png")
-# tt = str(qr(img))
-# t = str(classify(img))
-# print('case '+t+' ,qr '+tt)
-
