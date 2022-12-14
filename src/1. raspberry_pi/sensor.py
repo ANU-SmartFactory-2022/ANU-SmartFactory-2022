@@ -16,5 +16,3 @@ def start_pos_detect():
 
 def slide_detect():
     return GPIO.input(n)
-
-GPIO.cleanup()
