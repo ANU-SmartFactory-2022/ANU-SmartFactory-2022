@@ -43,11 +43,6 @@ def motor(Angle,Way):
         
         sig.rotate(Way)
 
-    # GPIO.output(AIN1,0)
-    # GPIO.output(BIN1,0)
-    # GPIO.output(AIN2,0)
-    # GPIO.output(BIN2,0)
-
 def moving( _position:Position ):
     global currnet_pos
     move_way = currnet_pos.value - _position.value
@@ -59,13 +54,3 @@ def run():
 
 def stop():
     GPIO.output(con,0)
-
-# try:
-    # INIT_2()
-    # moving(Position.BOTTOM)
-    # set_default_postion()
-    # moving(Position.TOP)
-    # set_default_postion()
-
-# except KeyboardInterrupt:
-#     GPIO.cleanup()
