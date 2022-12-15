@@ -308,7 +308,7 @@ namespace WindowsFormsApp4
                     Login_Form1 = new Login_Form();
                     Login_Form1.Show();
 
-                    //cmd.CommandText = $"INSERT INTO CON VALUES ('0', {login_Number} ,TO_CHAR(sysdate,'YYYY-MM-DD HH24:mi:SS'))";
+                    
                     try
                     {
                         cmd.CommandText = $"UPDATE CON SET CLTIME = TO_CHAR(sysdate,'YYYY-MM-DD HH24:mi:SS') WHERE CLTIME = '0'";
