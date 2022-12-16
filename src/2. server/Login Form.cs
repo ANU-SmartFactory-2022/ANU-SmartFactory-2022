@@ -21,7 +21,7 @@ namespace WindowsFormsApp4
                "(HOST=localhost)(PORT=1521)))" +
                "(CONNECT_DATA=(SERVER=DEDICATED)" +
                "(SERVICE_NAME=xe)));" +
-               "User Id=hr;Password=hr;";
+               "User Id=pd68;Password=pd68;";
 
 
         string login_Name;
