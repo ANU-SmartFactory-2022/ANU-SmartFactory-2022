@@ -294,5 +294,70 @@ namespace WindowsFormsApp4
             adapt.Fill(ds);
             return ds;
         }
+
+        public int[] Date(string str_inch, string str_panel, string str_hz)
+        {
+
+            string command = "select M.PRRESULT 분류_결과, COUNT(*) from  PRD D, PRM M";
+            List<string> where_item = new List<string>();
+            if (str_inch != "전체")
+            {
+                where_item.Add("PINCH = '" + str_inch + "'");
+            }
+            if (str_panel != "전체")
+            {
+                where_item.Add("PPN = '" + str_panel + "'");
+            }
+            if (str_hz != "전체")
+            {
+                where_item.Add("PRFH = '" + str_hz + "'");
+            }
+
+
+            command += " where D.PPDNUMBER = M.PRPDNUMBER";
+
+            int where_item_cnt = where_item.Count();
+            if (where_item_cnt > 0)
+            {
+                for (int i = 0; i < where_item_cnt; i++)
+                {
+                    if (i < where_item_cnt)
+                    {
+                        command += " AND ";
+                    }
+                    command += where_item[i];
+                }
+            }
+            command += " group by M.PRRESULT";
+            cmd.CommandText = command;
+            rdr = cmd.ExecuteReader();
+            int[] date = new int[5];
+            while (rdr.Read())
+            {
+                if(rdr["분류_결과"].ToString() == "정상")
+                {
+                    date[0] += Int32.Parse(rdr["COUNT(*)"].ToString());
+                }
+                if (rdr["분류_결과"].ToString() == "데드")
+                {
+                    date[1] += Int32.Parse(rdr["COUNT(*)"].ToString());
+                    date[3] += Int32.Parse(rdr["COUNT(*)"].ToString());
+
+                }
+                if (rdr["분류_결과"].ToString() == "핫")
+                {
+                    date[1] += Int32.Parse(rdr["COUNT(*)"].ToString());
+                    date[2] += Int32.Parse(rdr["COUNT(*)"].ToString());
+                }
+                if (rdr["분류_결과"].ToString() == "스턱")
+                {
+                    date[1] += Int32.Parse(rdr["COUNT(*)"].ToString());
+                    date[4] += Int32.Parse(rdr["COUNT(*)"].ToString());
+                }
+            }
+            return date;
+        }
+
+
     }
 }

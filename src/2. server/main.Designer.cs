@@ -53,8 +53,9 @@
             this.panel_title.Controls.Add(this.button6);
             this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_title.Location = new System.Drawing.Point(0, 0);
+            this.panel_title.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_title.Name = "panel_title";
-            this.panel_title.Size = new System.Drawing.Size(1429, 26);
+            this.panel_title.Size = new System.Drawing.Size(1633, 32);
             this.panel_title.TabIndex = 0;
             this.panel_title.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_title_Paint);
             this.panel_title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_MouseDown);
@@ -67,9 +68,10 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(1401, 1);
+            this.button6.Location = new System.Drawing.Point(1601, 1);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(25, 25);
+            this.button6.Size = new System.Drawing.Size(29, 31);
             this.button6.TabIndex = 6;
             this.button6.Text = "X";
             this.button6.UseVisualStyleBackColor = true;
@@ -87,9 +89,10 @@
             this.panel_menu.Controls.Add(this.btn_monitoring);
             this.panel_menu.Controls.Add(this.panel2);
             this.panel_menu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_menu.Location = new System.Drawing.Point(0, 26);
+            this.panel_menu.Location = new System.Drawing.Point(0, 32);
+            this.panel_menu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_menu.Name = "panel_menu";
-            this.panel_menu.Size = new System.Drawing.Size(186, 551);
+            this.panel_menu.Size = new System.Drawing.Size(213, 689);
             this.panel_menu.TabIndex = 0;
             // 
             // btn_logout
@@ -99,9 +102,10 @@
             this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_logout.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btn_logout.Location = new System.Drawing.Point(0, 501);
+            this.btn_logout.Location = new System.Drawing.Point(0, 627);
+            this.btn_logout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(186, 50);
+            this.btn_logout.Size = new System.Drawing.Size(213, 62);
             this.btn_logout.TabIndex = 6;
             this.btn_logout.Text = "로그아웃";
             this.btn_logout.UseVisualStyleBackColor = true;
@@ -110,9 +114,10 @@
             // PnlNav
             // 
             this.PnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.PnlNav.Location = new System.Drawing.Point(3, 194);
+            this.PnlNav.Location = new System.Drawing.Point(3, 242);
+            this.PnlNav.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PnlNav.Name = "PnlNav";
-            this.PnlNav.Size = new System.Drawing.Size(3, 100);
+            this.PnlNav.Size = new System.Drawing.Size(3, 125);
             this.PnlNav.TabIndex = 1;
             // 
             // btn_stop
@@ -122,9 +127,10 @@
             this.btn_stop.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_stop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btn_stop.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_urgency_4326670;
-            this.btn_stop.Location = new System.Drawing.Point(0, 404);
+            this.btn_stop.Location = new System.Drawing.Point(0, 505);
+            this.btn_stop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_stop.Name = "btn_stop";
-            this.btn_stop.Size = new System.Drawing.Size(186, 50);
+            this.btn_stop.Size = new System.Drawing.Size(213, 62);
             this.btn_stop.TabIndex = 5;
             this.btn_stop.Text = "라인 긴급 중지";
             this.btn_stop.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -140,9 +146,10 @@
             this.btn_detail.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_detail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btn_detail.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_data_gathering_6078597;
-            this.btn_detail.Location = new System.Drawing.Point(0, 294);
+            this.btn_detail.Location = new System.Drawing.Point(0, 366);
+            this.btn_detail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_detail.Name = "btn_detail";
-            this.btn_detail.Size = new System.Drawing.Size(186, 50);
+            this.btn_detail.Size = new System.Drawing.Size(213, 62);
             this.btn_detail.TabIndex = 4;
             this.btn_detail.Text = "상세정보";
             this.btn_detail.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -157,9 +164,10 @@
             this.btn_summary.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_summary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btn_summary.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_stats_164424;
-            this.btn_summary.Location = new System.Drawing.Point(0, 244);
+            this.btn_summary.Location = new System.Drawing.Point(0, 304);
+            this.btn_summary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_summary.Name = "btn_summary";
-            this.btn_summary.Size = new System.Drawing.Size(186, 50);
+            this.btn_summary.Size = new System.Drawing.Size(213, 62);
             this.btn_summary.TabIndex = 3;
             this.btn_summary.Text = "제품통계";
             this.btn_summary.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -174,9 +182,10 @@
             this.btn_running.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_running.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btn_running.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_conveyor_924555;
-            this.btn_running.Location = new System.Drawing.Point(0, 194);
+            this.btn_running.Location = new System.Drawing.Point(0, 242);
+            this.btn_running.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_running.Name = "btn_running";
-            this.btn_running.Size = new System.Drawing.Size(186, 50);
+            this.btn_running.Size = new System.Drawing.Size(213, 62);
             this.btn_running.TabIndex = 2;
             this.btn_running.Text = "공정가동";
             this.btn_running.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -192,9 +201,10 @@
             this.btn_monitoring.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_monitoring.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btn_monitoring.Image = global::WindowsFormsApp4.Properties.Resources.free_icon_computer_8281294;
-            this.btn_monitoring.Location = new System.Drawing.Point(0, 144);
+            this.btn_monitoring.Location = new System.Drawing.Point(0, 180);
+            this.btn_monitoring.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_monitoring.Name = "btn_monitoring";
-            this.btn_monitoring.Size = new System.Drawing.Size(186, 50);
+            this.btn_monitoring.Size = new System.Drawing.Size(213, 62);
             this.btn_monitoring.TabIndex = 1;
             this.btn_monitoring.Text = "모니터링";
             this.btn_monitoring.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -208,8 +218,9 @@
             this.panel2.Controls.Add(this.btn_home);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(186, 144);
+            this.panel2.Size = new System.Drawing.Size(213, 180);
             this.panel2.TabIndex = 0;
             // 
             // label2
@@ -217,9 +228,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(3, 24);
+            this.label2.Location = new System.Drawing.Point(3, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 21);
+            this.label2.Size = new System.Drawing.Size(0, 27);
             this.label2.TabIndex = 7;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -228,9 +239,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label3.Location = new System.Drawing.Point(-1, 3);
+            this.label3.Location = new System.Drawing.Point(-1, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 21);
+            this.label3.Size = new System.Drawing.Size(86, 27);
             this.label3.TabIndex = 0;
             this.label3.Text = "label3";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -245,8 +256,9 @@
             this.btn_home.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btn_home.Image = global::WindowsFormsApp4.Properties.Resources.홈버튼_이미지;
             this.btn_home.Location = new System.Drawing.Point(0, 0);
+            this.btn_home.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(186, 144);
+            this.btn_home.Size = new System.Drawing.Size(213, 180);
             this.btn_home.TabIndex = 0;
             this.btn_home.Text = "모니터 공정";
             this.btn_home.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -256,23 +268,25 @@
             // panel_main
             // 
             this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_main.Location = new System.Drawing.Point(186, 26);
+            this.panel_main.Location = new System.Drawing.Point(213, 32);
+            this.panel_main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(1243, 551);
+            this.panel_main.Size = new System.Drawing.Size(1420, 689);
             this.panel_main.TabIndex = 2;
             this.panel_main.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_main_Paint);
             // 
             // main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1429, 577);
+            this.ClientSize = new System.Drawing.Size(1633, 721);
             this.Controls.Add(this.panel_main);
             this.Controls.Add(this.panel_menu);
             this.Controls.Add(this.panel_title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

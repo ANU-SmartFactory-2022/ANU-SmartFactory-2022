@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace WindowsFormsApp4.ucPanel
 {
@@ -59,8 +60,43 @@ namespace WindowsFormsApp4.ucPanel
 
 			DataTable dt = Program.f_function.select_PRD(str_inch, str_panel, str_hz);
 			dataGridView1.DataSource = dt;
+            Chartupdate(Program.f_function.Date(str_inch, str_panel, str_hz));
 		}
 
-		
-	}
+
+        public void Chartupdate(int[] date)
+        {
+            chart1.Series[0].Points.Clear();
+            try
+            {
+                if (chart1.Series.IndexOf("new") != -1)
+                {
+                    chart1.Series.Clear();
+                }
+            }
+            catch { }
+            chart1.Series.Add("new");
+            chart1.Series["new"].ChartType = SeriesChartType.Doughnut;
+            chart1.Series["new"].Palette = ChartColorPalette.SeaGreen;
+            chart1.Series["new"].Points.AddXY($"정상\n{date[0]}", date[0]);
+            chart1.Series["new"].Points.AddXY($"비정상\n{date[1]}", date[1]);
+
+            chart3.Series[0].Points.Clear();
+            try
+            {
+                if (chart3.Series.IndexOf("new") != -1)
+                {
+                    chart3.Series.Clear();
+                }
+            }
+            catch { }
+            chart3.Series.Add("new");
+            chart3.Series["new"].ChartType = SeriesChartType.Doughnut;
+            chart3.Series["new"].Palette = ChartColorPalette.SeaGreen;
+            chart3.Series["new"].Points.AddXY($"핫픽셀\n{date[2]}",date[2]);
+            chart3.Series["new"].Points.AddXY($"데드픽셀\n{date[3]}", date[3]);
+            chart3.Series["new"].Points.AddXY($"스턱픽셀\n{date[4]}", date[4]);
+        }
+
+    }
 }

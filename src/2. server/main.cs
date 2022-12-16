@@ -40,7 +40,7 @@ namespace WindowsFormsApp4
         OracleDataReader rdr;
         OracleConnection conn = new OracleConnection(strConn);
 
-        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=pd68;Password=pd68;";
+        static string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=hr;Password=hr;";
 
         OracleDataAdapter adapt = new OracleDataAdapter();
         OracleTransaction transaction;
@@ -308,7 +308,7 @@ namespace WindowsFormsApp4
                     Login_Form1 = new Login_Form();
                     Login_Form1.Show();
 
-                    //cmd.CommandText = $"INSERT INTO CON VALUES ('0', {login_Number} ,TO_CHAR(sysdate,'YYYY-MM-DD HH24:mi:SS'))";
+                    
                     try
                     {
                         cmd.CommandText = $"UPDATE CON SET CLTIME = TO_CHAR(sysdate,'YYYY-MM-DD HH24:mi:SS') WHERE CLTIME = '0'";
